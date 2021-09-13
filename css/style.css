@@ -1,0 +1,99 @@
+/*  Designed by Anupam khosla:  https://www.linkedin.com/in/anupamkhosla/ */
+
+
+/*Genric global utility classes starts*/
+.btn-rounded {
+  border-radius: 50em;
+}
+
+/*Genric global utility classe end*/
+
+
+
+
+html, body {
+  height: 100%;
+}
+
+nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {    
+    line-height: 1.5; 
+}
+
+nav ul a.btn,
+nav .brand-logo {
+  color: #fff;
+  position: relative;
+  z-index: 1;   
+  margin: 0;
+}
+
+nav .brand-logo {
+  font-size: 1.5rem;
+}
+
+nav .call {
+  display: flex;
+}
+
+.dropdown-trigger.open {
+  outline: none;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.sidenav-trigger {
+  color: #26a69a;
+}
+
+.parallax-container {
+  height: 100%;
+  color: rgba(255,255,255,.9);
+  top: -64px;
+  margin-bottom: -64px;
+  
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+
+@media only screen and (min-width : 1200px) {
+  nav .number {
+    display: block !important;
+  }
+}
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.parallax-container .parallax img {
+   filter: brightness(0.7);
+}
+
+#index-banner .card-tabs {
+  display: flex;
+
+}
+
+#index-banner .tabs.tabs-fixed-width {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+    width: auto;
+}
+
+
