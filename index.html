@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
   <!-- Google Fonts Roboto -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  
   
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
@@ -24,7 +24,7 @@
 
   <nav class="transparent z-depth-0" role="navigation">
     <div class="nav-wrapper container ">
-      <a id="logo-container" href="#" class="brand-logo">
+      <a id="logo-container" href="#" class="brand-logo valign-wrapper">
        <span class="material-icons-outlined">maps_home_work</span>
        NK BUILDERS
      </a>
@@ -96,10 +96,69 @@
         </button>
       </li>
       <li><a class="waves-effect waves-light btn btn-rounded orange darken-1">Post ad</a></li>
-      <li><a class="waves-effect waves-light btn btn-rounded blue accent-2">Login</a></li>
+      <li><a class="waves-effect waves-light btn btn-rounded blue ">Login</a></li>
     </ul>
-    <ul id="nav-mobile" class="sidenav">
-      <li><a href="#">Navbar Link</a></li>
+    <ul id="nav-mobile" class="sidenav orange orange-darken-1 text-white">
+      
+      <li class="">
+        <ul class="collapsible collapsible-accordion">
+          <li>
+            <a class="collapsible-header">Rent<i class="material-icons">arrow_drop_down</i></a>
+            <div class="collapsible-body">
+              <ul>
+                <li><a href="#!">First</a></li>
+                <li><a href="#!">Second</a></li>
+                <li><a href="#!">Third</a></li>
+                <li><a href="#!">Fourth</a></li>
+              </ul>
+            </div>
+          </li>
+           <li>
+            <a class="collapsible-header">Buy<i class="material-icons">arrow_drop_down</i></a>
+            <div class="collapsible-body">
+              <ul>
+                <li><a href="#!">First</a></li>
+                <li><a href="#!">Second</a></li>
+                <li><a href="#!">Third</a></li>
+                <li><a href="#!">Fourth</a></li>
+              </ul>
+            </div>
+          </li>
+           <li>
+            <a class="collapsible-header">Sell<i class="material-icons">arrow_drop_down</i></a>
+            <div class="collapsible-body">
+              <ul>
+                <li><a href="#!">First</a></li>
+                <li><a href="#!">Second</a></li>
+                <li><a href="#!">Third</a></li>
+                <li><a href="#!">Fourth</a></li>
+              </ul>
+            </div>
+          </li>
+           <li>
+            <a class="collapsible-header">Explore<i class="material-icons">arrow_drop_down</i></a>
+            <div class="collapsible-body">
+              <ul>
+                <li><a href="#!">First</a></li>
+                <li><a href="#!">Second</a></li>
+                <li><a href="#!">Third</a></li>
+                <li><a href="#!">Fourth</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a class="valign-wrapper call" href="#!">
+          <span class="material-icons-outlined">call</span>
+          <span class="number">(+91) 84 695 34 587</span>
+        </a>
+      </li>
+      <li>
+        <a class="waves-effect waves-light btn btn-rounded orange darken-1">Post ad</a>
+        <a class="waves-effect waves-light btn btn-rounded blue ">Login</a>
+      </li>
+      
     </ul>
     <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
   </div>
@@ -109,56 +168,54 @@
 
 
 
-<div id="index-banner" class="parallax-container">
+<div id="index-banner" class="parallax-container white-text">
   <div class="parallax"><img src="img/house_night.jpg"></div>
-  <div class="section no-pad-bot">
-    <div class="container">
-      <h1 class="header center teal-text text-lighten-2">Parallax Template</h1>
-      <div class="row center">
-        <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
-      </div>
-      <div class="card z-depth-4 hoverable">
-        <div class="card-tabs">
-          <ul class="tabs tabs-fixed-width">
-            <li class="tab"><a href="#test4">Test 1</a></li>
-            <li class="tab"><a class="active" href="#test5">Test 2</a></li>
-            <li class="tab"><a href="#test6">Test 3</a></li>
-          </ul>
-        </div>
-        <div class="card-content blue">
-          <div class="row">
-            <form class="col s12">
-              <div class="row">
-                <div class="input-field col s6 l3">
-                  <i class="material-icons prefix">location</i>
-                  <input id="icon_prefix" type="text" class="validate">
-                  <label for="icon_prefix">Location</label>
-                </div>                    
-                <div class="input-field col s6 l3">
-                  <select multiple class="icons">                        
-                    <option value="" data-icon="images/sample-1.jpg" class="left">Apartment</option>
-                    <option value="" data-icon="images/office.jpg" class="left">Flat</option>
-                    <option value="" data-icon="images/yuna.jpg" class="left">Town House</option>
-                    <option value="" data-icon="images/yuna.jpg" class="left">Unit</option>
-                  </select>
-                  <label>Images in select</label>
-                </div>
-                <div class="input-field col s6 l3">
-                  Range
-                  <div id="price_range"></div>
-                </div>
-                <div class="input-field col s6 l3">
-                  <button class="btn waves-effect waves-light" type="submit" name="action">Submit
-                    <i class="material-icons right">send</i>
-                  </button>
-                </div>
-              </div>              
-            </form>
-          </div>
-        </div> 
+  
+  <section id="form1" class="container d-flex flex-column justify-content-center align-items-center">
+
+    <div class="empty"></div>
+    <div class="aligner">
+      <h1 class="center my-0">Choose your <span class="orange-text text-darken-1">favouirite property</span> </h1>
+      <h4 class="center hide-on-small-only">We provide the biggest varierty in Chandigarh</h4>
+
+      <ul class="tabs transparent text-white d-flex justify-content-center">
+        <li class="tab"><a class="btn-rounded" href="#test4">Buy</a></li>
+        <li class="tab"><a class="active btn-rounded" href="#test5">Rent</a></li>
+        <li class="tab"><a class="btn-rounded" href="#test6">Sell</a></li>
+      </ul>
+      <div class="card hoverable btn-rounded">
+        <form class="card-content btn-rounded">
+          <div class="row d-flex flex-wrap justify-content-center">
+            <div class="input-field col s12 l3">
+              <input id="icon_prefix" value="Mohali" type="text" class="validate">
+              <label for="icon_prefix">Location</label>
+            </div>                    
+            <div class="input-field col s12 l3">
+              <select multiple class="icons">                        
+                <option selected value="" data-icon="img/apartment.png" class="left">Apartment</option>
+                <option value="" data-icon="img/house.png" class="left">House</option>
+                <option value="" data-icon="img/town.png" class="left">Town House</option>
+                <option value="" data-icon="img/unit.png" class="left">Unit</option>
+              </select>
+              <label>Property type</label>
+            </div>
+            <div class="input-field col s12 l3 black-text">
+              <label class="price">Price Range</label>
+              <div class="dynamic-price left">
+                ₹<span class="example-val" id="slider-margin-value-min"></span>k -
+                ₹<span class="example-val" id="slider-margin-value-max"></span>k
+              </div>
+              <div id="price_range"></div>
+            </div>
+            <div class="center input-field col s12 l2">
+              <button class="search btn waves-effect waves-light blue btn-rounded" type="submit" name="action">Search</button>
+            </div>
+          </div>              
+        </form>
       </div>
     </div>
-  </div>
+    <div class="empty last"></div>
+  </section>
 </div>
 
 <footer class="page-footer teal">
@@ -190,7 +247,7 @@
   </div>
   <div class="footer-copyright">
     <div class="container">
-      Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      Inspired from <a class="brown-text text-lighten-3" href="https://demoapus2.com/houzing/">Wordpress theme</a>
     </div>
   </div>
 </footer>

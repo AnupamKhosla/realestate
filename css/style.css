@@ -1,22 +1,206 @@
 /*  Designed by Anupam khosla:  https://www.linkedin.com/in/anupamkhosla/ */
 
 
-/*Genric global utility classes starts*/
+/*Genric  utility classes starts*/
+.btn {
+  padding: 0 15px;
+}
+
 .btn-rounded {
   border-radius: 50em;
 }
 
-/*Genric global utility classe end*/
-
-
-
-
-html, body {
-  height: 100%;
+.d-flex {
+  display: flex;
 }
 
-nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {    
-    line-height: 1.5; 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-left {
+  justify-content: flex-start;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.my-0 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/*Genric utility classe end*/
+
+
+
+/*global rules start */
+html, body {
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  max-width: 1400px;
+  width: 100%;
+  padding: 0 15px;
+}
+
+.btn:hover {
+  box-shadow: 0 8px 17px 2px rgba(0,0,0,0.14),0 3px 14px 2px rgba(0,0,0,0.12),0 5px 5px -3px rgba(0,0,0,0.2)
+}
+
+.select-dropdown li img {
+  height: auto;
+  width: 30px;
+  padding-top: 8px;
+}
+
+.noUi-connect,
+.noUi-target.noUi-horizontal .noUi-tooltip {
+  background-color: #2196f3;
+}
+
+input:not([type]):focus:not([readonly]),
+input[type=text]:not(.browser-default):focus:not([readonly]),
+input[type=password]:not(.browser-default):focus:not([readonly]),
+input[type=email]:not(.browser-default):focus:not([readonly]),
+input[type=url]:not(.browser-default):focus:not([readonly]),
+input[type=time]:not(.browser-default):focus:not([readonly]),
+input[type=date]:not(.browser-default):focus:not([readonly]),
+input[type=datetime]:not(.browser-default):focus:not([readonly]),
+input[type=datetime-local]:not(.browser-default):focus:not([readonly]),
+input[type=tel]:not(.browser-default):focus:not([readonly]),
+input[type=number]:not(.browser-default):focus:not([readonly]),
+input[type=search]:not(.browser-default):focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]),
+input.valid:not([type]),
+input.valid:not([type]):focus,
+
+input[type=text]:not(.browser-default):focus,
+input[type=text].valid:not(.browser-default),
+input[type=text].valid:not(.browser-default):focus,
+input[type=password].valid:not(.browser-default),
+input[type=password].valid:not(.browser-default):focus,
+input[type=email].valid:not(.browser-default),
+input[type=email].valid:not(.browser-default):focus,
+input[type=url].valid:not(.browser-default),
+input[type=url].valid:not(.browser-default):focus,
+input[type=time].valid:not(.browser-default),
+input[type=time].valid:not(.browser-default):focus,
+input[type=date].valid:not(.browser-default),
+input[type=date].valid:not(.browser-default):focus,
+input[type=datetime].valid:not(.browser-default),
+input[type=datetime].valid:not(.browser-default):focus,
+input[type=datetime-local].valid:not(.browser-default),
+input[type=datetime-local].valid:not(.browser-default):focus,
+input[type=tel].valid:not(.browser-default),
+input[type=tel].valid:not(.browser-default):focus,
+input[type=number].valid:not(.browser-default),
+input[type=number].valid:not(.browser-default):focus,
+input[type=search].valid:not(.browser-default),
+input[type=search].valid:not(.browser-default):focus,
+textarea.materialize-textarea.valid,
+textarea.materialize-textarea.valid:focus,
+.select-wrapper.valid > input.select-dropdown {
+  border-bottom: 1px solid #2196F3;
+  -webkit-box-shadow: 0 1px 0 0 #2196F3;
+  box-shadow: 0 1px 0 0 #2196F3;
+
+}
+
+input:not([type]):focus.valid ~ label,
+input[type=text]:not(.browser-default):focus.valid ~ label,
+input[type=password]:not(.browser-default):focus.valid ~ label,
+input[type=email]:not(.browser-default):focus.valid ~ label,
+input[type=url]:not(.browser-default):focus.valid ~ label,
+input[type=time]:not(.browser-default):focus.valid ~ label,
+input[type=date]:not(.browser-default):focus.valid ~ label,
+input[type=datetime]:not(.browser-default):focus.valid ~ label,
+input[type=datetime-local]:not(.browser-default):focus.valid ~ label,
+input[type=tel]:not(.browser-default):focus.valid ~ label,
+input[type=number]:not(.browser-default):focus.valid ~ label,
+input[type=search]:not(.browser-default):focus.valid ~ label, textarea.materialize-textarea:focus.valid ~ label {
+  color: #2196F3;
+}
+
+input:not([type]):focus:not([readonly]) + label,
+input[type=text]:not(.browser-default):focus:not([readonly]) + label,
+input[type=password]:not(.browser-default):focus:not([readonly]) + label,
+input[type=email]:not(.browser-default):focus:not([readonly]) + label,
+input[type=url]:not(.browser-default):focus:not([readonly]) + label,
+input[type=time]:not(.browser-default):focus:not([readonly]) + label,
+input[type=date]:not(.browser-default):focus:not([readonly]) + label,
+input[type=datetime]:not(.browser-default):focus:not([readonly]) + label,
+input[type=datetime-local]:not(.browser-default):focus:not([readonly]) + label,
+input[type=tel]:not(.browser-default):focus:not([readonly]) + label,
+input[type=number]:not(.browser-default):focus:not([readonly]) + label,
+input[type=search]:not(.browser-default):focus:not([readonly]) + label, textarea.materialize-textarea:focus:not([readonly]) + label {
+    color: #2196F3;
+}
+
+[type="checkbox"]:checked + span:not(.lever):before {
+  border-right-color: #2196F3;
+  border-bottom-color: #2196F3;
+}
+
+.sidenav li > a {
+  color: #fff;
+}
+
+.sidenav li > a > i,
+.sidenav li > a > [class^="mdi-"],
+.sidenav li > a li > a > [class*="mdi-"],
+.sidenav li > a > i.material-icons {
+  float: right;
+  color: #fff;
+}
+
+.sidenav .collapsible-body,
+.sidenav.fixed .collapsible-body {
+  background-color: transparent;
+}
+
+.sidenav li > a {
+  padding: 0 16px;
+}
+
+
+/*global rules end*/
+
+
+nav {
+  display: flow-root; /*establish new block formatting context*/
+}
+
+nav .nav-wrapper {
+  margin-top: 5px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav, nav a.sidenav-trigger{     
+  height: 64px;
+  color: #e68509;
+}
+
+nav .sidenav-trigger i {
+  height: 64px;
+  line-height: 64px;
 }
 
 nav ul a.btn,
@@ -25,64 +209,59 @@ nav .brand-logo {
   position: relative;
   z-index: 1;   
   margin: 0;
+  display: inline-flex;
+}
+
+nav ul a.btn-rounded {
+  margin-left: 20px;
+  font-size: 12px;
+  padding: 0 25px;
 }
 
 nav .brand-logo {
   font-size: 1.5rem;
 }
 
+.brand-logo .material-icons-outlined {
+  font-size: 3rem;
+  margin-right: 15px;
+}
+
 nav .call {
+  display: flex;
+  font-weight: 600;
+}
+
+nav .call .material-icons-outlined {
+  margin-right: 10px;
+}
+
+.sidenav li > a.valign-wrapper {
   display: flex;
 }
 
 .dropdown-trigger.open {
-  outline: none;
+  outline: none; /*material css dropdown_on_hover_outline bug fix https://github.com/Dogfalo/materialize/issues/6656#issue-995096091*/
 }
 
-p {
-  line-height: 2rem;
-}
 
 .sidenav-trigger {
   color: #26a69a;
 }
 
 .parallax-container {
-  height: 100%;
-  color: rgba(255,255,255,.9);
+  height: auto;
+  min-height: 100%;  
   top: -64px;
   margin-bottom: -64px;
   
 }
-  .parallax-container .section {
-    width: 100%;
-  }
-
-
-@media only screen and (min-width : 1200px) {
-  nav .number {
-    display: block !important;
-  }
-}
-
-@media only screen and (max-width : 992px) {
-  .parallax-container .section {
-    position: absolute;
-    top: 40%;
-  }
-  #index-banner .section {
-    top: 10%;
-  }
-}
-
-@media only screen and (max-width : 600px) {
-  #index-banner .section {
-    top: 0;
-  }
+.parallax-container .section {
+  width: 100%;
 }
 
 .parallax-container .parallax img {
-   filter: brightness(0.7);
+ filter: brightness(0.5);
 }
 
 #index-banner .card-tabs {
@@ -93,7 +272,171 @@ p {
 #index-banner .tabs.tabs-fixed-width {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-    width: auto;
+  width: auto;
 }
 
+#form1 {  
+  width: 100%;  
+  min-height: 100vh;  
+}
+
+#form1 .empty {
+  flex-basis: 120px;
+}
+
+#form1 .card-content > .row {
+  margin-bottom: -15px;
+}
+
+#form1 .tabs {
+  margin-top: 50px;  
+}
+
+#form1 .tabs .tab {
+  line-height: 36px;
+  height: 36px;
+}
+
+#form1 .tabs a {
+  color: #fff;
+  font-weight: 600;
+}
+
+#form1.tab a:hover, #form1 .tab a.active {
+  background-color: rgba(33, 150, 243, 0.7);
+}
+
+#form1 .tabs .indicator {
+  display: none;
+}
+
+#form1 .card {
+  max-width: 993px;  
+  width: 100%;
+}
+
+#form1 .card-content {
+  border-radius: 100em;
+}
+
+#form1 #price_range {
+  margin-top: 43px;
+  padding: 0 10px 0 5px;
+}
+
+#form1 .price {
+  font-size: 0.8rem;
+  top: -27px;
+}
+
+#form1 .dynamic-price {
+  padding-top: 4px;
+}
+
+#form1 .card-content .col {
+  margin-left: 0;
+}
+
+#form1 .search {
+  margin-top: -0px;
+  width: 100%;
+}
+
+
+@media only screen and (min-width : 993px) { 
+
+  nav .number {
+    display: block !important;
+  }
+
+}
+
+@media only screen and (min-width: 1201px) {
+ .container {
+  width: 90%;
+}
+}
+
+@media only screen and (max-width: 1200.8px) {
+  nav ul a.btn-rounded {
+    margin-left: 15px;
+  }
+
+  #form1 h1 {
+    font-size: 3rem;
+  }
+
+  #form1 h4 {
+    font-size: 1.75rem;
+  }
+}
+
+
+
+
+@media only screen and (max-width: 992.8px) {
+
+  .nav-wrapper {
+    width: 100%;
+    padding: 0;
+  }
+
+  .brand-logo .material-icons-outlined {
+    margin-right: 10px;
+  }
+
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+
+  #index-banner .section {
+    top: 10%;
+  }
+
+  #form1 .aligner {
+    width: 80%;
+  }
+
+  #form1 h1 {
+    font-size: 2rem;
+  }
+
+  #form1 h4 {
+    font-size: 1.5rem;
+  }
+
+  #form1 .card {
+    border-radius: 30px;
+  }
+  #form1 .tab a {
+    padding: 0 24px;
+  }
+  #form1 .search {
+    max-width: 280px;    
+  }
+}
+
+@media only screen and (max-width : 600.8px) {
+
+  nav {
+    height: 64px;
+  }
+
+  #index-banner .section {
+    top: 0;
+  }
+
+  #form1 .aligner {
+    width: 100%;
+  }
+
+  #form1 .empty.last {
+    flex-basis: 30px;
+  }
+
+  #form1 .tabs {
+    margin-top: 30px;
+  }
+}
 
