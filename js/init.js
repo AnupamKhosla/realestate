@@ -13,7 +13,7 @@
 
     $('.tabs').tabs({      
       onShow: function(){   
-        $(this.$el).closest(".dropdown-content").addClass("o-y-hidden");
+        //$(this.$el).closest(".dropdown-content").addClass("o-y-hidden"); // This will show the dropdown recalculate bug in chrome
         var this2 = this.$el;
         setTimeout(function(){
           $(this2).closest(".dropdown-content").prev(".dropdown-trigger").dropdown("recalculateDimensions");
