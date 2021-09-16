@@ -3,7 +3,7 @@
 
 /*Genric  utility classes starts*/
 .btn {
-  padding: 0 15px;
+  padding: 0 12px;
 }
 
 .btn-rounded {
@@ -43,6 +43,17 @@
   margin-bottom: 0;
 }
 
+.outline-revert {
+  outline: revert;
+}
+
+.w-auto {
+  width: auto;
+}
+.o-y-hidden {
+  overflow-y: hidden;
+}
+
 /*Genric utility classe end*/
 
 
@@ -51,6 +62,7 @@
 html, body {
   height: 100%;
   font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
 }
 
 .container {
@@ -59,9 +71,6 @@ html, body {
   padding: 0 15px;
 }
 
-.btn:hover {
-  box-shadow: 0 8px 17px 2px rgba(0,0,0,0.14),0 3px 14px 2px rgba(0,0,0,0.12),0 5px 5px -3px rgba(0,0,0,0.2)
-}
 
 .select-dropdown li img {
   height: auto;
@@ -149,7 +158,7 @@ input[type=datetime-local]:not(.browser-default):focus:not([readonly]) + label,
 input[type=tel]:not(.browser-default):focus:not([readonly]) + label,
 input[type=number]:not(.browser-default):focus:not([readonly]) + label,
 input[type=search]:not(.browser-default):focus:not([readonly]) + label, textarea.materialize-textarea:focus:not([readonly]) + label {
-    color: #2196F3;
+  color: #2196F3;
 }
 
 [type="checkbox"]:checked + span:not(.lever):before {
@@ -178,6 +187,24 @@ input[type=search]:not(.browser-default):focus:not([readonly]) + label, textarea
   padding: 0 16px;
 }
 
+.dropdown-content li > a, .dropdown-content li > span {
+  font-size: 0.875rem;
+}
+
+.btn:focus,
+.btn:hover {
+  box-shadow: 0 8px 17px 2px rgba(0,0,0,0.14),0 3px 14px 2px rgba(0,0,0,0.12),0 5px 5px -3px rgba(0,0,0,0.2);
+}
+
+.btn.orange:focus,
+.btn.orange:hover {
+  background-color: #ef6c00 !important;
+}
+
+.btn.blue:focus,
+.btn.blue:hover {
+  background-color: #1976d2 !important;
+}
 
 /*global rules end*/
 
@@ -214,7 +241,7 @@ nav .brand-logo {
 
 nav ul a.btn-rounded {
   margin-left: 20px;
-  font-size: 12px;
+  font-size: 0.75rem;
   padding: 0 25px;
 }
 
@@ -234,6 +261,100 @@ nav .call {
 
 nav .call .material-icons-outlined {
   margin-right: 10px;
+}
+
+nav .tabs {
+  height: auto;
+}
+
+nav .tabs .indicator {
+  display: none;
+}
+
+nav .dropdown-content {
+  max-width: 800px;
+  transition-property: width, height;
+  transition-duration: .3s;
+}
+
+nav .dropdown-content .tab {
+  text-align: left;
+  height: auto;
+  line-height: initial;
+  min-height: 0;  
+  text-transform: none;
+}
+
+nav .dropdown-content .tabs {
+  background-color: #f7f7f7;
+  padding: 30px 0;
+  margin: 0;
+}
+
+.dropdown-content .tab a {
+  padding: 10px 40px;
+  position: relative;
+  color: #222;
+  font-weight: 500;
+}
+.dropdown-content .tab a:focus,
+.dropdown-content .tab a:hover {
+  background-color: rgba(251, 140, 0, 0.2);
+  color: #222;
+}
+
+.dropdown-content .tab a.active,
+.dropdown-content .tab a.active:focus,
+.dropdown-content .tab a.active:hover {
+  color: #fb8c00;  
+  background-color: rgba(251, 140, 0, 0.2);
+}
+
+.dropdown-content .tab a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 3px;
+  background-color: transparent;
+  transition: background-color .28s ease;
+}
+
+.dropdown-content .tab a.active:before {
+  background-color: #fb8c00;
+}
+
+nav .row .tab-content.col {
+  padding: 20px 40px;
+}
+
+nav .dropdown-content li {
+  min-height: 0;
+  cursor: default;
+  margin-top: 10px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #555;
+}
+
+nav .dropdown-content li > a,
+nav .dropdown-content li > span {
+  color: #111;
+  line-height: normal;
+  padding: 0;
+  font-size: 0.8125rem;
+}
+
+nav .dropdown-content li > a:hover,
+nav .dropdown-content li > a:focus {
+  color: #fb8c00;
+  background-color: transparent;
+}
+
+.dropdown-content li:hover,
+.dropdown-content li.active {
+  background-color: transparent;
 }
 
 .sidenav li > a.valign-wrapper {
@@ -302,8 +423,17 @@ nav .call .material-icons-outlined {
   font-weight: 600;
 }
 
-#form1.tab a:hover, #form1 .tab a.active {
+#form1 .tab a:hover:not(.active),
+#form1 .tab a:focus {
+  background-color: rgba(251, 140, 0, 0.2);
+}
+
+#form1 .tab a.active {
   background-color: rgba(33, 150, 243, 0.7);
+}
+
+#form1 .tab a.active:focus {
+  background-color: rgba(21, 101, 192, 0.7);
 }
 
 #form1 .tabs .indicator {
@@ -352,14 +482,23 @@ nav .call .material-icons-outlined {
 }
 
 @media only screen and (min-width: 1201px) {
- .container {
-  width: 90%;
-}
+
+  .btn {
+    padding: 0 15px;
+  }
+
+  .container {
+    width: 90%;
+  }
 }
 
 @media only screen and (max-width: 1200.8px) {
   nav ul a.btn-rounded {
-    margin-left: 15px;
+    margin-left: 14px;
+  }
+
+  nav .dropdown-content {
+    max-width: 725px;
   }
 
   #form1 h1 {
