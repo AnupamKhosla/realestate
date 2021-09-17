@@ -50,8 +50,14 @@
     $('select').formSelect();
 
     !function(){ //module for range slider
-      var slider = document.getElementById('price_range');
-      noUiSlider.create(slider, {
+
+      var slider1 = document.getElementById('price1');
+      var slider2 = document.getElementById('price2');
+      var slider3 = document.getElementById('price3');
+
+      var $sliders = $(".price_range");
+
+      noUiSlider.create(slider1, {
        start: [0, 100],
        step: 0.5,
        connect: true,       
@@ -67,16 +73,54 @@
 
      });
 
-      var marginMin = document.getElementById('slider-margin-value-min');
-      var marginMax = document.getElementById('slider-margin-value-max');
+      noUiSlider.create(slider2, {
+       start: [0, 100],
+       step: 0.5,
+       connect: true,       
+        orientation: 'horizontal', // 'horizontal' or 'vertical'
+        range: {
+         'min': 0,
+         'max': 100
+       },
+       format: wNumb({
+         decimals: 0
+         
+       }),
 
-      slider.noUiSlider.on('update', function (values, handle) {
-        if (handle) {
-          marginMax.innerHTML = values[handle];
-        } else {
-          marginMin.innerHTML = values[handle];
-        }
+     });
+
+      noUiSlider.create(slider3, {
+       start: [0, 100],
+       step: 0.5,
+       connect: true,       
+        orientation: 'horizontal', // 'horizontal' or 'vertical'
+        range: {
+         'min': 0,
+         'max': 200
+       },
+       format: wNumb({
+         decimals: 0
+         
+       }),
+
+     });
+
+      $sliders.each(function(){
+
+        var this2 = this;
+        this.noUiSlider.on('update', function (values, handle) {
+            
+            var marginMin = $(this2).prev(".dynamic-price").children(".min")[0];
+            var marginMax = $(this2).prev(".dynamic-price").children(".max")[0];
+            if (handle) {
+              marginMax.innerHTML = values[handle];
+            } else {
+              marginMin.innerHTML = values[handle];
+            }
+          });
       });
+
+      
 
 
 
