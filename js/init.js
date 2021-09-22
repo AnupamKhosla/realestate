@@ -1,6 +1,6 @@
 "use strict";
 // import Swiper JS
-import Swiper from '../node_modules/swiper/swiper-bundle.esm.browser.js'
+import Swiper from '../js/swiper-bundle.esm.browser.js'
 
 
 (function($){
