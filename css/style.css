@@ -1,6 +1,7 @@
 /*  Designed by Anupam khosla:  https://www.linkedin.com/in/anupamkhosla/ */
 
 
+
 /*Genric  utility classes starts*/
 .btn {
   padding: 0 12px;
@@ -9,7 +10,13 @@
 .btn-rounded {
   border-radius: 50em;
 }
-
+.container-fixed {
+  max-width: 1600px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
 .d-flex {
   display: flex;
 }
@@ -262,6 +269,9 @@ nav ul a.btn:not(.btn-rounded):focus {
 .brand-logo .material-icons-outlined {
   font-size: 3rem;
   margin-right: 15px;
+  max-width: 3rem;
+  overflow: hidden;
+  /*For slow connections, before the icons load, the replaced text won't break the design*/
 }
 
 nav .call {
@@ -271,6 +281,8 @@ nav .call {
 
 nav .call .material-icons-outlined {
   margin-right: 10px;
+  max-width: 24px;
+  overflow: hidden;
 }
 
 nav .tabs {
@@ -318,6 +330,17 @@ nav .dropdown-content .tabs {
   margin-bottom: 15px;
 }
 
+.sidenav .account a:hover,
+.sidenav .account a:focus {
+  background-color: #ef6c00 !important;
+}
+
+.sidenav .account a.blue:hover,
+.sidenav .account a.blue:focus {
+  background-color: #1976d2 !important;
+}
+
+
 .sidenav li > a > i.material-icons {
   margin: 0;
   width: auto;
@@ -349,6 +372,7 @@ nav .dropdown-content .tabs {
   font-size: 4rem;
   color: #fb8c00;
   padding-top: 10px;
+  font-weight: 500;
 }
 
 .sidenav .logo a.text-link {
@@ -356,6 +380,8 @@ nav .dropdown-content .tabs {
   color: #fb8c00;
   padding-top: 5px;
 }
+
+
 
 .sidenav li.logo:hover > a {
   color: #ef6c00;
@@ -562,16 +588,107 @@ nav .dropdown-content li > a:focus {
 }
 
 
-@media only screen and (min-width : 993px) { 
+/* sponser section */
 
+.sponser {
+  padding: 20px 0;
+}
+
+.sponser h3 {
+  font-size: 2rem;
+}
+
+.sponser h4 {
+  font-size: 1.5rem;
+}
+
+.swiper {
+  padding: 20px 20px;  
+}
+
+.swiper-slide {
+  width: calc(23.52% - 38px);
+  height: auto;
+  margin-right: 50px;
+}
+
+.swiper .card {
+  border-radius: 5px;
+}
+
+.swiper .card-image > img {
+  height: 250px;
+  object-fit: cover;
+  object-position: center center;
+  border-radius: 5px 5px 0 0;
+}
+
+.swiper .card-image .badge{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  margin-left: 0;
+  font-size: 0.75rem;
+}
+
+.swiper .badge.new:after {
+  content: "";
+}
+
+.swiper .bookmark {
+  position: absolute;
+  top: 11px;
+  right: 10px;  
+  cursor: pointer;  
+  width: 20px;
+  height: 20px;
+}
+
+.swiper .bookmark .star {
+  fill: transparent;
+  stroke: #fb8c00;
+  stroke-width: 2px;
+  transition: fill .3s ease;
+}
+
+.swiper .fill .star {
+  fill: #fb8c00;
+}
+
+.swiper .btn-floating.halfway-fab {
+  right: 50%;
+  transform: translateX(50%);
+}
+
+.swiper .card-content {
+  padding: 24px 16px;
+}
+
+.swiper .card-content .title {
+  font-size: 1rem;
+}
+
+.swiper .title a:hover,
+.swiper .title a:focus {
+  color: #ef6c00 !important;
+}
+
+.swiper address {
+  font-size: 0.8125rem;
+  font-style: normal;
+}
+
+.swiper .card-action:last-child {
+  border-radius: 0 0 5px 5px;
+}
+
+
+@media only screen and (min-width : 993px) { 
   nav .number {
     display: block !important;
   }
-
 }
-
 @media only screen and (min-width: 1201px) {
-
   .btn {
     padding: 0 15px;
   }
@@ -581,6 +698,19 @@ nav .dropdown-content li > a:focus {
   }
 }
 
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1700.8px) {  
+  .container-fixed {
+    max-width: 1400px;
+  }
+}
 @media only screen and (max-width: 1200.8px) {
   nav ul a.btn-rounded {
     margin-left: 14px;
@@ -598,12 +728,7 @@ nav .dropdown-content li > a:focus {
     font-size: 1.75rem;
   }
 }
-
-
-
-
 @media only screen and (max-width: 992.8px) {
-
   .nav-wrapper {
     width: 100%;
     padding: 0;
@@ -644,9 +769,7 @@ nav .dropdown-content li > a:focus {
     max-width: 280px;    
   }
 }
-
 @media only screen and (max-width : 600.8px) {
-
   nav {
     height: 64px;
   }

@@ -3,816 +3,977 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Parallax Template - Materialize</title>
+  <title>AK Homes - Property dealers</title>
 
   <!-- CSS  -->
 
+  <link rel="icon" type="image/png" href="favicon.svg"/>  
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="preload" as="style">
   <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+  
   <!-- Google Fonts Roboto -->
   
   
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link rel="stylesheet" href="css/nouislider.css">
+  <link rel="stylesheet" href="node_modules/swiper/swiper-bundle.css">
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
 
-
   <nav class="transparent z-depth-0" role="navigation">
     <div class="nav-wrapper container ">
       <a id="logo-container" href="#" class="brand-logo valign-wrapper">
-       <span class="material-icons-outlined">maps_home_work</span>
-       AK Homes
-     </a>
-     <ul class="right hide-on-med-and-down valign-wrapper">
-      <li>
-        <a class="dropdown-trigger waves-effect waves-light btn transparent z-depth-0" href="dropdown1" data-target="dropdown1" >Rent</a>
-        <div id="dropdown1" class="dropdown-content">
-          <div class="row mb-0">
-            <ul class="tabs col w-auto">
-              <li class="tab">
-                <a href="#rent1" class="active">Rent a house</a>
-              </li>
-              <li class="tab">
-                <a href="#rent2">Rent land</a>
-              </li>          
-              <li class="tab">
-                <a href="#rent3">Rent a office</a>
-              </li>
-              <li class="tab">
-                <a href="#rent4">Popular locations</a>
-              </li>
-              <li class="tab">
-                <a href="#rent5">Market analysys</a>
-              </li>
+        <span class="material-icons-outlined">maps_home_work</span>
+        AK Homes
+      </a>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down valign-wrapper">
+        <li>
+          <a class="dropdown-trigger waves-effect waves-light btn transparent z-depth-0" href="dropdown1" data-target="dropdown1" >Rent</a>
+          <div id="dropdown1" class="dropdown-content">
+            <div class="row mb-0">
+              <ul class="tabs col w-auto">
+                <li class="tab">
+                  <a href="#rent1" class="active">Rent a house</a>
+                </li>
+                <li class="tab">
+                  <a href="#rent2">Rent land</a>
+                </li>          
+                <li class="tab">
+                  <a href="#rent3">Rent a office</a>
+                </li>
+                <li class="tab">
+                  <a href="#rent4">Popular locations</a>
+                </li>
+                <li class="tab">
+                  <a href="#rent5">Market analysys</a>
+                </li>
 
-            </ul>
-            <div class="col tab-content">
-              <div id="rent1">
-                <ul>
-                  <li class="title">House Type</li>
-                  <li>
-                    <a href="#!">                      
-                      Apartments
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#!">
-                      Independent House
-                    </a>
-                  </li> 
-                  <li>
-                    <a href="#!">
-                      Commericial factory
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#!">
-                      Town House
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#!">
-                      Unit
-                    </a>
-                  </li>
-                </ul> 
-              </div>
-              <div id="rent2">
-                <ul>
-                  <li class="title">Land Type</li>
-                  <li>
-                    <a href="#!">Agricultural land</a>
-                  </li>
-                  <li>
-                    <a href="#!">Commericial land</a>
-                  </li>
-                  <li>
-                    <a href="#!">Govt susidised land</a>
-                  </li>
-                  <li>
-                    <a href="#!">Non-cultivated land</a>
-                  </li>
-                </ul>
-              </div>
-              <div id="rent3">
-                <ul>
-                  <li class="title">Office Type</li>
-                  <li>
-                    <a href="">
-                      Furnished office
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      Shared office
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      Small shop
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      Large scale Warehouse
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      Big Showrooms
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div id="rent4">
-                <ul>
-                  <li class="title">Prime locations</li>
-                  <li>
-                    <a href="#!">House in Chandigarh</a>
-                  </li>
-                  <li>
-                    <a href="#!">House in Kharar</a>
-                  </li>
-                  <li>
-                    <a href="#!">House in Ludhiana</a>
-                  </li>
-                  <li>
-                    <a href="#!">House in Punchkula</a>
-                  </li>
-                  <li>
-                    <a href="#!">House in all Punjab</a>
-                  </li>
-                </ul>
-              </div>
-              <div id="rent5">
-                <ul>
-                  <li class="title">
-                    Helpful information
-                  </li>
-                  <li>
-                    <a href="">Housing Loan organisations</a>
-                  </li>
+              </ul>
+              <div class="col tab-content">
+                <div id="rent1">
+                  <ul>
+                    <li class="title">House Type</li>
+                    <li>
+                      <a href="#!">                      
+                        Apartments
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#!">
+                        Independent House
+                      </a>
+                    </li> 
+                    <li>
+                      <a href="#!">
+                        Commericial factory
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#!">
+                        Town House
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#!">
+                        Unit
+                      </a>
+                    </li>
+                  </ul> 
+                </div>
+                <div id="rent2">
+                  <ul>
+                    <li class="title">Land Type</li>
+                    <li>
+                      <a href="#!">Agricultural land</a>
+                    </li>
+                    <li>
+                      <a href="#!">Commericial land</a>
+                    </li>
+                    <li>
+                      <a href="#!">Govt susidised land</a>
+                    </li>
+                    <li>
+                      <a href="#!">Non-cultivated land</a>
+                    </li>
+                  </ul>
+                </div>
+                <div id="rent3">
+                  <ul>
+                    <li class="title">Office Type</li>
+                    <li>
+                      <a href="">
+                        Furnished office
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        Shared office
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        Small shop
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        Large scale Warehouse
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        Big Showrooms
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div id="rent4">
+                  <ul>
+                    <li class="title">Prime locations</li>
+                    <li>
+                      <a href="#!">House in Chandigarh</a>
+                    </li>
+                    <li>
+                      <a href="#!">House in Kharar</a>
+                    </li>
+                    <li>
+                      <a href="#!">House in Ludhiana</a>
+                    </li>
+                    <li>
+                      <a href="#!">House in Punchkula</a>
+                    </li>
+                    <li>
+                      <a href="#!">House in all Punjab</a>
+                    </li>
+                  </ul>
+                </div>
+                <div id="rent5">
+                  <ul>
+                    <li class="title">
+                      Helpful information
+                    </li>
+                    <li>
+                      <a href="">Housing Loan organisations</a>
+                    </li>
 
-                  <li>
-                    <a href="">Latest price trends</a>
-                  </li>                
-                  <li>
-                    <a href="">Dealers in Punjab</a>
-                  </li>
+                    <li>
+                      <a href="">Latest price trends</a>
+                    </li>                
+                    <li>
+                      <a href="">Dealers in Punjab</a>
+                    </li>
 
-                  <li>
-                    <a href="">Market survey reports</a>
-                  </li>               
-                  <li>
-                    <a href="">Banking morgage analysis</a>
-                  </li>
-                </ul>
+                    <li>
+                      <a href="">Market survey reports</a>
+                    </li>               
+                    <li>
+                      <a href="">Banking morgage analysis</a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </li>
-      <li>
-        <a class="dropdown-trigger waves-effect waves-light btn outline-revert transparent z-depth-0" href="#!" data-target="dropdown2">Buy</a>
-        <div id="dropdown2" class="dropdown-content">
-          <div class="row mb-0">
-            <ul class="tabs col w-auto">
-              <li class="tab">
-                <a href="#buy1" class="active">Buy a house</a>
-              </li>
-              <li class="tab">
-                <a href="#buy2">Buy land</a>
-              </li>          
-              <li class="tab">
-                <a href="#buy3">Buy a office</a>
-              </li>
-              <li class="tab">
-                <a href="#buy4">Buy locations</a>
-              </li>
-              <li class="tab">
-                <a href="#buy5">Buy analysys</a>
-              </li>
+        </li>
+        <li>
+          <a class="dropdown-trigger waves-effect waves-light btn outline-revert transparent z-depth-0" href="#!" data-target="dropdown2">Buy</a>
+          <div id="dropdown2" class="dropdown-content">
+            <div class="row mb-0">
+              <ul class="tabs col w-auto">
+                <li class="tab">
+                  <a href="#buy1" class="active">Buy a house</a>
+                </li>
+                <li class="tab">
+                  <a href="#buy2">Buy land</a>
+                </li>          
+                <li class="tab">
+                  <a href="#buy3">Buy a office</a>
+                </li>
+                <li class="tab">
+                  <a href="#buy4">Buy locations</a>
+                </li>
+                <li class="tab">
+                  <a href="#buy5">Buy analysys</a>
+                </li>
+              </ul>
+              <div class="col tab-content">
+                <div id="buy1">
+                  <ul>
+                    <li class="title">House Type</li>
+                    <li>
+                      <a href="#!">                      
+                        Apartments
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#!">
+                        Independent House
+                      </a>
+                    </li> 
+                    <li>
+                      <a href="#!">
+                        Commericial factory
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#!">
+                        Town House
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#!">
+                        Unit
+                      </a>
+                    </li>
+                  </ul> 
+                </div>
+                <div id="buy2">
+                  <ul>
+                    <li class="title">Land Type</li>
+                    <li>
+                      <a href="#!">Agricultural land</a>
+                    </li>
+                    <li>
+                      <a href="#!">Commericial land</a>
+                    </li>
+                    <li>
+                      <a href="#!">Govt susidised land</a>
+                    </li>
+                    <li>
+                      <a href="#!">Non-cultivated land</a>
+                    </li>
+                  </ul>
+                </div>
+                <div id="buy3">
+                  <ul>
+                    <li class="title">Office Type</li>
+                    <li>
+                      <a href="">
+                        Furnished office
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        Shared office
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        Small shop
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        Large scale Warehouse
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        Big Showrooms
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div id="buy4">
+                  <ul>
+                    <li class="title">Prime locations</li>
+                    <li>
+                      <a href="#!">House in Chandigarh</a>
+                    </li>
+                    <li>
+                      <a href="#!">House in Kharar</a>
+                    </li>
+                    <li>
+                      <a href="#!">House in Ludhiana</a>
+                    </li>
+                    <li>
+                      <a href="#!">House in Punchkula</a>
+                    </li>
+                    <li>
+                      <a href="#!">House in all Punjab</a>
+                    </li>
+                  </ul>
+                </div>
+                <div id="buy5">
+                  <ul>
+                    <li class="title">
+                      Helpful information
+                    </li>
+                    <li>
+                      <a href="">Housing Loan organisations</a>
+                    </li>
 
-            </ul>
-            <div class="col tab-content">
-              <div id="buy1">
-                <ul>
-                  <li class="title">House Type</li>
-                  <li>
-                    <a href="#!">                      
-                      Apartments
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#!">
-                      Independent House
-                    </a>
-                  </li> 
-                  <li>
-                    <a href="#!">
-                      Commericial factory
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#!">
-                      Town House
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#!">
-                      Unit
-                    </a>
-                  </li>
-                </ul> 
-              </div>
-              <div id="buy2">
-                <ul>
-                  <li class="title">Land Type</li>
-                  <li>
-                    <a href="#!">Agricultural land</a>
-                  </li>
-                  <li>
-                    <a href="#!">Commericial land</a>
-                  </li>
-                  <li>
-                    <a href="#!">Govt susidised land</a>
-                  </li>
-                  <li>
-                    <a href="#!">Non-cultivated land</a>
-                  </li>
-                </ul>
-              </div>
-              <div id="buy3">
-                <ul>
-                  <li class="title">Office Type</li>
-                  <li>
-                    <a href="">
-                      Furnished office
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      Shared office
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      Small shop
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      Large scale Warehouse
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      Big Showrooms
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div id="buy4">
-                <ul>
-                  <li class="title">Prime locations</li>
-                  <li>
-                    <a href="#!">House in Chandigarh</a>
-                  </li>
-                  <li>
-                    <a href="#!">House in Kharar</a>
-                  </li>
-                  <li>
-                    <a href="#!">House in Ludhiana</a>
-                  </li>
-                  <li>
-                    <a href="#!">House in Punchkula</a>
-                  </li>
-                  <li>
-                    <a href="#!">House in all Punjab</a>
-                  </li>
-                </ul>
-              </div>
-              <div id="buy5">
-                <ul>
-                  <li class="title">
-                    Helpful information
-                  </li>
-                  <li>
-                    <a href="">Housing Loan organisations</a>
-                  </li>
+                    <li>
+                      <a href="">Latest price trends</a>
+                    </li>                
+                    <li>
+                      <a href="">Dealers in Punjab</a>
+                    </li>
 
-                  <li>
-                    <a href="">Latest price trends</a>
-                  </li>                
-                  <li>
-                    <a href="">Dealers in Punjab</a>
-                  </li>
-
-                  <li>
-                    <a href="">Market survey reports</a>
-                  </li>               
-                  <li>
-                    <a href="">Banking morgage analysis</a>
-                  </li>
-                </ul>
+                    <li>
+                      <a href="">Market survey reports</a>
+                    </li>               
+                    <li>
+                      <a href="">Banking morgage analysis</a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </li>
+        <li>
+          <a class="dropdown-trigger waves-effect waves-light btn outline-revert transparent z-depth-0" href="#!" data-target="dropdown3">Sell</a>
+          <div id="dropdown3" class="dropdown-content ">
+            <div class="tab-content left">
+              <ul class="">
+                <li class="title">
+                  Sales services
+                </li>
+                <li>
+                  <a href="">Get estimated price</a>
+                </li>  
+                <li>
+                  <a href="">List your property</a>
+                </li>
 
-      </li>
-      <li>
-        <a class="dropdown-trigger waves-effect waves-light btn outline-revert transparent z-depth-0" href="#!" data-target="dropdown3">Sell</a>
-        <div id="dropdown3" class="dropdown-content ">
-          <div class="tab-content left">
-            <ul class="">
-              <li class="title">
-                Sales services
-              </li>
-              <li>
-                <a href="">Get estimated price</a>
-              </li>  
-              <li>
-                <a href="">List your property</a>
-              </li>
+                <li>
+                  <a href="">Recently sold properties</a>
+                </li>  
+                <li>
+                  <a href="">Recently listed properties</a>
+                </li>  
 
-              <li>
-                <a href="">Recently sold properties</a>
-              </li>  
-              <li>
-                <a href="">Recently listed properties</a>
-              </li>  
+                <li>
+                  <a href="">Top sellers Punjab</a>
+                </li>
 
-              <li>
-                <a href="">Top sellers Punjab</a>
-              </li>
+                <li>
+                  <a href="">Yearly market trends</a>
+                </li>              
 
-              <li>
-                <a href="">Yearly market trends</a>
-              </li>              
-
-            </ul>
+              </ul>
+            </div>
           </div>
-        </div>
-      </li>
-      <li>
-        <a class=" waves-effect waves-light btn outline-revert transparent z-depth-0" href="#!">About Us</a>
-        <ul id="dropdown4" class="dropdown-content">
-          <li>
-            <a href="#!">one</a>
-          </li>
-          <li>
-            <a href="#!">two</a>
-          </li>
-          <li class="divider"></li>
-          <li>
-            <a href="#!">three</a>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <a href="tel:+918469534587" class="call waves-effect waves-light btn outline-revert valign-wrapper transparent z-depth-0">
-          <span class="material-icons-outlined">call</span>
-          <span class="number hide">(+91) 84 695 34 587</span>
-        </a>
-      </li>
-      <li><a href="#!" class="o-focus-none waves-effect waves-light btn btn-rounded orange darken-1">Post ad</a></li>
-      <li><a href="#!" class="o-focus-none waves-effect waves-light btn btn-rounded blue ">Login</a></li>
-    </ul>
-    <ul id="nav-mobile" class="sidenav black-text hide-on-large-only">
-
-      <li class="">
-        <ul class="collapsible collapsible-accordion">          
-
-          <li class="logo d-flex text-orange">
-            <a href="#!" class="material-icons-outlined icon">maps_home_work</a>             
-            <a href="#!" class="text-link">
-              AK Homes
-            </a> 
-          </li>
-
-          <li class="d-flex account">
-            <a href="" class="w-50 center orange white-text">Post Ad</a>
-            <a href="" class="w-50 center blue white-text">Login</a>
-          </li>
-
-          <li>
-            <a class="collapsible-header">Rent<i class="material-icons">arrow_drop_down</i></a>
-            <div class="collapsible-body">
-              <ul class="collapsible collapsible-accordion">
-                <li>
-                  <a href="#!" class="collapsible-header lv1">Rent a house<i class="material-icons">arrow_drop_down</i></a>
-                  <div class="collapsible-body">
-                    <ul>
-                      <li>
-                        <a href="" class="lv2">apartments</a>
-                      </li>
-                      <li>
-                        <a href="" class="lv2">Independent house</a>
-                      </li>
-                      <li>
-                        <a href="" class="lv2">Commercial factories</a>
-                      </li>
-                      <li>
-                        <a href="" class="lv2">Town House</a>
-                      </li>
-                      <li>
-                        <a href="" class="lv2">Unit</a>
-                      </li>
-                    </ul>
-                  </div>              
-                </li>
-                <li>
-                  <a href="#!" class="collapsible-header lv1">Rent Land<i class="material-icons">arrow_drop_down</i></a>
-                  <div class="collapsible-body">
-                    <ul>
-                      <li>
-                        <a href="" class="lv2">Agricultural land</a>
-                      </li>
-                      <li>
-                        <a href="" class="lv2">Commercial land</a>
-                      </li>
-                      <li>
-                        <a href="" class="lv2">Govt subsidised land</a>
-                      </li>
-                      <li>
-                        <a href="" class="lv2">Non cultivated land</a>
-                      </li>                      
-                    </ul>
-                  </div>              
-                </li>
-                <li>
-                  <a href="#!" class="collapsible-header lv1">Rent an office<i class="material-icons">arrow_drop_down</i></a>
-                  <div class="collapsible-body">
-                    <ul>
-                      <li>
-                        <a href="" class="lv2">Furnished office</a>
-                      </li>
-                      <li>
-                        <a href="" class="lv2">Shared office</a>
-                      </li>
-                      <li>
-                        <a href="" class="lv2">Small shop</a>
-                      </li>
-                      <li>
-                        <a href="" class="lv2">Large scale warehouse</a>
-                      </li> 
-                      <li>
-                        <a href="" class="lv2">Big showrooms</a>
-                      </li>                     
-                    </ul>
-                  </div>              
-                </li>
-                <li>
-                  <a href="#!" class="collapsible-header lv1">Popular locations<i class="material-icons">arrow_drop_down</i></a>
-                  <div class="collapsible-body">
-                    <ul>
-                      <li>
-                        <a href="" class="lv2">House in Chandigarh</a>
-                      </li>
-                      <li>
-                        <a href="" class="lv2">House in Kharar</a>
-                      </li>
-                      <li>
-                        <a href="" class="lv2">House in Ludhiana</a>
-                      </li>
-                      <li>
-                        <a href="" class="lv2">House in Punchkula</a>
-                      </li> 
-                      <li>
-                        <a href="" class="lv2">House in all Punjab</a>
-                      </li>                     
-                    </ul>
-                  </div>              
-                </li>
-                <li>
-                  <a href="#!" class="collapsible-header lv1">Market Analysis<i class="material-icons">arrow_drop_down</i></a>
-                  <div class="collapsible-body">
-                    <ul>
-                      <li>
-                        <a href="" class="lv2">Housing Loan organisations</a>
-                      </li>
-                      <li>
-                        <a href="" class="lv2">Latest price trends</a>
-                      </li>
-                      <li>
-                        <a href="" class="lv2">Dealers in Punjab</a>
-                      </li>
-                      <li>
-                        <a href="" class="lv2">Market survey reports</a>
-                      </li> 
-                      <li>
-                        <a href="" class="lv2">Banking morgage analysis</a>
-                      </li>                     
-                    </ul>
-                  </div>              
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <a class="collapsible-header">Buy<i class="material-icons">arrow_drop_down</i></a>
-            <div class="collapsible-body">
-              <ul class="collapsible collapsible-accordion">
-                <li>
-                  <a href="#!" class="collapsible-header lv1">Buy a house<i class="material-icons">arrow_drop_down</i></a>
-                  <div class="collapsible-body">
-                    <ul>
-                      <li>
-                        <a href="" class="lv2">apartments</a>
-                      </li>
-                      <li>
-                        <a href="" class="lv2">Independent house</a>
-                      </li>
-                      <li>
-                        <a href="" class="lv2">Commercial factories</a>
-                      </li>
-                      <li>
-                        <a href="" class="lv2">Town House</a>
-                      </li>
-                      <li>
-                        <a href="" class="lv2">Unit</a>
-                      </li>
-                    </ul>
-                  </div>              
-                </li>
-                <li>
-                  <a href="#!" class="collapsible-header lv1">Buy Land<i class="material-icons">arrow_drop_down</i></a>
-                  <div class="collapsible-body">
-                    <ul>
-                      <li>
-                        <a href="" class="lv2">Agricultural land</a>
-                      </li>
-                      <li>
-                        <a href="" class="lv2">Commercial land</a>
-                      </li>
-                      <li>
-                        <a href="" class="lv2">Govt subsidised land</a>
-                      </li>
-                      <li>
-                        <a href="" class="lv2">Non cultivated land</a>
-                      </li>                      
-                    </ul>
-                  </div>              
-                </li>
-                <li>
-                  <a href="#!" class="collapsible-header lv1">Buy an office<i class="material-icons">arrow_drop_down</i></a>
-                  <div class="collapsible-body">
-                    <ul>
-                      <li>
-                        <a href="" class="lv2">Furnished office</a>
-                      </li>
-                      <li>
-                        <a href="" class="lv2">Shared office</a>
-                      </li>
-                      <li>
-                        <a href="" class="lv2">Small shop</a>
-                      </li>
-                      <li>
-                        <a href="" class="lv2">Large scale warehouse</a>
-                      </li> 
-                      <li>
-                        <a href="" class="lv2">Big showrooms</a>
-                      </li>                     
-                    </ul>
-                  </div>              
-                </li>
-                <li>
-                  <a href="#!" class="collapsible-header lv1">Popular locations<i class="material-icons">arrow_drop_down</i></a>
-                  <div class="collapsible-body">
-                    <ul>
-                      <li>
-                        <a href="" class="lv2">House in Chandigarh</a>
-                      </li>
-                      <li>
-                        <a href="" class="lv2">House in Kharar</a>
-                      </li>
-                      <li>
-                        <a href="" class="lv2">House in Ludhiana</a>
-                      </li>
-                      <li>
-                        <a href="" class="lv2">House in Punchkula</a>
-                      </li> 
-                      <li>
-                        <a href="" class="lv2">House in all Punjab</a>
-                      </li>                     
-                    </ul>
-                  </div>              
-                </li>
-                <li>
-                  <a href="#!" class="collapsible-header lv1">Market Analysis<i class="material-icons">arrow_drop_down</i></a>
-                  <div class="collapsible-body">
-                    <ul>
-                      <li>
-                        <a href="" class="lv2">Housing Loan organisations</a>
-                      </li>
-                      <li>
-                        <a href="" class="lv2">Latest price trends</a>
-                      </li>
-                      <li>
-                        <a href="" class="lv2">Dealers in Punjab</a>
-                      </li>
-                      <li>
-                        <a href="" class="lv2">Market survey reports</a>
-                      </li> 
-                      <li>
-                        <a href="" class="lv2">Banking morgage analysis</a>
-                      </li>                     
-                    </ul>
-                  </div>              
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <a class="collapsible-header">Sell<i class="material-icons">arrow_drop_down</i></a>
-            <div class="collapsible-body">
-              <ul>
-                <li><a href="#!" class="lv1">Get estimated price</a></li>
-                <li><a href="#!" class="lv1">List your property</a></li>
-                <li><a href="#!" class="lv1">Recently sold properties</a></li>
-                <li><a href="#!" class="lv1">Recently listed properties</a></li>
-                <li><a href="#!" class="lv1">Yearly market trends</a></li>
-                <li><a href="#!" class="lv1">Top sellers Punjab</a></li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <a href="#!" class="">About Us</a>            
-          </li>
-        </ul>
-      </li>
-      <li>
-        <a class="valign-wrapper call" href="tel:+918469534587">
-          <span class="material-icons-outlined">call</span>
-          <span class="number">(+91) 84 695 34 587</span>
-        </a>
-      </li>
-
-
-    </ul>
-    <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-  </div>
-
-</nav>
-
-
-
-
-<div id="index-banner" class="parallax-container white-text">
-  <div class="parallax"><img src="img/house_night.jpg"></div>
-
-  <section id="form1" class="container d-flex flex-column justify-content-center align-items-center">
-
-    <div class="empty"></div>
-    <div class="aligner">
-      <h1 class="center my-0">Choose your <span class="orange-text text-darken-1">favouirite property</span> </h1>
-      <h4 class="center hide-on-small-only">We provide the biggest varierty in Chandigarh</h4>
-
-      <ul class="tabs transparent text-white d-flex justify-content-center">
-        <li class="tab"><a class="btn-rounded" href="#tab_form1">Buy</a></li>
-        <li class="tab"><a class="active btn-rounded" href="#tab_form2">Rent</a></li>
-        <li class="tab"><a class="btn-rounded" href="#tab_form3">Sell</a></li>
+        </li>
+        <li>
+          <a class=" waves-effect waves-light btn outline-revert transparent z-depth-0" href="#!">About Us</a>
+          <ul id="dropdown4" class="dropdown-content">
+            <li>
+              <a href="#!">one</a>
+            </li>
+            <li>
+              <a href="#!">two</a>
+            </li>
+            <li class="divider"></li>
+            <li>
+              <a href="#!">three</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="tel:+918469534587" class="call waves-effect waves-light btn outline-revert valign-wrapper transparent z-depth-0">
+            <span class="material-icons-outlined">call</span>
+            <span class="number hide">(+91) 84 695 34 587</span>
+          </a>
+        </li>
+        <li><a href="#!" class="o-focus-none waves-effect waves-light btn btn-rounded orange darken-1">Post ad</a></li>
+        <li><a href="#!" class="o-focus-none waves-effect waves-light btn btn-rounded blue ">Login</a></li>
       </ul>
-      <div id="tab_form1" class="hide2 card hoverable btn-rounded">
-        <form class="card-content btn-rounded">
-          <div class="row d-flex flex-wrap justify-content-center">
-            <div class="input-field col s12 l3">
-              <input id="icon_prefix" value="Mohali" type="text" class="validate">
-              <label for="icon_prefix">Location</label>
-            </div>                    
-            <div class="input-field col s12 l3">
-              <select multiple class="icons">                        
-                <option selected value="" data-icon="img/apartment.png" class="left">Apartment</option>
-                <option value="" data-icon="img/house.png" class="left">House</option>
-                <option value="" data-icon="img/town.png" class="left">Town House</option>
-                <option value="" data-icon="img/unit.png" class="left">Unit</option>
-              </select>
-              <label>Property type</label>
-            </div>
-            <div class="input-field col s12 l3 black-text">
-              <label class="price">Price Range</label>
-              <div class="dynamic-price left">
-                ₹<span class="example-val min" id="slider-margin-value-min"></span>L -
-                ₹<span class="example-val max" id="slider-margin-value-max"></span>L
+      <ul id="nav-mobile" class="sidenav black-text hide-on-large-only">
+        <li class="">
+          <ul class="collapsible collapsible-accordion">  
+            <li class="logo d-flex text-orange">
+              <a href="#!" class="material-icons-outlined icon">maps_home_work</a>             
+              <a href="#!" class="text-link">
+                AK Homes
+              </a> 
+            </li>
+            <li class="d-flex account">
+              <a href="" class="w-50 center orange white-text o-focus-none">Post Ad</a>
+              <a href="" class="w-50 center blue white-text o-focus-none">Login</a>
+            </li>
+            <li>
+              <a class="collapsible-header">Rent<i class="material-icons">arrow_drop_down</i></a>
+              <div class="collapsible-body">
+                <ul class="collapsible collapsible-accordion">
+                  <li>
+                    <a href="#!" class="collapsible-header lv1">Rent a house<i class="material-icons">arrow_drop_down</i></a>
+                    <div class="collapsible-body">
+                      <ul>
+                        <li>
+                          <a href="" class="lv2">apartments</a>
+                        </li>
+                        <li>
+                          <a href="" class="lv2">Independent house</a>
+                        </li>
+                        <li>
+                          <a href="" class="lv2">Commercial factories</a>
+                        </li>
+                        <li>
+                          <a href="" class="lv2">Town House</a>
+                        </li>
+                        <li>
+                          <a href="" class="lv2">Unit</a>
+                        </li>
+                      </ul>
+                    </div>              
+                  </li>
+                  <li>
+                    <a href="#!" class="collapsible-header lv1">Rent Land<i class="material-icons">arrow_drop_down</i></a>
+                    <div class="collapsible-body">
+                      <ul>
+                        <li>
+                          <a href="" class="lv2">Agricultural land</a>
+                        </li>
+                        <li>
+                          <a href="" class="lv2">Commercial land</a>
+                        </li>
+                        <li>
+                          <a href="" class="lv2">Govt subsidised land</a>
+                        </li>
+                        <li>
+                          <a href="" class="lv2">Non cultivated land</a>
+                        </li>                      
+                      </ul>
+                    </div>              
+                  </li>
+                  <li>
+                    <a href="#!" class="collapsible-header lv1">Rent an office<i class="material-icons">arrow_drop_down</i></a>
+                    <div class="collapsible-body">
+                      <ul>
+                        <li>
+                          <a href="" class="lv2">Furnished office</a>
+                        </li>
+                        <li>
+                          <a href="" class="lv2">Shared office</a>
+                        </li>
+                        <li>
+                          <a href="" class="lv2">Small shop</a>
+                        </li>
+                        <li>
+                          <a href="" class="lv2">Large scale warehouse</a>
+                        </li> 
+                        <li>
+                          <a href="" class="lv2">Big showrooms</a>
+                        </li>                     
+                      </ul>
+                    </div>              
+                  </li>
+                  <li>
+                    <a href="#!" class="collapsible-header lv1">Popular locations<i class="material-icons">arrow_drop_down</i></a>
+                    <div class="collapsible-body">
+                      <ul>
+                        <li>
+                          <a href="" class="lv2">House in Chandigarh</a>
+                        </li>
+                        <li>
+                          <a href="" class="lv2">House in Kharar</a>
+                        </li>
+                        <li>
+                          <a href="" class="lv2">House in Ludhiana</a>
+                        </li>
+                        <li>
+                          <a href="" class="lv2">House in Punchkula</a>
+                        </li> 
+                        <li>
+                          <a href="" class="lv2">House in all Punjab</a>
+                        </li>                     
+                      </ul>
+                    </div>              
+                  </li>
+                  <li>
+                    <a href="#!" class="collapsible-header lv1">Market Analysis<i class="material-icons">arrow_drop_down</i></a>
+                    <div class="collapsible-body">
+                      <ul>
+                        <li>
+                          <a href="" class="lv2">Housing Loan organisations</a>
+                        </li>
+                        <li>
+                          <a href="" class="lv2">Latest price trends</a>
+                        </li>
+                        <li>
+                          <a href="" class="lv2">Dealers in Punjab</a>
+                        </li>
+                        <li>
+                          <a href="" class="lv2">Market survey reports</a>
+                        </li> 
+                        <li>
+                          <a href="" class="lv2">Banking morgage analysis</a>
+                        </li>                     
+                      </ul>
+                    </div>              
+                  </li>
+                </ul>
               </div>
-              <div id="price1" class="price_range"></div>
-            </div>
-            <div class="center input-field col s12 l2">
-              <button class="search btn waves-effect waves-light blue btn-rounded" type="submit" name="action">Search</button>
-            </div>
-          </div>              
-        </form>
-      </div>
-      <div id="tab_form2" class="card hoverable btn-rounded">
-        <form class="card-content btn-rounded">
-          <div class="row d-flex flex-wrap justify-content-center">
-            <div class="input-field col s12 l3">
-              <input id="icon_prefix" value="Mohali" type="text" class="validate">
-              <label for="icon_prefix">Location</label>
-            </div>                    
-            <div class="input-field col s12 l3">
-              <select multiple class="icons">                        
-                <option selected value="" data-icon="img/apartment.png" class="left">Apartment</option>
-                <option value="" data-icon="img/house.png" class="left">House</option>
-                <option value="" data-icon="img/town.png" class="left">Town House</option>
-                <option value="" data-icon="img/unit.png" class="left">Unit</option>
-              </select>
-              <label>Property type</label>
-            </div>
-            <div class="input-field col s12 l3 black-text">
-              <label class="price">Price Range</label>
-              <div class="dynamic-price left">
-                ₹<span class="example-val min" id="slider-margin-value-min2"></span>k -
-                ₹<span class="example-val max" id="slider-margin-value-max2"></span>k
+            </li>
+            <li>
+              <a class="collapsible-header">Buy<i class="material-icons">arrow_drop_down</i></a>
+              <div class="collapsible-body">
+                <ul class="collapsible collapsible-accordion">
+                  <li>
+                    <a href="#!" class="collapsible-header lv1">Buy a house<i class="material-icons">arrow_drop_down</i></a>
+                    <div class="collapsible-body">
+                      <ul>
+                        <li>
+                          <a href="" class="lv2">apartments</a>
+                        </li>
+                        <li>
+                          <a href="" class="lv2">Independent house</a>
+                        </li>
+                        <li>
+                          <a href="" class="lv2">Commercial factories</a>
+                        </li>
+                        <li>
+                          <a href="" class="lv2">Town House</a>
+                        </li>
+                        <li>
+                          <a href="" class="lv2">Unit</a>
+                        </li>
+                      </ul>
+                    </div>              
+                  </li>
+                  <li>
+                    <a href="#!" class="collapsible-header lv1">Buy Land<i class="material-icons">arrow_drop_down</i></a>
+                    <div class="collapsible-body">
+                      <ul>
+                        <li>
+                          <a href="" class="lv2">Agricultural land</a>
+                        </li>
+                        <li>
+                          <a href="" class="lv2">Commercial land</a>
+                        </li>
+                        <li>
+                          <a href="" class="lv2">Govt subsidised land</a>
+                        </li>
+                        <li>
+                          <a href="" class="lv2">Non cultivated land</a>
+                        </li>                      
+                      </ul>
+                    </div>              
+                  </li>
+                  <li>
+                    <a href="#!" class="collapsible-header lv1">Buy an office<i class="material-icons">arrow_drop_down</i></a>
+                    <div class="collapsible-body">
+                      <ul>
+                        <li>
+                          <a href="" class="lv2">Furnished office</a>
+                        </li>
+                        <li>
+                          <a href="" class="lv2">Shared office</a>
+                        </li>
+                        <li>
+                          <a href="" class="lv2">Small shop</a>
+                        </li>
+                        <li>
+                          <a href="" class="lv2">Large scale warehouse</a>
+                        </li> 
+                        <li>
+                          <a href="" class="lv2">Big showrooms</a>
+                        </li>                     
+                      </ul>
+                    </div>              
+                  </li>
+                  <li>
+                    <a href="#!" class="collapsible-header lv1">Popular locations<i class="material-icons">arrow_drop_down</i></a>
+                    <div class="collapsible-body">
+                      <ul>
+                        <li>
+                          <a href="" class="lv2">House in Chandigarh</a>
+                        </li>
+                        <li>
+                          <a href="" class="lv2">House in Kharar</a>
+                        </li>
+                        <li>
+                          <a href="" class="lv2">House in Ludhiana</a>
+                        </li>
+                        <li>
+                          <a href="" class="lv2">House in Punchkula</a>
+                        </li> 
+                        <li>
+                          <a href="" class="lv2">House in all Punjab</a>
+                        </li>                     
+                      </ul>
+                    </div>              
+                  </li>
+                  <li>
+                    <a href="#!" class="collapsible-header lv1">Market Analysis<i class="material-icons">arrow_drop_down</i></a>
+                    <div class="collapsible-body">
+                      <ul>
+                        <li>
+                          <a href="" class="lv2">Housing Loan organisations</a>
+                        </li>
+                        <li>
+                          <a href="" class="lv2">Latest price trends</a>
+                        </li>
+                        <li>
+                          <a href="" class="lv2">Dealers in Punjab</a>
+                        </li>
+                        <li>
+                          <a href="" class="lv2">Market survey reports</a>
+                        </li> 
+                        <li>
+                          <a href="" class="lv2">Banking morgage analysis</a>
+                        </li>                     
+                      </ul>
+                    </div>              
+                  </li>
+                </ul>
               </div>
-              <div id="price2" class="price_range"></div>
-            </div>
-            <div class="center input-field col s12 l2">
-              <button class="search btn waves-effect waves-light blue btn-rounded" type="submit" name="action">Search</button>
-            </div>
-          </div>              
-        </form>
-      </div>
-      <div id="tab_form3" class="hide2 card hoverable btn-rounded">
-        <form class="card-content btn-rounded">
-          <div class="row d-flex flex-wrap justify-content-center">
-            <div class="input-field col s12 l3">
-              <input id="icon_prefix" value="Mohali" type="text" class="validate">
-              <label for="icon_prefix">Location</label>
-            </div>                    
-            <div class="input-field col s12 l3">
-              <select multiple class="icons">                        
-                <option selected value="" data-icon="img/apartment.png" class="left">Apartment</option>
-                <option value="" data-icon="img/house.png" class="left">House</option>
-                <option value="" data-icon="img/town.png" class="left">Town House</option>
-                <option value="" data-icon="img/unit.png" class="left">Unit</option>
-              </select>
-              <label>Property type</label>
-            </div>
-            <div class="input-field col s12 l3 black-text">
-              <label class="price">Price Range</label>
-              <div class="dynamic-price left">
-                ₹<span class="example-val min" id="slider-margin-value-min3"></span>L -
-                ₹<span class="example-val max" id="slider-margin-value-max3"></span>L
+            </li>
+            <li>
+              <a class="collapsible-header">Sell<i class="material-icons">arrow_drop_down</i></a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a href="#!" class="lv1">Get estimated price</a></li>
+                  <li><a href="#!" class="lv1">List your property</a></li>
+                  <li><a href="#!" class="lv1">Recently sold properties</a></li>
+                  <li><a href="#!" class="lv1">Recently listed properties</a></li>
+                  <li><a href="#!" class="lv1">Yearly market trends</a></li>
+                  <li><a href="#!" class="lv1">Top sellers Punjab</a></li>
+                </ul>
               </div>
-              <div id="price3" class="price_range"></div>
-            </div>
-            <div class="center input-field col s12 l2">
-              <button class="search btn waves-effect waves-light blue btn-rounded" type="submit" name="action">Search</button>
-            </div>
-          </div>              
-        </form>
-      </div>
+            </li>
+            <li>
+              <a href="#!" class="">About Us</a>            
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a class="valign-wrapper call" href="tel:+918469534587">
+            <span class="material-icons-outlined">call</span>
+            <span class="number">(+91) 84 695 34 587</span>
+          </a>
+        </li>
+      </ul>    
     </div>
-    <div class="empty last"></div>
-  </section>
-</div>
+  </nav>
 
-<footer class="page-footer teal">
-  <div class="container">
-    <div class="row">
-      <div class="col l6 s12">
-        <h5 class="white-text">Company Bio</h5>
-        <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
-      </div>
-      <div class="col l3 s12">
-        <h5 class="white-text">Settings</h5>
-        <ul>
-          <li><a class="white-text" href="#!">Link 1</a></li>
-          <li><a class="white-text" href="#!">Link 2</a></li>
-          <li><a class="white-text" href="#!">Link 3</a></li>
-          <li><a class="white-text" href="#!">Link 4</a></li>
+  <div id="index-banner" class="parallax-container white-text">
+    <div class="parallax"><img src="img/house_night.jpg"></div>
+    <section id="form1" class="container d-flex flex-column justify-content-center align-items-center">
+      <div class="empty"></div>
+      <div class="aligner">
+        <h1 class="center my-0">Choose your <span class="orange-text text-darken-1">favouirite property</span> </h1>
+        <h4 class="center hide-on-small-only">We provide the biggest varierty in Chandigarh</h4>
+
+        <ul class="tabs transparent text-white d-flex justify-content-center">
+          <li class="tab"><a class="btn-rounded" href="#tab_form1">Buy</a></li>
+          <li class="tab"><a class="active btn-rounded" href="#tab_form2">Rent</a></li>
+          <li class="tab"><a class="btn-rounded" href="#tab_form3">Sell</a></li>
         </ul>
+        <div id="tab_form1" class="hide2 card hoverable btn-rounded">
+          <form class="card-content btn-rounded">
+            <div class="row d-flex flex-wrap justify-content-center">
+              <div class="input-field col s12 l3">
+                <input id="icon_prefix" value="Mohali" type="text" class="validate">
+                <label for="icon_prefix">Location</label>
+              </div>                    
+              <div class="input-field col s12 l3">
+                <select multiple class="icons">                        
+                  <option selected value="" data-icon="img/apartment.png" class="left">Apartment</option>
+                  <option value="" data-icon="img/house.png" class="left">House</option>
+                  <option value="" data-icon="img/town.png" class="left">Town House</option>
+                  <option value="" data-icon="img/unit.png" class="left">Unit</option>
+                </select>
+                <label>Property type</label>
+              </div>
+              <div class="input-field col s12 l3 black-text">
+                <label class="price">Price Range</label>
+                <div class="dynamic-price left">
+                  ₹<span class="example-val min" id="slider-margin-value-min"></span>L -
+                  ₹<span class="example-val max" id="slider-margin-value-max"></span>L
+                </div>
+                <div id="price1" class="price_range"></div>
+              </div>
+              <div class="center input-field col s12 l2">
+                <button class="search btn waves-effect waves-light blue btn-rounded" type="submit" name="action">Search</button>
+              </div>
+            </div>              
+          </form>
+        </div>
+        <div id="tab_form2" class="card hoverable btn-rounded">
+          <form class="card-content btn-rounded">
+            <div class="row d-flex flex-wrap justify-content-center">
+              <div class="input-field col s12 l3">
+                <input id="icon_prefix" value="Mohali" type="text" class="validate">
+                <label for="icon_prefix">Location</label>
+              </div>                    
+              <div class="input-field col s12 l3">
+                <select multiple class="icons">                        
+                  <option selected value="" data-icon="img/apartment.png" class="left">Apartment</option>
+                  <option value="" data-icon="img/house.png" class="left">House</option>
+                  <option value="" data-icon="img/town.png" class="left">Town House</option>
+                  <option value="" data-icon="img/unit.png" class="left">Unit</option>
+                </select>
+                <label>Property type</label>
+              </div>
+              <div class="input-field col s12 l3 black-text">
+                <label class="price">Price Range</label>
+                <div class="dynamic-price left">
+                  ₹<span class="example-val min" id="slider-margin-value-min2"></span>k -
+                  ₹<span class="example-val max" id="slider-margin-value-max2"></span>k
+                </div>
+                <div id="price2" class="price_range"></div>
+              </div>
+              <div class="center input-field col s12 l2">
+                <button class="search btn waves-effect waves-light blue btn-rounded" type="submit" name="action">Search</button>
+              </div>
+            </div>              
+          </form>
+        </div>
+        <div id="tab_form3" class="hide2 card hoverable btn-rounded">
+          <form class="card-content btn-rounded">
+            <div class="row d-flex flex-wrap justify-content-center">
+              <div class="input-field col s12 l3">
+                <input id="icon_prefix" value="Mohali" type="text" class="validate">
+                <label for="icon_prefix">Location</label>
+              </div>                    
+              <div class="input-field col s12 l3">
+                <select multiple class="icons">                        
+                  <option selected value="" data-icon="img/apartment.png" class="left">Apartment</option>
+                  <option value="" data-icon="img/house.png" class="left">House</option>
+                  <option value="" data-icon="img/town.png" class="left">Town House</option>
+                  <option value="" data-icon="img/unit.png" class="left">Unit</option>
+                </select>
+                <label>Property type</label>
+              </div>
+              <div class="input-field col s12 l3 black-text">
+                <label class="price">Price Range</label>
+                <div class="dynamic-price left">
+                  ₹<span class="example-val min" id="slider-margin-value-min3"></span>L -
+                  ₹<span class="example-val max" id="slider-margin-value-max3"></span>L
+                </div>
+                <div id="price3" class="price_range"></div>
+              </div>
+              <div class="center input-field col s12 l2">
+                <button class="search btn waves-effect waves-light blue btn-rounded" type="submit" name="action">Search</button>
+              </div>
+            </div>              
+          </form>
+        </div>
       </div>
-      <div class="col l3 s12">
-        <h5 class="white-text">Connect</h5>
-        <ul>
-          <li><a class="white-text" href="#!">Link 1</a></li>
-          <li><a class="white-text" href="#!">Link 2</a></li>
-          <li><a class="white-text" href="#!">Link 3</a></li>
-          <li><a class="white-text" href="#!">Link 4</a></li>
-        </ul>
-      </div>
-    </div>
+      <div class="empty last"></div>
+    </section>
   </div>
+
+  <section class="sponser container-fixed">
+    <h3 class="center">Sponsered properties</h3>
+    <h4 class="center" >Properties that need to be sold quickly</h4>
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <div class="card hoverable">
+            <div class="card-image">
+              <img class="swiper-lazy" src="img/interior1.jpg">
+              <span class="orange badge new">For Sale</span>
+              <svg class="bookmark" xmlns="http://www.w3.org/2000/svg"  height="24" viewBox="0 0 24 24" width="24">
+                <g>
+                  <path d="M0,0h24v24H0V0z" fill="none"/>
+                  <path d="M0,0h24v24H0V0z" fill="none"/>
+                </g>
+                <g>
+                  <path class="star" fill="transparent" d="M12,17.27L18.18,21l-1.64-7.03L22,9.24l-7.19-0.61L12,2L9.19,8.63L2,9.24l5.46,4.73L5.82,21L12,17.27z"/>
+                </g>
+              </svg>
+              <a class="btn-floating halfway-fab waves-effect waves-light white" href="#!">
+                <img class="circle responsive-img" src="https://demoapus2.com/houzing/wp-content/uploads/2021/06/agent1-300x300.jpg" alt="Seller pic">
+              </a>
+            </div>
+            <div class="card-content">
+              <h6 class="title">
+                <a class="orange-text" href="#!">Spacious old house</a>
+              </h6>
+              <address>2/114 Sunny Enclave, Kharar 131004</address>
+            </div>
+            <div class="card-action">
+              <a href="#">This is a link</a>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card hoverable">
+            <div class="card-image">
+              <img class="swiper-lazy" src="img/interior2.jpg">
+              <span class="orange badge new">For Sale</span>
+              <svg class="bookmark" xmlns="http://www.w3.org/2000/svg"  height="24" viewBox="0 0 24 24" width="24">
+                <g>
+                  <path d="M0,0h24v24H0V0z" fill="none"/>
+                  <path d="M0,0h24v24H0V0z" fill="none"/>
+                </g>
+                <g>
+                  <path class="star" fill="transparent" d="M12,17.27L18.18,21l-1.64-7.03L22,9.24l-7.19-0.61L12,2L9.19,8.63L2,9.24l5.46,4.73L5.82,21L12,17.27z"/>
+                </g>
+              </svg>
+              <a class="btn-floating halfway-fab waves-effect waves-light white" href="#!">
+                <img class="circle responsive-img" src="https://demoapus2.com/houzing/wp-content/uploads/2021/06/agent1-300x300.jpg" alt="Seller pic">
+              </a>
+            </div>
+            <div class="card-content">
+              <h6 class="title">
+                <a class="orange-text" href="#!">Spacious old house</a>
+              </h6>
+              <address>2/114 Sunny Enclave, Kharar 131004</address>
+            </div>
+            <div class="card-action">
+              <a href="#">This is a link</a>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card hoverable">
+            <div class="card-image">
+              <img class="swiper-lazy" src="img/interior3.jpg">
+              <span class="orange badge new">For Sale</span>
+              <svg class="bookmark" xmlns="http://www.w3.org/2000/svg"  height="24" viewBox="0 0 24 24" width="24">
+                <g>
+                  <path d="M0,0h24v24H0V0z" fill="none"/>
+                  <path d="M0,0h24v24H0V0z" fill="none"/>
+                </g>
+                <g>
+                  <path class="star" fill="transparent" d="M12,17.27L18.18,21l-1.64-7.03L22,9.24l-7.19-0.61L12,2L9.19,8.63L2,9.24l5.46,4.73L5.82,21L12,17.27z"/>
+                </g>
+              </svg>
+              <a class="btn-floating halfway-fab waves-effect waves-light white" href="#!">
+                <img class="circle responsive-img" src="https://demoapus2.com/houzing/wp-content/uploads/2021/06/agent1-300x300.jpg" alt="Seller pic">
+              </a>
+            </div>
+            <div class="card-content">
+              <h6 class="title">
+                <a class="orange-text" href="#!">Spacious old house</a>
+              </h6>
+              <address>2/114 Sunny Enclave, Kharar 131004</address>
+            </div>
+            <div class="card-action">
+              <a href="#">This is a link</a>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card hoverable">
+            <div class="card-image">
+              <img class="swiper-lazy" src="img/interior1.jpg">
+              <span class="orange badge new">For Sale</span>
+              <svg class="bookmark" xmlns="http://www.w3.org/2000/svg"  height="24" viewBox="0 0 24 24" width="24">
+                <g>
+                  <path d="M0,0h24v24H0V0z" fill="none"/>
+                  <path d="M0,0h24v24H0V0z" fill="none"/>
+                </g>
+                <g>
+                  <path class="star" fill="transparent" d="M12,17.27L18.18,21l-1.64-7.03L22,9.24l-7.19-0.61L12,2L9.19,8.63L2,9.24l5.46,4.73L5.82,21L12,17.27z"/>
+                </g>
+              </svg>
+              <a class="btn-floating halfway-fab waves-effect waves-light white" href="#!">
+                <img class="circle responsive-img" src="https://demoapus2.com/houzing/wp-content/uploads/2021/06/agent1-300x300.jpg" alt="Seller pic">
+              </a>
+            </div>
+            <div class="card-content">
+              <h6 class="title">
+                <a class="orange-text" href="#!">Spacious old house</a>
+              </h6>
+              <address>2/114 Sunny Enclave, Kharar 131004</address>
+            </div>
+            <div class="card-action">
+              <a href="#">This is a link</a>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card hoverable">
+            <div class="card-image">
+              <img class="swiper-lazy" src="img/interior2.jpg">
+              <span class="orange badge new">For Sale</span>
+              <svg class="bookmark" xmlns="http://www.w3.org/2000/svg"  height="24" viewBox="0 0 24 24" width="24">
+                <g>
+                  <path d="M0,0h24v24H0V0z" fill="none"/>
+                  <path d="M0,0h24v24H0V0z" fill="none"/>
+                </g>
+                <g>
+                  <path class="star" fill="transparent" d="M12,17.27L18.18,21l-1.64-7.03L22,9.24l-7.19-0.61L12,2L9.19,8.63L2,9.24l5.46,4.73L5.82,21L12,17.27z"/>
+                </g>
+              </svg>
+              <a class="btn-floating halfway-fab waves-effect waves-light white" href="#!">
+                <img class="circle responsive-img" src="https://demoapus2.com/houzing/wp-content/uploads/2021/06/agent1-300x300.jpg" alt="Seller pic">
+              </a>
+            </div>
+            <div class="card-content">
+              <h6 class="title">
+                <a class="orange-text" href="#!">Spacious old house</a>
+              </h6>
+              <address>2/114 Sunny Enclave, Kharar 131004</address>
+            </div>
+            <div class="card-action">
+              <a href="#">This is a link</a>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card hoverable">
+            <div class="card-image">
+              <img class="swiper-lazy" src="img/interior3.jpg">
+              <span class="orange badge new">For Sale</span>
+              <svg class="bookmark" xmlns="http://www.w3.org/2000/svg"  height="24" viewBox="0 0 24 24" width="24">
+                <g>
+                  <path d="M0,0h24v24H0V0z" fill="none"/>
+                  <path d="M0,0h24v24H0V0z" fill="none"/>
+                </g>
+                <g>
+                  <path class="star" fill="transparent" d="M12,17.27L18.18,21l-1.64-7.03L22,9.24l-7.19-0.61L12,2L9.19,8.63L2,9.24l5.46,4.73L5.82,21L12,17.27z"/>
+                </g>
+              </svg>
+              <a class="btn-floating halfway-fab waves-effect waves-light white" href="#!">
+                <img class="circle responsive-img" src="https://demoapus2.com/houzing/wp-content/uploads/2021/06/agent1-300x300.jpg" alt="Seller pic">
+              </a>
+            </div>
+            <div class="card-content">
+              <h6 class="title">
+                <a class="orange-text" href="#!">Spacious old house</a>
+              </h6>
+              <address>2/114 Sunny Enclave, Kharar 131004</address>
+            </div>
+            <div class="card-action">
+              <a href="#">This is a link</a>
+            </div>
+          </div>
+        </div>
+      </div>
+     
+
+      
+       
+
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+
+
+    </div>
+  </section>
+
   <div class="footer-copyright">
     <div class="container">
       Inspired from <a class="brown-text text-lighten-3" href="https://demoapus2.com/houzing/">Wordpress theme</a>
+
     </div>
   </div>
-</footer>
 
-<!--  Scripts-->
-<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src="js/materialize.js"></script>
-<script src="js/nouislider.js"></script>
-<script src="js/init.js"></script>
+  <!--  Scripts-->
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/nouislider.js"></script>
+  <script type="module" src="js/init.js"></script>
+
 
 </body>
 </html>

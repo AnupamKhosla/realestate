@@ -1,15 +1,25 @@
+"use strict";
+// import Swiper JS
+import Swiper from '../node_modules/swiper/swiper-bundle.esm.browser.js'
+
+
 (function($){
   $(function(){
 
 
 
-    //check if hoverable device  
-    const isHoverAvailable = window.matchMedia("(any-hover: hover)").matches;
-    console.log(isHoverAvailable)
 
+
+    //check if hoverable device  
+    const isHoverAvailable = window.matchMedia("(any-hover: hover)").matches;    
 
     $('.sidenav').sidenav();
+
     $('.parallax').parallax();
+    $("#index-banner").css("min-height", ($(window).height() + "px") ); 
+    //make sure hero image doesn't flicker/jump in mobile browsers due to top url bar changing
+
+
 
     $('.tabs').tabs({      
       onShow: function(){   
@@ -109,23 +119,57 @@
 
         var this2 = this;
         this.noUiSlider.on('update', function (values, handle) {
-            
-            var marginMin = $(this2).prev(".dynamic-price").children(".min")[0];
-            var marginMax = $(this2).prev(".dynamic-price").children(".max")[0];
-            if (handle) {
-              marginMax.innerHTML = values[handle];
-            } else {
-              marginMin.innerHTML = values[handle];
-            }
-          });
+
+          var marginMin = $(this2).prev(".dynamic-price").children(".min")[0];
+          var marginMax = $(this2).prev(".dynamic-price").children(".max")[0];
+          if (handle) {
+            marginMax.innerHTML = values[handle];
+          } else {
+            marginMin.innerHTML = values[handle];
+          }
+        });
       });
 
       
-
-
-
     }();
+
+
+  //carousel using swiper plugin
+  const swiper = new Swiper('.swiper', {  
+    direction: 'horizontal',
+    loop: false,
+    slidesPerView: 1.25,
+    lazy: true,
+    spaceBetween: 15,
+    breakpoints: {
+          640: {
+            slidesPerView: 2.25,
+            spaceBetween: 25,
+          },
+          992: {
+            slidesPerView: 3.25,
+            spaceBetween: 35,
+          },
+          1200: {
+            slidesPerView: 4.25,
+            spaceBetween: 50,
+          },
+        },
+
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+      dynamicBullets: true,
+    },
+  
+  });
+
+  $(".swiper .bookmark").click(function(){
+    console.log(this);
+    $(this).toggleClass("fill");
+  });
 
 
   }); // end of document ready
 })(jQuery); // end of jQuery name space
+
