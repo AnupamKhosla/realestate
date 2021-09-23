@@ -135,38 +135,47 @@ import Swiper from '../js/swiper-bundle.esm.browser.js'
 
 
   //carousel using swiper plugin
-  const swiper = new Swiper('.swiper', {  
+  const swiper = new Swiper('.outer-swiper', {  
     direction: 'horizontal',
     loop: false,
-    slidesPerView: 1.25,
+    slidesPerView: 1.1,
     lazy: true,
     spaceBetween: 15,
     breakpoints: {
-          640: {
-            slidesPerView: 2.25,
-            spaceBetween: 25,
-          },
-          992: {
-            slidesPerView: 3.25,
-            spaceBetween: 35,
-          },
-          1200: {
-            slidesPerView: 4.25,
-            spaceBetween: 50,
-          },
-        },
+      601: {
+        slidesPerView: 2.1,
+        spaceBetween: 15,
+      },
+      993: {
+        slidesPerView: 3.1,
+        spaceBetween: 25,
+      },
+      1201: {
+        slidesPerView: 4.1,
+        spaceBetween: 35,
+      },
+
+    },
 
     // If we need pagination
     pagination: {
       el: '.swiper-pagination',
       dynamicBullets: true,
     },
-  
+
   });
 
   $(".swiper .bookmark").click(function(){
     console.log(this);
     $(this).toggleClass("fill");
+  });
+
+  var nestedSwiper = new Swiper(".nested-swiper", {
+    allowTouchMove: false,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
   });
 
 
