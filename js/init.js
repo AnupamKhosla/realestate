@@ -16,7 +16,7 @@ import Swiper from '../js/swiper-bundle.esm.browser.js'
     $('.sidenav').sidenav();
 
     $('.parallax').parallax();
-    $("#index-banner").css("min-height", ($(window).height() + "px") ); 
+    //$("#index-banner").css("min-height", ($(window).height() + "px") ); 
     //make sure hero image doesn't flicker/jump in mobile browsers due to top url bar changing
 
 

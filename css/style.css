@@ -530,8 +530,7 @@ nav .dropdown-content li > a:focus {
   color: #26a69a;
 }
 
-.parallax-container {
-  height: auto;
+.parallax-container {  
   min-height: 100%;  
   top: -64px;
   margin-bottom: -64px;
