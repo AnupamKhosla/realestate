@@ -170,8 +170,12 @@ import Swiper from '../js/swiper-bundle.esm.browser.js'
     $(this).toggleClass("fill");
   });
 
-  var nestedSwiper = new Swiper(".nested-swiper", {
+  const nestedSwiper = new Swiper(".nested-swiper", {
     allowTouchMove: false,
+    lazy: {
+      elementClass: "nested-lazy"
+    },
+    loop: false,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -179,7 +183,60 @@ import Swiper from '../js/swiper-bundle.esm.browser.js'
   });
 
 
-   
+  const propSwiper = new Swiper(".explore .swiper", {
+
+    loop: false,
+    slidesPerView: 1,
+    lazy: true,
+    spaceBetween: 15,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      601: {
+        slidesPerView: 2,        
+      },
+      993: {
+        slidesPerView: 3,        
+      },
+      1201: {
+        slidesPerView: 5,        
+      },
+    }
+  });
+
+
+  /*
+  !function(){
+
+    var phone = ($(window).innerWidth() < 601);
+
+    const cardSwiper = new Swiper(".card-swiper", {
+
+    effect: phone ? "cards":"slide", 
+    //on small screens use playing cards behaviour
+
+    grabCursor: true,
+    slidesPerView: 1,
+    spaceBetween: 15,
+    breakpoints: {
+      601: {
+        slidesPerView: phone ? 1:2.1,
+      },
+      768: {
+        slidesPerView: phone ? 1:3.1,
+      },
+      993: {
+        slidesPerView: phone ? 1:4.1,
+      },
+      1201: {
+        slidesPerView: phone ? 1:5,
+      },
+    }
+  });
+  }();
+  */
 
 
   }); // end of document ready

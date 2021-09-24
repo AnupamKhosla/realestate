@@ -635,14 +635,16 @@ nav .dropdown-content li > a:focus {
 /* sponser section */
 
 .sponser {
-  padding: 20px 0;
+  padding: 20px 20px 50px;
 }
 
-.sponser > h3 {
+
+
+section > h3 {
   font-size: 2rem;
 }
 
-.sponser > h4 {
+section > h4 {
   font-size: 1.25rem;
 }
 
@@ -817,6 +819,42 @@ nav .dropdown-content li > a:focus {
   background-color: #ff9800;
 }
 
+.explore {
+  background-color: #f6f8f9;
+  padding: 30px 0 0;
+}
+
+.explore .container-fixed {
+  padding: 0 15px;
+}
+
+.explore .swiper {
+  padding: 20px 5px 40px;
+}
+
+.explore .swiper .swiper-slide {
+  width: calc(20% - 12px);
+  margin-right: 15px;
+}
+
+.explore .card-image .activator {
+  height: 250px;
+  object-fit: cover;
+}
+
+.explore .swiper-button-prev,
+.explore .swiper-button-next {
+  width: 50px;
+  background: white;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+}
+
+.explore .swiper-button-prev:after,
+.explore .swiper-button-next:after {
+  content: "";
+}
 
 
 
@@ -847,6 +885,11 @@ nav .dropdown-content li > a:focus {
   }
 }
 @media only screen and (min-width: 1201px) {
+
+  .container-fixed {
+
+  }
+
   .btn {
     padding: 0 15px;
   }
@@ -854,7 +897,10 @@ nav .dropdown-content li > a:focus {
     width: 90%;
   }
   .swiper {
-    padding: 20px 35px 40px;
+    padding: 20px 35px 40px 20px;
+  }
+  .sponser .outer-swiper {    
+    margin-left: -20px;
   }
   .swiper .swiper-slide {
     width: calc(24.39% - 26.45px);   
@@ -892,14 +938,22 @@ nav .dropdown-content li > a:focus {
     font-size: 1.75rem;
   }
 
-  .sponser > h3 {
+  .sponser {
+    padding: 20px 0 30px;
+  }
+
+  section > h3 {
     font-size: 1.5rem;
     margin: 1rem 0 1rem 0;
   }
 
-  .sponser > h4 {
+  section > h4 {
     font-size: 1.125rem;
     margin: 1rem 0 0.5rem 0;
+  }
+
+  .explore {  
+    padding: 30px 5px 0;
   }
 
 }
@@ -946,6 +1000,10 @@ nav .dropdown-content li > a:focus {
     max-width: 280px;    
   }
 
+  .explore {  
+    padding: 30px 0 0;
+  }
+
 }
 
 @media only screen and (max-width : 600.8px) {
@@ -966,12 +1024,16 @@ nav .dropdown-content li > a:focus {
     margin-top: 30px;
   }
 
-  .sponser > h3 {
+  .sponser {
+    padding: 20px 0 15px;
+  }
+
+  section > h3 {
     font-size: 1.5rem;
     margin: 0 0 0.8125rem 0;
   }
 
-  .sponser > h4 {
+  section > h4 {
     font-size: 1rem;
     margin: 0.8125rem 0 0 0;
   }
