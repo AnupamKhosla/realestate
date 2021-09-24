@@ -179,12 +179,7 @@ import Swiper from '../js/swiper-bundle.esm.browser.js'
   });
 
 
-   $( "body" ).append( "<div id='#test' style='position:fixed; top: 30px; left: 20px; background: white;'>Handler for .scroll() called.</div>" );
-  $(window).scroll(function() {    
-    setTimeout(function(){
-      $(document.getElementById("#test")).html($("html").height());
-    }, 1000);
-  });
+   
 
 
   }); // end of document ready

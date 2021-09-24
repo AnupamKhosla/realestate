@@ -534,7 +534,7 @@ nav .dropdown-content li > a:focus {
   min-height: 100vh;  
   top: -64px;
   margin-bottom: -64px;
-  
+  height: auto;
 }
 .parallax-container .section {
   width: 100%;
@@ -820,6 +820,13 @@ nav .dropdown-content li > a:focus {
 
 
 
+@media (hover:none) {
+  /*This will target only android/sfari phone/ipad browsers*/
+  .parallax-container {
+    min-height: calc(100vh - 50px);
+  }
+}
+
 
 @media only screen and (min-width: 601px) {
   .swiper .swiper-slide {
@@ -947,6 +954,10 @@ nav .dropdown-content li > a:focus {
     width: 100%;
   }
 
+  #form1 .empty {
+    flex-basis: 105px;
+  }
+
   #form1 .empty.last {
     flex-basis: 30px;
   }
@@ -966,7 +977,7 @@ nav .dropdown-content li > a:focus {
   }
 
   .swiper {
-    padding: 10px 15px 40px;
+    padding: 10px 15px 20px;
   }
 
 }
