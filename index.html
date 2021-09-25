@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>AK Homes - Property dealers</title>
 
   <!-- CSS  -->
+
+  
 
   <link rel="icon" type="image/png" href="favicon.svg"/>  
 
@@ -665,16 +667,16 @@
         <h4 class="center hide-on-small-only">We provide the biggest varierty in Chandigarh</h4>
 
         <ul class="tabs transparent text-white d-flex justify-content-center">
-          <li class="tab"><a class="btn-rounded" href="#tab_form1">Buy</a></li>
-          <li class="tab"><a class="active btn-rounded" href="#tab_form2">Rent</a></li>
-          <li class="tab"><a class="btn-rounded" href="#tab_form3">Sell</a></li>
+          <li class="tab"><a class="btn-rounded" data-href="#tab_form1">Buy</a></li>
+          <li class="tab"><a class="active btn-rounded"  data-href="#tab_form2">Rent</a></li>
+          <li class="tab"><a class="btn-rounded" data-href="#tab_form3">Sell</a></li>
         </ul>
         <div id="tab_form1" class="hide2 card hoverable btn-rounded">
           <form class="card-content btn-rounded">
             <div class="row d-flex flex-wrap justify-content-center">
               <div class="input-field col s12 l3">
                 <input id="icon_prefix" value="Mohali" type="text" class="validate">
-                <label for="icon_prefix">Location</label>
+                <label class="active" for="icon_prefix">Location</label>
               </div>                    
               <div class="input-field col s12 l3">
                 <select multiple class="icons">                        
@@ -685,7 +687,7 @@
                 </select>
                 <label>Property type</label>
               </div>
-              <div class="input-field col s12 l3 black-text">
+              <div class="input-field col s12 l3 black-text ranger">
                 <label class="price">Price Range</label>
                 <div class="dynamic-price left">
                   ₹<span class="example-val min" id="slider-margin-value-min"></span>L -
@@ -704,7 +706,7 @@
             <div class="row d-flex flex-wrap justify-content-center">
               <div class="input-field col s12 l3">
                 <input id="icon_prefix" value="Mohali" type="text" class="validate">
-                <label for="icon_prefix">Location</label>
+                <label class="active" for="icon_prefix">Location</label>
               </div>                    
               <div class="input-field col s12 l3">
                 <select multiple class="icons">                        
@@ -715,7 +717,7 @@
                 </select>
                 <label>Property type</label>
               </div>
-              <div class="input-field col s12 l3 black-text">
+              <div class="input-field col s12 l3 black-text ranger">
                 <label class="price">Price Range</label>
                 <div class="dynamic-price left">
                   ₹<span class="example-val min" id="slider-margin-value-min2"></span>k -
@@ -734,7 +736,7 @@
             <div class="row d-flex flex-wrap justify-content-center">
               <div class="input-field col s12 l3">
                 <input id="icon_prefix" value="Mohali" type="text" class="validate">
-                <label for="icon_prefix">Location</label>
+                <label class="active" for="icon_prefix">Location</label>
               </div>                    
               <div class="input-field col s12 l3">
                 <select multiple class="icons">                        
@@ -745,7 +747,7 @@
                 </select>
                 <label>Property type</label>
               </div>
-              <div class="input-field col s12 l3 black-text">
+              <div class="input-field col s12 l3 black-text ranger">
                 <label class="price">Price Range</label>
                 <div class="dynamic-price left">
                   ₹<span class="example-val min" id="slider-margin-value-min3"></span>L -
@@ -862,19 +864,19 @@
               <div class="swiper nested-swiper">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
-                    <img class="card-pic swiper-lazy" src="img/interior3.jpg">
+                    <img class="card-pic swiper-lazy" data-src="img/interior3.jpg">
                   </div>
                   <div class="swiper-slide">
-                    <img class="card-pic nested-lazy" src="img/interior1.jpg">
+                    <img class="card-pic nested-lazy" data-src="img/interior1.jpg">
                   </div>
                   <div class="swiper-slide">
-                    <img class="card-pic nested-lazy" src="img/interior2.jpg">
+                    <img class="card-pic nested-lazy" data-src="img/interior2.jpg">
                   </div>
                   <div class="swiper-slide">
-                    <img class="card-pic nested-lazy" src="img/interior1.jpg">
+                    <img class="card-pic nested-lazy" data-src="img/interior1.jpg">
                   </div>
                   <div class="swiper-slide">
-                    <img class="card-pic nested-lazy" src="img/interior2.jpg">
+                    <img class="card-pic nested-lazy" data-src="img/interior2.jpg">
                   </div>                  
                 </div>
                 <div class="swiper-button-next orange-text"></div>
@@ -947,19 +949,19 @@
               <div class="swiper nested-swiper">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
-                    <img class="card-pic swiper-lazy" src="img/interior1.jpg">
+                    <img class="card-pic swiper-lazy" data-src="img/interior1.jpg">
                   </div>
                   <div class="swiper-slide">
-                    <img class="card-pic nested-lazy" src="img/interior2.jpg">
+                    <img class="card-pic nested-lazy" data-src="img/interior2.jpg">
                   </div>
                   <div class="swiper-slide">
-                    <img class="card-pic nested-lazy" src="img/interior3.jpg">
+                    <img class="card-pic nested-lazy" data-src="img/interior3.jpg">
                   </div>
                   <div class="swiper-slide">
-                    <img class="card-pic nested-lazy" src="img/interior1.jpg">
+                    <img class="card-pic nested-lazy" data-src="img/interior1.jpg">
                   </div>
                   <div class="swiper-slide">
-                    <img class="card-pic nested-lazy" src="img/interior2.jpg">
+                    <img class="card-pic nested-lazy" data-src="img/interior2.jpg">
                   </div>                  
                 </div>
                 <div class="swiper-button-next orange-text"></div>
@@ -1032,19 +1034,19 @@
               <div class="swiper nested-swiper">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
-                    <img class="card-pic swiper-lazy" src="img/interior3.jpg">
+                    <img class="card-pic swiper-lazy" data-src="img/interior3.jpg">
                   </div>
                   <div class="swiper-slide">
-                    <img class="card-pic nested-lazy" src="img/interior1.jpg">
+                    <img class="card-pic nested-lazy" data-src="img/interior1.jpg">
                   </div>
                   <div class="swiper-slide">
-                    <img class="card-pic nested-lazy" src="img/interior2.jpg">
+                    <img class="card-pic nested-lazy" data-src="img/interior2.jpg">
                   </div>
                   <div class="swiper-slide">
-                    <img class="card-pic nested-lazy" src="img/interior1.jpg">
+                    <img class="card-pic nested-lazy" data-src="img/interior1.jpg">
                   </div>
                   <div class="swiper-slide">
-                    <img class="card-pic nested-lazy" src="img/interior2.jpg">
+                    <img class="card-pic nested-lazy" data-src="img/interior2.jpg">
                   </div>                  
                 </div>
                 <div class="swiper-button-next orange-text"></div>
@@ -1118,19 +1120,19 @@
               <div class="swiper nested-swiper">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
-                    <img class="card-pic swiper-lazy" src="img/interior1.jpg">
+                    <img class="card-pic swiper-lazy" data-src="img/interior1.jpg">
                   </div>
                   <div class="swiper-slide">
-                    <img class="card-pic nested-lazy" src="img/interior2.jpg">
+                    <img class="card-pic nested-lazy" data-src="img/interior2.jpg">
                   </div>
                   <div class="swiper-slide">
-                    <img class="card-pic nested-lazy" src="img/interior3.jpg">
+                    <img class="card-pic nested-lazy" data-src="img/interior3.jpg">
                   </div>
                   <div class="swiper-slide">
-                    <img class="card-pic nested-lazy" src="img/interior1.jpg">
+                    <img class="card-pic nested-lazy" data-src="img/interior1.jpg">
                   </div>
                   <div class="swiper-slide">
-                    <img class="card-pic nested-lazy" src="img/interior2.jpg">
+                    <img class="card-pic nested-lazy" data-src="img/interior2.jpg">
                   </div>                  
                 </div>
                 <div class="swiper-button-next orange-text"></div>
@@ -1203,19 +1205,19 @@
               <div class="swiper nested-swiper">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
-                    <img class="card-pic swiper-lazy" src="img/interior3.jpg">
+                    <img class="card-pic swiper-lazy" data-src="img/interior3.jpg">
                   </div>
                   <div class="swiper-slide">
-                    <img class="card-pic nested-lazy" src="img/interior1.jpg">
+                    <img class="card-pic nested-lazy" data-src="img/interior1.jpg">
                   </div>
                   <div class="swiper-slide">
-                    <img class="card-pic nested-lazy" src="img/interior2.jpg">
+                    <img class="card-pic nested-lazy" data-src="img/interior2.jpg">
                   </div>
                   <div class="swiper-slide">
-                    <img class="card-pic nested-lazy" src="img/interior1.jpg">
+                    <img class="card-pic nested-lazy" data-src="img/interior1.jpg">
                   </div>
                   <div class="swiper-slide">
-                    <img class="card-pic nested-lazy" src="img/interior2.jpg">
+                    <img class="card-pic nested-lazy" data-src="img/interior2.jpg">
                   </div>                  
                 </div>
                 <div class="swiper-button-next orange-text"></div>
@@ -1288,19 +1290,19 @@
               <div class="swiper nested-swiper">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
-                    <img class="card-pic swiper-lazy" src="img/interior1.jpg">
+                    <img class="card-pic swiper-lazy" data-src="img/interior1.jpg">
                   </div>
                   <div class="swiper-slide">
-                    <img class="card-pic nested-lazy" src="img/interior2.jpg">
+                    <img class="card-pic nested-lazy" data-src="img/interior2.jpg">
                   </div>
                   <div class="swiper-slide">
-                    <img class="card-pic nested-lazy" src="img/interior3.jpg">
+                    <img class="card-pic nested-lazy" data-src="img/interior3.jpg">
                   </div>
                   <div class="swiper-slide">
-                    <img class="card-pic nested-lazy" src="img/interior1.jpg">
+                    <img class="card-pic nested-lazy" data-src="img/interior1.jpg">
                   </div>
                   <div class="swiper-slide">
-                    <img class="card-pic nested-lazy" src="img/interior2.jpg">
+                    <img class="card-pic nested-lazy" data-src="img/interior2.jpg">
                   </div>                  
                 </div>
                 <div class="swiper-button-next orange-text"></div>
@@ -1373,19 +1375,19 @@
               <div class="swiper nested-swiper">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
-                    <img class="card-pic swiper-lazy" src="img/interior3.jpg">
+                    <img class="card-pic swiper-lazy" data-src="img/interior3.jpg">
                   </div>
                   <div class="swiper-slide">
-                    <img class="card-pic swiper-lazy" src="img/interior1.jpg">
+                    <img class="card-pic nested-lazy" data-src="img/interior1.jpg">
                   </div>
                   <div class="swiper-slide">
-                    <img class="card-pic swiper-lazy" src="img/interior2.jpg">
+                    <img class="card-pic nested-lazy" data-src="img/interior2.jpg">
                   </div>
                   <div class="swiper-slide">
-                    <img class="card-pic swiper-lazy" src="img/interior1.jpg">
+                    <img class="card-pic nested-lazy" data-src="img/interior1.jpg">
                   </div>
                   <div class="swiper-slide">
-                    <img class="card-pic swiper-lazy" src="img/interior2.jpg">
+                    <img class="card-pic nested-lazy" data-src="img/interior2.jpg">
                   </div>                  
                 </div>
                 <div class="swiper-button-next orange-text"></div>
@@ -1473,91 +1475,122 @@
       <div class="swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <div class="card z-depth-0">
-              <div class="card-image waves-effect waves-block waves-light">
+            <div class="card">
+              <div class="card-image">
                 <img class="activator" src="img/house_p.jpg">
               </div>
-              <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-                <p><a href="#">This is a link</a></p>
+              <div class="card-content d-flex white-text">  
+                <a href="#!">
+                  <img class="icon" alt="house pic" src="img/house.png">
+                </a>
+                <span>House</span>
+                <i class="material-icons-outlined ml-auto toggle">more_vert</i>
               </div>
-              <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-                <p>Here is some more information about this product that is only revealed once clicked on.</p>
+              <div class="card-reveal2 blue white-text d-flex align-content-bottom flex-wrap">                
+
+                <p class="center">Explore all the available Houses on rent/sale.</p>
+                <a href="#!" class="btn btn-small white black-text mx-auto">See All</a>
+                
               </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="card z-depth-0">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator" src="img/house_p.jpg">
-              </div>
-              <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-                <p><a href="#">This is a link</a></p>
-              </div>
-              <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-                <p>Here is some more information about this product that is only revealed once clicked on.</p>
-              </div>
+              <div class="empty-spacer blue"></div>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="card">
-              <div class="card-image waves-effect waves-block waves-light">
+              <div class="card-image">
                 <img class="activator" src="img/house_p.jpg">
               </div>
-              <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-                <p><a href="#">This is a link</a></p>
+              <div class="card-content d-flex white-text">  
+                <a href="#!">
+                  <img class="icon" alt="house pic" src="img/house.png">
+                </a>
+                <span>House</span>
+                <i class="material-icons-outlined ml-auto toggle">more_vert</i>
               </div>
-              <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-                <p>Here is some more information about this product that is only revealed once clicked on.</p>
+              <div class="card-reveal2 blue white-text d-flex align-content-bottom flex-wrap">                
+
+                <p class="center">Explore all the available Houses on rent/sale.</p>
+                <a href="#!" class="btn btn-small white black-text mx-auto">See All</a>
+                
               </div>
+              <div class="empty-spacer blue"></div>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="card">
-              <div class="card-image waves-effect waves-block waves-light">
+              <div class="card-image">
                 <img class="activator" src="img/house_p.jpg">
               </div>
-              <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-                <p><a href="#">This is a link</a></p>
+              <div class="card-content d-flex white-text">  
+                <a href="#!">
+                  <img class="icon" alt="house pic" src="img/house.png">
+                </a>
+                <span>House</span>
+                <i class="material-icons-outlined ml-auto toggle">more_vert</i>
               </div>
-              <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-                <p>Here is some more information about this product that is only revealed once clicked on.</p>
+              <div class="card-reveal2 blue white-text d-flex align-content-bottom flex-wrap">                
+
+                <p class="center">Explore all the available Houses on rent/sale.</p>
+                <a href="#!" class="btn btn-small white black-text mx-auto">See All</a>
+                
               </div>
+              <div class="empty-spacer blue"></div>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="card">
-              <div class="card-image waves-effect waves-block waves-light">
+              <div class="card-image">
                 <img class="activator" src="img/house_p.jpg">
               </div>
-              <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-                <p><a href="#">This is a link</a></p>
+              <div class="card-content d-flex white-text">  
+                <a href="#!">
+                  <img class="icon" alt="house pic" src="img/house.png">
+                </a>
+                <span>House</span>
+                <i class="material-icons-outlined ml-auto toggle">more_vert</i>
               </div>
-              <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-                <p>Here is some more information about this product that is only revealed once clicked on.</p>
+              <div class="card-reveal2 blue white-text d-flex align-content-bottom flex-wrap">                
+
+                <p class="center">Explore all the available Houses on rent/sale.</p>
+                <a href="#!" class="btn btn-small white black-text mx-auto">See All</a>
+                
               </div>
+              <div class="empty-spacer blue"></div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <div class="card-image">
+                <img class="activator" src="img/house_p.jpg">
+              </div>
+              <div class="card-content d-flex white-text">  
+                <a href="#!">
+                  <img class="icon" alt="house pic" src="img/house.png">
+                </a>
+                <span>House</span>
+                <i class="material-icons-outlined ml-auto toggle">more_vert</i>
+              </div>
+              <div class="card-reveal2 blue white-text d-flex align-content-bottom flex-wrap">                
+
+                <p class="center">Explore all the available Houses on rent/sale.</p>
+                <a href="#!" class="btn btn-small white black-text mx-auto">See All</a>
+                
+              </div>
+              <div class="empty-spacer blue"></div>
             </div>
           </div>
         </div>
-        <div class="swiper-button-next orange-text">
-          <span class="material-icons-outlined">
-            arrow_forward
-          </span>
-        </div>
-        <div class="swiper-button-prev orange-text">
-          <span class="material-icons-outlined">
-            arrow_back
-          </span>
-        </div>
+        
+      </div>
+      <div class="swiper-button-next orange-text z-depth-1">
+        <span class="material-icons-outlined">
+          arrow_forward
+        </span>
+      </div>
+      <div class="swiper-button-prev orange-text z-depth-1">
+        <span class="material-icons-outlined">
+          arrow_back
+        </span>
       </div>
     </div>
   </section>
@@ -1575,6 +1608,7 @@
   crossorigin="anonymous"></script>
   <script src="js/materialize.js"></script>
   <script src="js/nouislider.js"></script>
+
   <script type="module" src="js/init.js"></script>
 
 

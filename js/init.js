@@ -8,20 +8,27 @@ import Swiper from '../js/swiper-bundle.esm.browser.js'
 
 
 
+    $("html").removeClass("no-js");
+    // chrome bug https://stackoverflow.com/a/42969608/3429430
 
+    $("a[data-href]").each(function(){
+      $(this).attr("href", $(this).attr("data-href"));
+    });
+    //avoiding unintentional anchor tag clicks before tabs are activated
 
     //check if hoverable device  
     const isHoverAvailable = window.matchMedia("(any-hover: hover)").matches;    
+    //detects mobile/tablet android/safari browsers
+
 
     $('.sidenav').sidenav();
-
     $('.parallax').parallax();
     //$("#index-banner").css("min-height", ($(window).height() + "px") ); 
     //make sure hero image doesn't flicker/jump in mobile browsers due to top url bar changing
 
 
 
-    $('.tabs').tabs({      
+    $('nav .tabs').tabs({      
       onShow: function(){   
         $(this.$el).closest(".dropdown-content").addClass("o-y-hidden");
         var this2 = this.$el;
@@ -32,6 +39,8 @@ import Swiper from '../js/swiper-bundle.esm.browser.js'
       }      
     });
 
+
+    $("#form1 .tabs").tabs();
     $("#form1 .tab a").click(function(){
       $(this).blur();      
     });
@@ -204,6 +213,10 @@ import Swiper from '../js/swiper-bundle.esm.browser.js'
         slidesPerView: 5,        
       },
     }
+  });
+
+  $(".explore .toggle").click(function(){
+    $(this).closest(".card").toggleClass("open");
   });
 
 
