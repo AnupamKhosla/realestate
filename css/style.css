@@ -2,127 +2,6 @@
 
 
 
-/*Genric  utility classes starts*/
-.btn {
-  padding: 0 12px;
-}
-
-.btn-rounded {
-  border-radius: 50em;
-}
-.container-fixed {
-  max-width: 1600px;
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-.d-flex {
-  display: flex;
-}
-
-.flex-wrap {
-  flex-wrap: wrap;
-}
-
-.flex-column {
-  flex-direction: column;
-}
-
-.flow-root {
-  display: flow-root;
-}
-
-.hide2 {
-  display: none; 
-}
-
-.justify-content-center {
-  justify-content: center;
-}
-
-.justify-content-left {
-  justify-content: flex-start;
-}
-
-.justify-content-evenly {
-  justify-content: space-evenly;
-}
-
-.justify-space-between {
-  justify-content: space-between;
-}
-
-.align-content-bottom {
-  align-content: flex-end;
-}
-
-.align-items-center {
-  align-items: center;
-}
-
-.mb-0 {
-  margin-bottom: 0;
-}
-
-.ml-auto {
-  margin-left: auto;
-}
-
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.my-0 {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.no-wrap {
-  white-space: nowrap;
-}
-
-.px-15 {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.truncated {
-  text-overflow: ellipsis;
-  overflow-x: hidden;
-  white-space: nowrap;
-  display: block;
-  width: 100%;
-}
-
-.truncated-2lines {
- display: -webkit-box;
- -webkit-box-orient: vertical;
- -webkit-line-clamp: 2;
- overflow-y: hidden;
-}
-
-.w-auto {
-  width: auto;
-}
-
-.o-y-hidden {
-  overflow-y: hidden;
-}
-
-.o-focus-none:focus {
-  outline: 0;
-}
-
-.w-50 {
-  width: 50%;
-}
-
-/*Genric utility classe end*/
-
-
-
 /*global rules start */
 html, body {
   height: 100vh;
@@ -536,13 +415,23 @@ nav .dropdown-content li > a:focus {
 }
 
 .dropdown-trigger.open {
-  outline: none; /*material css dropdown_on_hover_outline bug fix https://github.com/Dogfalo/materialize/issues/6656#issue-995096091*/
+  outline: none; 
+  /*material css dropdown_on_hover_outline bug fix https://github.com/Dogfalo/materialize/issues/6656#issue-995096091*/
 }
-
 
 .sidenav-trigger {
   color: #26a69a;
 }
+/* Navigation area finishes */
+
+
+
+
+
+
+
+
+
 
 .parallax-container {  
   min-height: 100vh;  
@@ -627,13 +516,17 @@ nav .dropdown-content li > a:focus {
   border-radius: 100em;
 }
 
-#form1 .card-content .input-field {
+#form1 .card-content .input-field:not(.center) {
   min-height: 57px;
 }
 
 #form1 .input-field > input {
   position: relative;
   z-index: 1;
+}
+
+#form1 .multiple-select-dropdown {
+  min-width: 213px;
 }
 
 
@@ -659,26 +552,36 @@ nav .dropdown-content li > a:focus {
   margin-top: -0px;
   width: 100%;
 }
+/* Hero area finishes */
 
 
-/* sponser section */
 
+
+
+
+
+
+
+
+
+
+/* Feature sponser section starts */
 .sponser {
   padding: 20px 20px 50px;
 }
 
-
-
 section > h3 {
   font-size: 2rem;
+  margin-bottom: 0;
 }
 
 section > h4 {
   font-size: 1.25rem;
+  margin-top: 0.75rem;
 }
 
 .swiper {
-  padding: 20px 15px 40px;  
+  padding: 20px 25px 40px;  
 }
 
 .swiper .swiper-slide {
@@ -848,9 +751,17 @@ section > h4 {
   background-color: #ff9800;
 }
 
+/*Feature slider section finishes*/
+
+
+
+
+
+
+
 .explore {
   background-color: #f6f8f9;
-  padding: 30px 0 0;
+  padding: 20px 0 35px;
 }
 
 .explore .container-fixed {
@@ -890,6 +801,9 @@ section > h4 {
   z-index: 2;
   align-items: flex-end;
   padding: 13px 16px;
+  text-transform: uppercase;
+  font-size: 0.875rem; 
+  font-weight: 500;
 }
 
 .explore .card .empty-spacer {
@@ -903,15 +817,24 @@ section > h4 {
 
 .explore .icon {
   filter: invert(1);
-  margin-bottom: -9px;
+  margin-bottom: -5px;
   margin-right: 15px;  
   height: 50px;
-  width: auto;
+  width: auto;  
+}
+
+.explore a {
+  color: white;
+}
+
+.explore .icon.first {
+  margin-bottom: -10px;
 }
 
 .explore .toggle {
   cursor: pointer;
   transition: transform .3s ease;
+  width: 24px;
 }
 
 .explore .card-reveal2 {  
@@ -976,8 +899,71 @@ section > h4 {
 .explore .swiper-button-next:after {
   content: "";
 }
+/*Explore slider finishes*/
 
 
+
+
+
+
+
+/*Week's top property area starts*/
+.week .parallax-container {
+  min-height: 0;
+  height: 600px;
+  top: 0;
+  margin-bottom: 0;
+}
+
+.week .btn-rounded {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.week .eye-container {
+  border: 2px solid #fff;
+  background-color: rgba(1,1,1,0.35);
+  box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
+  cursor: unset;
+  color: #fff;
+  margin-right: 5px;
+}
+
+.week .eye {
+  margin-right: 10px;
+}
+
+.week .details {
+  margin-left: 5px;
+}
+
+.week h3 {
+  margin: 0;
+}
+
+.week h4 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+/*Week section finishes*/
+
+
+
+
+
+/*nearby section starts*/
+.nearby .bookmark .star {
+  stroke: #2196f3;
+}
+
+.nearby .fill .star {
+  fill: #2196f3;
+}
+
+.nearby .swiper-pagination-bullet-active {
+ background-color: #2196f3;
+}
 
 @media (hover:none) {
   /*This will target only android/sfari phone/ipad browsers*/
@@ -1068,16 +1054,16 @@ section > h4 {
 
   section > h3 {
     font-size: 1.5rem;
-    margin: 1rem 0 1rem 0;
+    margin: 1rem 0 0rem 0;
   }
 
   section > h4 {
     font-size: 1.125rem;
-    margin: 1rem 0 0.5rem 0;
+    margin: 0.5rem 0 0.5rem 0;
   }
 
   .explore {  
-    padding: 30px 5px;
+    padding: 20px 5px 20px;
   }
 
   .explore .swiper .swiper-slide {
@@ -1089,6 +1075,7 @@ section > h4 {
   }
 }
 @media only screen and (max-width: 992.8px) {
+
   .nav-wrapper {
     width: 100%;
     padding: 0;
@@ -1131,14 +1118,9 @@ section > h4 {
     max-width: 280px;    
   }
 
-
   #form1 .card-content .input-field.ranger {
     min-height: 46px;
-  }
-
-  .explore {  
-    padding: 30px 0 0;
-  }
+  }  
 
   .explore .swiper .swiper-slide {
     width: calc(50% - 7.5px);
@@ -1150,6 +1132,15 @@ section > h4 {
 
   .explore .swiper-button-prev {
     left: 5px;
+  }
+
+  .week h3 {
+    font-size: 2rem;
+  }
+
+  .week h4 {
+    font-size: 1.25rem;
+    margin-top: 5px;
   }
 
 }
@@ -1173,21 +1164,29 @@ section > h4 {
   }
 
   .sponser {
-    padding: 20px 0 15px;
+    padding: 30px 0 25px;
   }
 
   section > h3 {
     font-size: 1.5rem;
-    margin: 0 0 0.8125rem 0;
+    margin: 0;
   }
 
   section > h4 {
     font-size: 1rem;
-    margin: 0.8125rem 0 0 0;
+    margin: 0.5rem 0 0 0;
   }
 
   .swiper {
     padding: 10px 15px 20px;
+  }
+
+  .explore {
+    padding: 30px 0px 15px;
+  }
+
+  .explore .container-fixed {
+    padding: 0 10px;
   }
 
   .explore .swiper .swiper-slide {
@@ -1209,6 +1208,176 @@ section > h4 {
     font-size: 18px;
   }
 
+  .week .parallax-container {
+    height: 450px;
+  }
+
+  .week .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .week h3 {
+    font-size: 1.5rem;
+  }
+
+  .week h4 {
+    font-size: 1rem;
+  }  
+
+  .week .eye-container {
+    margin: 0 0 0 0;
+    min-width: 220px;
+  }
+
+  .week .details {
+    margin: 10px 0 0 0;
+    min-width: 220px
+  }
+
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Genric  utility classes starts*/
+/*These ,ust come at last, so as to override other styles*/
+.btn {
+  padding: 0 12px;
+}
+
+.btn-rounded {
+  border-radius: 50em;
+  padding: 0 25px;
+}
+.container-fixed {
+  max-width: 1600px;
+  margin-right: auto;
+  margin-left: auto;  
+}
+.d-flex {
+  display: flex;
+}
+
+.d-inline-flex {
+  display: inline-flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flow-root {
+  display: flow-root;
+}
+
+.hide2 {
+  display: none; 
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-left {
+  justify-content: flex-start;
+}
+
+.justify-content-evenly {
+  justify-content: space-evenly;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
+
+.align-content-bottom {
+  align-content: flex-end;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.my-0 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+.px-15 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.truncated {
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+  white-space: nowrap;
+  display: block;
+  width: 100%;
+}
+
+.truncated-2lines {
+ display: -webkit-box;
+ -webkit-box-orient: vertical;
+ -webkit-line-clamp: 2;
+ overflow-y: hidden;
+}
+
+.w-auto {
+  width: auto;
+}
+
+.o-y-hidden {
+  overflow-y: hidden;
+}
+
+.o-focus-none:focus {
+  outline: 0;
+}
+
+.w-24p {
+  width: 24px;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+/*Genric utility classe end*/
 

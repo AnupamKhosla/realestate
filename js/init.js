@@ -23,8 +23,7 @@ import Swiper from '../js/swiper-bundle.esm.browser.js'
 
     $('.sidenav').sidenav();
     $('.parallax').parallax();
-    //$("#index-banner").css("min-height", ($(window).height() + "px") ); 
-    //make sure hero image doesn't flicker/jump in mobile browsers due to top url bar changing
+    
 
 
 
@@ -66,7 +65,10 @@ import Swiper from '../js/swiper-bundle.esm.browser.js'
     // dropdown finishes
 
 
-    $('select').formSelect();
+    $('select').formSelect({
+      dropdownOptions: {
+      }
+    });
 
     !function(){ //module for range slider
 
@@ -192,6 +194,9 @@ import Swiper from '../js/swiper-bundle.esm.browser.js'
   });
 
 
+  $(".swiper-button-next.two, .swiper-button-prev.two").removeClass("hide2");
+  //making sure user doesn't keep clicking before js loads on slow connections
+
   const propSwiper = new Swiper(".explore .swiper", {
 
     loop: false,
@@ -199,8 +204,8 @@ import Swiper from '../js/swiper-bundle.esm.browser.js'
     lazy: true,
     spaceBetween: 15,
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".swiper-button-next.two",
+      prevEl: ".swiper-button-prev.two",
     },
     breakpoints: {
       601: {
