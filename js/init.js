@@ -1,12 +1,9 @@
 "use strict";
 // import Swiper JS
-import Swiper from '../js/swiper-bundle.esm.browser.js'
-
+import Swiper from   '../js/swiper-bundle.esm.browser.js'
 
 (function($){
   $(function(){
-
-
 
     $("html").removeClass("no-js");
     // chrome bug https://stackoverflow.com/a/42969608/3429430
@@ -20,12 +17,8 @@ import Swiper from '../js/swiper-bundle.esm.browser.js'
     const isHoverAvailable = window.matchMedia("(any-hover: hover)").matches;    
     //detects mobile/tablet android/safari browsers
 
-
     $('.sidenav').sidenav();
-    $('.parallax').parallax();
-    
-
-
+    $('.parallax').parallax(); 
 
     $('nav .tabs').tabs({      
       onShow: function(){   
@@ -38,11 +31,11 @@ import Swiper from '../js/swiper-bundle.esm.browser.js'
       }      
     });
 
-
     $("#form1 .tabs").tabs();
     $("#form1 .tab a").click(function(){
       $(this).blur();      
     });
+
     $('.collapsible').collapsible();
 
     // dropdown initialization with hover
@@ -54,8 +47,7 @@ import Swiper from '../js/swiper-bundle.esm.browser.js'
       closeOnClick: false,
       autoTrigger: true,
       onOpenStart: function(){
-        $(this.el).addClass("open");
-        
+        $(this.el).addClass("open");        
       },
       onCloseEnd: function(){    
         $(this.el).blur();       
@@ -64,18 +56,15 @@ import Swiper from '../js/swiper-bundle.esm.browser.js'
     });
     // dropdown finishes
 
-
     $('select').formSelect({
       dropdownOptions: {
       }
     });
 
     !function(){ //module for range slider
-
       var slider1 = document.getElementById('price1');
       var slider2 = document.getElementById('price2');
       var slider3 = document.getElementById('price3');
-
       var $sliders = $(".price_range");
 
       noUiSlider.create(slider1, {
@@ -88,10 +77,8 @@ import Swiper from '../js/swiper-bundle.esm.browser.js'
          'max': 100
        },
        format: wNumb({
-         decimals: 0
-         
+         decimals: 0         
        }),
-
      });
 
       noUiSlider.create(slider2, {
@@ -104,10 +91,8 @@ import Swiper from '../js/swiper-bundle.esm.browser.js'
          'max': 100
        },
        format: wNumb({
-         decimals: 0
-         
+         decimals: 0         
        }),
-
      });
 
       noUiSlider.create(slider3, {
@@ -120,14 +105,11 @@ import Swiper from '../js/swiper-bundle.esm.browser.js'
          'max': 200
        },
        format: wNumb({
-         decimals: 0
-         
+         decimals: 0         
        }),
-
      });
 
       $sliders.each(function(){
-
         var this2 = this;
         this.noUiSlider.on('update', function (values, handle) {
 
@@ -139,122 +121,155 @@ import Swiper from '../js/swiper-bundle.esm.browser.js'
             marginMin.innerHTML = values[handle];
           }
         });
-      });
-
-      
+      });      
     }();
 
-
-  //carousel using swiper plugin
-  const swiper = new Swiper('.outer-swiper', {  
-    direction: 'horizontal',
-    loop: false,
-    slidesPerView: 1.1,
-    lazy: true,
-    spaceBetween: 15,
-    breakpoints: {
-      601: {
-        slidesPerView: 2.1,
-        spaceBetween: 15,
+    //carousel using swiper plugin
+    const swiper = new Swiper('.outer-swiper', {  
+      direction: 'horizontal',
+      loop: false,
+      slidesPerView: 1.1,
+      lazy: true,
+      spaceBetween: 15,
+      breakpoints: {
+        601: {
+          slidesPerView: 2.1,
+          spaceBetween: 15,
+        },
+        993: {
+          slidesPerView: 3.1,
+          spaceBetween: 25,
+        },
+        1201: {
+          slidesPerView: 4.1,
+          spaceBetween: 35,
+        },
       },
-      993: {
-        slidesPerView: 3.1,
-        spaceBetween: 25,
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+        dynamicBullets: true,
       },
-      1201: {
-        slidesPerView: 4.1,
-        spaceBetween: 35,
+    });
+    $(".swiper .bookmark").click(function(){
+      console.log(this);
+      $(this).toggleClass("fill");
+    });
+
+    const nestedSwiper = new Swiper(".nested-swiper", {
+      allowTouchMove: false,
+      lazy: {
+        elementClass: "nested-lazy"
       },
-
-    },
-
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
-      dynamicBullets: true,
-    },
-
-  });
-
-  $(".swiper .bookmark").click(function(){
-    console.log(this);
-    $(this).toggleClass("fill");
-  });
-
-  const nestedSwiper = new Swiper(".nested-swiper", {
-    allowTouchMove: false,
-    lazy: {
-      elementClass: "nested-lazy"
-    },
-    loop: false,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
-
-
-  $(".swiper-button-next.two, .swiper-button-prev.two").removeClass("hide2");
-  //making sure user doesn't keep clicking before js loads on slow connections
-
-  const propSwiper = new Swiper(".explore .swiper", {
-
-    loop: false,
-    slidesPerView: 1,
-    lazy: true,
-    spaceBetween: 15,
-    navigation: {
-      nextEl: ".swiper-button-next.two",
-      prevEl: ".swiper-button-prev.two",
-    },
-    breakpoints: {
-      601: {
-        slidesPerView: 2,        
+      loop: false,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
       },
-      993: {
-        slidesPerView: 3,        
+    });
+
+
+    $(".swiper-button-next.two, .swiper-button-prev.two").removeClass("hide2");
+    //making sure user doesn't keep clicking before js loads on slow connections
+
+    const propSwiper = new Swiper(".explore .swiper", {
+      loop: false,
+      slidesPerView: 1,
+      lazy: true,
+      spaceBetween: 15,
+      navigation: {
+        nextEl: ".swiper-button-next.two",
+        prevEl: ".swiper-button-prev.two",
       },
-      1201: {
-        slidesPerView: 5,        
+      breakpoints: {
+        601: {
+          slidesPerView: 2,        
+        },
+        993: {
+          slidesPerView: 3,        
+        },
+        1201: {
+          slidesPerView: 5,        
+        },
+      }
+    });
+    $(".explore .toggle").click(function(){
+      $(this).closest(".card").toggleClass("open");
+    });
+
+    const thumbsSwiper = new Swiper(".review .thumbs", {
+      loop: false,
+      spaceBetween: 10,
+      slidesPerView: 3,         
+      centeredSlides: true,
+      initialSlide: 2,
+      freeMode: true,
+      watchSlidesProgress: true,
+      breakpoints: {
+        // when window width is >= 320px
+        993: {
+          slidesPerView: 5,
+        }
+      }
+    });
+
+    const reviewSwiper = new Swiper(".review .content", {
+      loop: false,
+      spaceBetween: 100,
+      slidesPerView: 1,  
+      noSwiping: true,                  
+      initialSlide: 2,
+      speed: 1000,        
+      effect: 'fade',
+      fadeEffect: {
+        crossFade: true
       },
-    }
-  });
-
-  $(".explore .toggle").click(function(){
-    $(this).closest(".card").toggleClass("open");
-  });
-
-
-  /*
-  !function(){
-
-    var phone = ($(window).innerWidth() < 601);
-
-    const cardSwiper = new Swiper(".card-swiper", {
-
-    effect: phone ? "cards":"slide", 
-    //on small screens use playing cards behaviour
-
-    grabCursor: true,
-    slidesPerView: 1,
-    spaceBetween: 15,
-    breakpoints: {
-      601: {
-        slidesPerView: phone ? 1:2.1,
+      navigation: {
+        nextEl: ".swiper-button-next.three",
+        prevEl: ".swiper-button-prev.three",
       },
-      768: {
-        slidesPerView: phone ? 1:3.1,
+      thumbs: {
+        swiper: thumbsSwiper,
       },
-      993: {
-        slidesPerView: phone ? 1:4.1,
-      },
-      1201: {
-        slidesPerView: phone ? 1:5,
-      },
-    }
-  });
-  }();
-  */
+    })    
+
+    reviewSwiper.on("slideChange", function(){      
+      thumbsSwiper.slideTo($(".swiper-slide.swiper-slide-thumb-active").index());
+    });
+
+
+
+
+    /*
+    !function(){
+
+      var phone = ($(window).innerWidth() < 601);
+
+      const cardSwiper = new Swiper(".card-swiper", {
+
+      effect: phone ? "cards":"slide", 
+      //on small screens use playing cards behaviour
+
+      grabCursor: true,
+      slidesPerView: 1,
+      spaceBetween: 15,
+      breakpoints: {
+        601: {
+          slidesPerView: phone ? 1:2.1,
+        },
+        768: {
+          slidesPerView: phone ? 1:3.1,
+        },
+        993: {
+          slidesPerView: phone ? 1:4.1,
+        },
+        1201: {
+          slidesPerView: phone ? 1:5,
+        },
+      }
+    });
+    }();
+    */
 
 
   }); // end of document ready

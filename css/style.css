@@ -7,6 +7,9 @@ html, body {
   height: 100vh;
   font-family: 'Montserrat', sans-serif;
   font-size: 1rem;  
+  min-width: 320px;
+  /*force scroll on old/ultra-small/anroid-watch/etc devices*/
+  /*It might also zoom out on screen < 320px*/
 }
 
 html.no-js * {
@@ -311,6 +314,7 @@ nav .dropdown-content .tabs {
   color: #fb8c00;
   padding-top: 10px;
   font-weight: 500;
+  height: auto;
 }
 
 .sidenav .logo a.text-link {
@@ -572,12 +576,12 @@ nav .dropdown-content li > a:focus {
 
 section h3 {
   font-size: 2rem;
-  margin-bottom: 0;
+  margin-bottom: 0;  
 }
 
-section h4 {
+section h4:not(.default) {
   font-size: 1.25rem;
-  margin-top: 0.75rem;
+  margin-top: 0.75rem;  
 }
 
 .swiper {
@@ -889,7 +893,23 @@ section h4 {
   border-radius: 50%;
   margin-top: -25px;
   right: 0;
+  transition: background-color .3s ease;
 }
+
+.explore .swiper-button-prev:hover,
+.explore .swiper-button-next:hover {
+  background-color: #2196f3;
+} 
+
+.swiper-button-prev .material-icons-outlined,
+.swiper-button-next .material-icons-outlined {
+  transition: color .3s ease;
+}
+
+.swiper-button-prev:hover .material-icons-outlined,
+.swiper-button-next:hover .material-icons-outlined{
+  color: #fff !important;
+} 
 
 .explore .swiper-button-prev {
   left: 0;
@@ -946,12 +966,12 @@ section h4 {
   margin-left: 5px;
 }
 
-.week h3 {
+section.week h3 {
   margin: 0;
   font-size: 2.92rem;
 }
 
-.week h4 {
+section.week h4 {
   margin-top: 0;
   margin-bottom: 20px;
   font-size: 1.5rem;
@@ -1042,6 +1062,240 @@ section h4 {
 }
 
 
+
+
+
+
+
+
+
+
+
+/* stats section starts */
+.stats {
+  padding: 20px 0;  
+}
+
+.stats .squeeze {
+  padding: 0 25px 0 75px;
+  margin-top: 30px;
+}
+
+.stats .squeeze.two {
+  padding: 0 75px 0 25px;
+}
+
+.stats .squeeze .s12 {
+  padding: 0 25px;
+}
+
+.squeeze .card {
+  background-color: #f0f2f3;
+}
+
+.squeeze.two .card {
+  background-color: #f3f3f3;
+}
+
+.stats .card {  
+  margin: auto;
+}
+
+.stats .card-content {
+  padding: 16px;
+}
+
+.stats .card-content .card-title {
+  margin-bottom: 0;
+}
+
+.stats .card-action {
+  padding: 12px 18px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+/*stats finishes*/
+
+
+
+
+/*review section starts*/
+
+.review {
+  padding: 20px 60px 55px;
+}
+
+.review .content {
+  width: 800px;
+  padding: 0;
+  height: 105px;
+  margin-top: 35px;
+  line-height: 1.65;
+}
+
+.review .quote {
+  width: 800px;
+  margin: auto;
+  height: 0;
+  position: relative;
+}
+
+.review .quote-left .material-icons-outlined{
+  transform: scaleX(-1);
+  left: -32px;
+  top: -5px;
+}
+
+.review .quote .material-icons-outlined {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  font-size: 32px;
+}
+
+.review .thumbs {
+  width: 600px;  
+  padding: 50px 10px 0;
+  border-right: 60px solid white;
+  border-left: 60px solid white;
+}
+
+.review .thumbs .swiper-wrapper {
+  padding: 0;
+}
+
+.review .content .swiper-slide {
+  text-align: center;
+  width: 100%;
+  overflow-y: auto;
+  background-color: white;
+  margin-right: 0;
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.content .swiper-slide.swiper-slide-active {
+  visibility: visible;
+}
+
+.no-js .content .swiper-slide:not(.swiper-slide-active) {
+  display: none;
+}
+
+.review .thumbs .swiper-slide:not(.swiper-slide-visible) {
+  opacity: 0;
+}
+
+.review .thumbs .swiper-slide {
+  opacity: 0.5;
+  transition: opacity 1s ease;
+  text-align: center;
+  height: 145px;  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.review .thumbs .swiper-slide.swiper-slide-thumb-active {      
+  transition: opacity .3s ease;
+  opacity: 1;
+  margin-left: 30px;
+}
+
+.review .thumbs .swiper-slide img {
+  transition: transform .3s ease;
+  margin-left: -30px;
+  flex-shrink: 0; /*important, for multiline occupation details*/
+}
+
+.review .thumbs .swiper-slide-thumb-active img {
+  transform: scale(1.5);
+  margin-left: -60px;
+}
+
+.review .swiper-button-next,
+.review .swiper-button-prev  {
+    width: 45px;
+    background: white;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 50%;   
+    transition: opacity .3s ease; 
+}
+
+.review .swiper-button-next,
+.review .swiper-button-prev {  
+  top: -111px;
+  right: 42px;
+  transition: background-color .3s ease;
+}
+
+
+
+.review .swiper-button-prev:hover,
+.review .swiper-button-next:hover {
+  background-color: #2196f3;
+} 
+
+
+.review .swiper-button-prev {
+  left: 42px;
+}
+
+.review .swiper-button-next:after,
+.review .swiper-button-prev:after {
+  content: "";
+}
+
+.review .thumbs .swiper-slide-next,
+.review .thumbs .swiper-slide-prev {
+  transition: opacity .3s ease;  
+}
+
+.review .thumbs .responsive-img {
+  object-fit: cover;
+  height: 70px;
+  width: 70px;
+  box-shadow: 0 4px 5px 0 rgb(0 0 0 / 14%), 0 1px 10px 0 rgb(0 0 0 / 12%), 0 2px 4px -1px rgb(0 0 0 / 30%);
+}
+
+.review .thumbs .client {
+  margin: 20px -100px 0 -160px;
+  opacity: 0;
+  visibility: hidden;
+  font-weight: 500;
+  font-size: 0.875rem;
+  max-width: 300px;
+  overflow-y: auto;
+}
+
+.thumbs .swiper-slide-thumb-active .client {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+
+.thumbs .name {
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
+.thumbs .occupation {
+  color: #2196f3;
+}
+
+.review .arrows {
+  position: relative;
+  width: 700px;
+  margin: auto;
+}
+
+
+
+
+
 @media (hover:none) {
   /*This will target only android/sfari phone/ipad browsers*/
   .parallax-container {
@@ -1108,6 +1362,22 @@ section h4 {
     max-width: 1400px;
   }
 }
+
+
+@media only screen and (max-width: 1400.8px) {
+  .stats .squeeze {
+    padding: 0 25px 0 60px;
+  } 
+
+  .stats .squeeze.two {
+    padding: 0 60px 0 25px;
+  }
+
+  .stats .squeeze .s12 {
+    padding: 0 15px;
+  }
+}
+
 @media only screen and (max-width: 1200.8px) {
   nav ul a.btn-rounded {
     margin-left: 14px;
@@ -1134,9 +1404,14 @@ section h4 {
     margin: 1rem 0 0rem 0;
   }
 
-  section h4 {
+  section h4:not(.default) {
     font-size: 1.125rem;
     margin: 0.5rem 0 0.5rem 0;
+  }
+
+  section.week h4 {
+    font-size: 1.5rem;
+    margin: 0px 0 20px 0;
   }
 
   .explore {  
@@ -1150,6 +1425,31 @@ section h4 {
   .explore .card-reveal2 {    
     transform: rotateZ(-82deg);    
   }
+
+  .stats {
+    padding: 20px 0 0;
+  }
+
+  .stats .squeeze {
+    padding: 0 20px 0 40px;
+  } 
+
+  .stats .squeeze.two {
+    padding: 0 40px 0 20px;
+  }
+
+  .stats .squeeze .s12 {
+    padding: 0 10px;
+  }
+
+  .review {
+    padding: 20px 60px 35px;
+  }
+
+  .review .content {
+    margin-top: 30px;
+  }
+
 }
 @media only screen and (max-width: 992.8px) {
 
@@ -1211,13 +1511,14 @@ section h4 {
     left: 5px;
   }
 
-  .week h3 {
+  section.week h3 {
     font-size: 2rem;
   }
 
-  .week h4 {
+  section.week h4 {
     font-size: 1.25rem;
     margin-top: 5px;
+    margin-bottom: 15px;
   }
 
   .cities {
@@ -1230,7 +1531,93 @@ section h4 {
 
   .city img.two {
     height: 150px;
+  }  
+
+  .squeeze .two {
+    margin-top: 30px;
+  }  
+
+  .review {
+    padding: 20px 15px 25px;
   }
+
+  .review .content {
+    width: 550px;
+    height: 160px;
+  }
+
+  .review .quote {
+    width: 550px;
+  }
+
+  .review .thumbs {
+    width: 350px;
+    border: 0;
+    padding: 40px 70px 0;
+  }
+
+  .review .thumbs .responsive-img {   
+    height: 50px;
+    width: 50px;
+  }
+
+  .review .thumbs .swiper-slide {
+    height: 125px;
+  }
+
+  .review .thumbs .swiper-slide.swiper-slide-thumb-active {
+    margin-left: 20px;
+  }
+
+  .review .thumbs .swiper-slide img {
+    margin-left: -20px;
+  }
+
+  .review .thumbs .swiper-slide-thumb-active img {
+    margin-left: -40px;
+  }
+
+  .review .client h6 {
+    margin-top: 0px;
+  }
+
+  .review .arrows {
+    width: 540px;
+  }
+
+  .review .swiper-button-next, .review .swiper-button-prev {
+    top: -96px;
+    right: 105px;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+  }
+
+  .review .swiper-button-prev {
+    left: 105px;
+  }
+
+  .review .thumbs .swiper-slide {
+    transition: none;
+  }
+
+  .review .thumbs .swiper-slide.swiper-slide-visible {
+    transition: opacity .3s ease;
+  }
+
+  .review .swiper-button-prev .material-icons-outlined,
+  .review .swiper-button-next .material-icons-outlined {
+    font-size: 18px;
+  }
+
+  .review .quote .material-icons-outlined {
+    right: -16px;
+  }
+
+  .review .quote-left .material-icons-outlined {
+    left: -16px;
+  }
+
 
 }
 
@@ -1261,7 +1648,7 @@ section h4 {
     margin: 0;
   }
 
-  section h4 {
+  section h4:not(.default) {
     font-size: 1rem;
     margin: 0.5rem 0 0 0;
   }
@@ -1307,12 +1694,13 @@ section h4 {
     align-items: center;
   }
 
-  .week h3 {
+  section.week h3 {
     font-size: 1.5rem;
   }
 
-  .week h4 {
+  section.week h4 {
     font-size: 1rem;
+    margin: 5px 0 15px 0;
   }  
 
   .week .eye-container {
@@ -1333,6 +1721,80 @@ section h4 {
     margin: 20px 0 20px;
   }
 
+  .stats {
+    padding: 30px 0 10px;
+  }
+
+  .stats .squeeze {
+    padding: 0 15px;
+    margin-top: 20px;
+  }
+
+  .stats .squeeze.two {
+    padding: 0 15px;
+    margin-top: -5px;
+  }
+
+  .squeeze .two {
+    margin-top: 15px;
+  }
+
+  .review {
+    padding: 20px 15px 10px;
+  }
+
+  .review .content {
+    width: 290px;
+    height: 240px;
+    margin-top: 20px;
+    font-size: 14px;
+    /*in version 2 we'll change all sizes to rem
+    Here the hieght would have to be changed tinto rems as well
+    so I am going with fixe pixel values for font size*/
+  }
+
+  .review .quote {
+    width: 300px;
+  }
+
+  .review .quote-right .material-icons-outlined {
+    right: -5px;
+    bottom: -25px;
+  }
+
+  .review .thumbs {
+    width: 290px;
+    padding: 30px 50px 0;
+  }
+
+  .review .thumbs:before,
+  .review .thumbs:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 36px;
+    height: 80px;
+    width: 30px;
+    z-index: 2;
+    background-color: white;
+  }
+
+  .review .thumbs:after {
+    right: 0;
+    left: auto;
+  }
+
+  .review .arrows {
+    width: 290px;
+  }
+
+  .review .swiper-button-next {
+    right: -5px;    
+  }
+
+  .review .swiper-button-prev {
+    left: -5px;
+  }
 
 }
 
