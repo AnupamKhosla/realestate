@@ -202,8 +202,7 @@ import Swiper from   '../js/swiper-bundle.esm.browser.js'
       spaceBetween: 10,
       slidesPerView: 3,         
       centeredSlides: true,
-      initialSlide: 2,
-      freeMode: true,
+      initialSlide: 2,      
       watchSlidesProgress: true,
       breakpoints: {
         // when window width is >= 320px
