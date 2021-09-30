@@ -161,6 +161,22 @@ input[type=search]:not(.browser-default):focus:not([readonly]) + label, textarea
 /*global rules end*/
 
 
+.fuck {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 0;
+  height: 0;
+}
+
+#scrollzipPoint { 
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 0;
+  height: 0;
+}
+
 nav {
   display: flow-root; /*establish new block formatting context*/
 }
@@ -1295,8 +1311,80 @@ section.week h4 {
   width: 700px;
   margin: auto;
 }
+/*Review section finishes*/
 
 
+
+.team {
+  padding: 20px 15px 40px;
+}
+
+.team > h4:not(.default) {
+  margin-bottom: 35px;
+}
+
+.team .container-fixed {
+  max-width: 1254px;
+  /* matching this width with weekly number section width */
+}
+
+.team .card {
+  flex: 1 1 0;
+  margin: 0 15px 20px;
+  border-radius: 10px;
+}
+
+.team .card-image {
+  border-radius: 10px 10px 0 0;
+}
+
+.team .card-image img {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.team .card-content {
+  background: white;
+  position: relative;  
+  padding: 15px 10px;
+  z-index: 2;
+  border-radius: 0 0 10px 10px;
+}
+
+.team .card-content h6 {
+  font-size: 1rem;
+  margin: 0px 0 3px 0;
+  font-weight: 500;
+  color: orange;
+}
+
+.team a {
+  color: #ff9800;
+}
+
+ .team a:hover, .team a:focus {
+    color: #ef6c00;
+  }
+
+.team .card-content p {
+  font-size: 0.8125rem;
+  font-weight: 500;  
+}
+
+.team .card-content::after {
+    content: "";
+    width: 100%;
+    height: 7px;
+    background: orange;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 0 0 10px 10px;
+  }
+
+  
 
 
 
@@ -1380,6 +1468,8 @@ section.week h4 {
   .stats .squeeze .s12 {
     padding: 0 15px;
   }
+
+  
 }
 
 @media only screen and (max-width: 1200.8px) {
@@ -1452,6 +1542,25 @@ section.week h4 {
 
   .review .content {
     margin-top: 30px;
+  }
+
+  .team {
+    padding: 20px 5px 0px;
+  }
+
+  .team .container-fixed {
+    max-width: 992px;
+    flex-wrap: wrap;
+    padding: 0 15px;
+  }
+
+  .team .card {
+    margin: 0 20px 40px;
+    flex: 0 0 calc(33.3333% - 40px);
+  }
+
+  .team .card-image img {
+    height: 250px;
   }
 
 }
@@ -1637,7 +1746,25 @@ section.week h4 {
     left: -16px;
   }
 
+  .team {
+    padding: 20px 5px 10px;
+  }
 
+  .team .card {
+    margin: 0 15px 30px;
+    flex: 0 0 calc(33.3333% - 30px);
+  }  
+
+
+}
+
+@media only screen and (max-width : 767.8px) {
+
+  .team .card {
+    margin: 0 15px 30px;
+    flex: 0 0 calc(50% - 30px);
+  }
+  
 }
 
 @media only screen and (max-width : 600.8px) {
@@ -1824,6 +1951,26 @@ section.week h4 {
   .review .swiper-button-prev {
     left: -5px;
   }
+
+  .team {
+    padding: 30px 0px 25px;
+  }
+
+  .team .container-fixed {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team > h4:not(.default) {
+    margin-bottom: 0;
+  }
+
+  .team .card {
+    margin: 20px 0 5px;
+    max-width: 350px;
+    flex: 0;
+    width: 100%;
+  }  
 
 }
 

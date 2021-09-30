@@ -27,7 +27,8 @@
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
-
+  <div id='scrollzipPoint'></div>
+  <!-- Important: this needs to be here for increment plugin to work -->
   <nav class="transparent z-depth-0" role="navigation">
     <div class="nav-wrapper container ">
       <a id="logo-container" href="#" class="brand-logo valign-wrapper">
@@ -1614,7 +1615,7 @@
     </div>
   </section>
 
-  <section class="sponser nearby container-fixed">
+  <section class="sponser container-fixed nearby">
     <h3 class="center px-15">Nearby properties</h3>
     <h4 class="center px-15" >Properties that are close to your location</h4>
     <div class="swiper outer-swiper">
@@ -2453,9 +2454,9 @@
         <div class="col s12 m6 squeeze">
           <div class="row">
             <div class="col  s12 l6">
-              <div class="card br-5 z-depth-2 white">
+              <div class="card br-5 z-depth-2 hoverable white">
                 <div class="card-content">
-                  <span class="card-title blue-text center">13,455</span>                
+                  <span class="card-title blue-text center numscroller" data-min='10000' data-max='13455' data-delay='100' data-increment='99'>10000</span>
                 </div>
                 <div class="card-action blue white-text center">
                   Sold out / Week
@@ -2463,9 +2464,9 @@
               </div>
             </div>
             <div class="col s12 l6 two">
-              <div class="card br-5 z-depth-2 white">
+              <div class="card br-5 z-depth-2 hoverable white">
                 <div class="card-content">
-                  <span class="card-title blue-text center">4,887</span>                
+                  <span class="card-title blue-text center numscroller" data-min='1000' data-max='4887' data-delay='100' data-increment='99'>1000</span>                
                 </div>
                 <div class="card-action blue white-text center">
                   Rent Outs / Week
@@ -2477,9 +2478,9 @@
         <div class="col s12 m6 squeeze two">
           <div class="row mb-0">
             <div class="col s12 l6">
-              <div class="card br-5 z-depth-2 white">
+              <div class="card br-5 z-depth-2 hoverable white">
                 <div class="card-content">
-                  <span class="card-title blue-text center">11,809</span>                
+                  <span class="card-title blue-text center numscroller" data-min='10000' data-max='11809' data-delay='100' data-increment='99'>10000</span>
                 </div>
                 <div class="card-action blue white-text center">
                   Sales Listings / Week
@@ -2487,9 +2488,9 @@
               </div>
             </div>
             <div class="col s12 l6 two">
-              <div class="card br-5 z-depth-2 white">
+              <div class="card br-5 z-depth-2 hoverable white">
                 <div class="card-content">
-                  <span class="card-title blue-text center">5,108</span>                
+                  <span class="card-title blue-text center numscroller" data-min='1000' data-max='5108' data-delay='100' data-increment='99'>1000</span>
                 </div>
                 <div class="card-action blue white-text center">
                   Rental Listings / Week
@@ -2502,704 +2503,697 @@
     </div>
   </section>
 
-  <section class="sponser container-fixed whiteblue2">
-    <h3 class="center px-15">Recently added  properties</h3>
-    <h4 class="center px-15" >Properties that have been added just lately</h4>
-    <div class="swiper outer-swiper">
-      <!-- Additional required wrapper -->
-      <div class="swiper-wrapper">
-        <!-- Slides -->
-        <div class="swiper-slide">
-          <div class="card hoverable">
-            <div class="card-image">
-              <div class="swiper nested-swiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <img class="card-pic swiper-lazy" data-src="img/interior1.jpg">
+  <section class="sponser whiteblue2">
+    <div class="container-fixed">
+      <h3 class="center px-15">Recently added  properties</h3>
+      <h4 class="center px-15" >Properties that have been added just lately</h4>
+      <div class="swiper outer-swiper">      
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <div class="card hoverable">
+              <div class="card-image">
+                <div class="swiper nested-swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img class="card-pic swiper-lazy" data-src="img/interior1.jpg">
+                    </div>
+                    <div class="swiper-slide">
+                      <img class="card-pic nested-lazy" data-src="img/interior2.jpg">
+                    </div>
+                    <div class="swiper-slide">
+                      <img class="card-pic nested-lazy" data-src="img/interior3.jpg">
+                    </div>
+                    <div class="swiper-slide">
+                      <img class="card-pic nested-lazy" data-src="img/interior1.jpg">
+                    </div>
+                    <div class="swiper-slide">
+                      <img class="card-pic nested-lazy" data-src="img/interior2.jpg">
+                    </div>                  
                   </div>
-                  <div class="swiper-slide">
-                    <img class="card-pic nested-lazy" data-src="img/interior2.jpg">
-                  </div>
-                  <div class="swiper-slide">
-                    <img class="card-pic nested-lazy" data-src="img/interior3.jpg">
-                  </div>
-                  <div class="swiper-slide">
-                    <img class="card-pic nested-lazy" data-src="img/interior1.jpg">
-                  </div>
-                  <div class="swiper-slide">
-                    <img class="card-pic nested-lazy" data-src="img/interior2.jpg">
-                  </div>                  
+                  <div class="swiper-button-next orange-text"></div>
+                  <div class="swiper-button-prev orange-text"></div>
                 </div>
-                <div class="swiper-button-next orange-text"></div>
-                <div class="swiper-button-prev orange-text"></div>
-              </div>
 
-              <span class="orange badge new">For Sale</span>
-              <svg class="bookmark" xmlns="http://www.w3.org/2000/svg"  height="24" viewBox="0 0 24 24" width="24">
-                <g>
-                  <path d="M0,0h24v24H0V0z" fill="none"/>
-                  <path d="M0,0h24v24H0V0z" fill="none"/>
-                </g>
-                <g>
-                  <path class="star" fill="transparent" d="M12,17.27L18.18,21l-1.64-7.03L22,9.24l-7.19-0.61L12,2L9.19,8.63L2,9.24l5.46,4.73L5.82,21L12,17.27z"/>
-                </g>
-              </svg>
-              <a class="btn-floating halfway-fab waves-effect waves-light white" href="#!">
-                <img class="circle responsive-img" src="img/profile.jpg" alt="Seller pic">
-              </a>
-            </div>
-            <div class="card-content">
-              <h6 class="title">
-                <a class="orange-text truncated" href="#!">Spacious old house</a>
-              </h6>
-              <address class="">
-                <a class="" target="_blank" href="https://www.google.com/maps/place/411+E+67th+St,+New+York,+NY+10065,+USA/@40.7645597,-73.9601172,17z/data=!3m1!4b1!4m5!3m4!1s0x89c258c242c0b3f1:0x2fbd8e1add386215!8m2!3d40.7645597!4d-73.9579285">
-                  2/114 Sunny Enclave, Kharar 131004 2/114 Sunny Enclave, Kharar 131004 more    
-                </a>   
-                <br>
-                <a target="_blank" href="https://www.google.com/maps/place/411+E+67th+St,+New+York,+NY+10065,+USA/@40.7645597,-73.9601172,17z/data=!3m1!4b1!4m5!3m4!1s0x89c258c242c0b3f1:0x2fbd8e1add386215!8m2!3d40.7645597!4d-73.9579285">
-                  Click to see on map <!-- Add this in all slides to ensure two lines being occupied-->     
-                </a> 
-              </address>
-              <div class="features d-flex justify-space-between">
-                <div class="beds d-flex flex-column">
-                  <span class="material-icons-outlined ">
-                    bed
-                  </span>
-                  <span class="amount">4</span>
-                </div>
-                <div class="baths d-flex flex-column">
-                  <span class="material-icons-outlined">
-                    shower
-                  </span>
-                  <span class="amount">2</span>
-                </div>
-                <div class="cars d-flex flex-column">
-                  <span class="material-icons-outlined">
-                    car_repair
-                  </span>
-                  <span class="amount">2</span>
-                </div>
-                <div class="area d-flex flex-column">
-                  <span class="material-icons-outlined">
-                    square_foot
-                  </span>
-                  <span class="amount truncated center">150<small>ft<sup>2</sup></small> </span>
+                <span class="orange badge new">For Sale</span>
+                <svg class="bookmark" xmlns="http://www.w3.org/2000/svg"  height="24" viewBox="0 0 24 24" width="24">
+                  <g>
+                    <path d="M0,0h24v24H0V0z" fill="none"/>
+                    <path d="M0,0h24v24H0V0z" fill="none"/>
+                  </g>
+                  <g>
+                    <path class="star" fill="transparent" d="M12,17.27L18.18,21l-1.64-7.03L22,9.24l-7.19-0.61L12,2L9.19,8.63L2,9.24l5.46,4.73L5.82,21L12,17.27z"/>
+                  </g>
+                </svg>
+                <a class="btn-floating halfway-fab waves-effect waves-light white" href="#!">
+                  <img class="circle responsive-img" src="img/profile.jpg" alt="Seller pic">
+                </a>
+              </div>
+              <div class="card-content">
+                <h6 class="title">
+                  <a class="orange-text truncated" href="#!">Spacious old house</a>
+                </h6>
+                <address class="">
+                  <a class="" target="_blank" href="https://www.google.com/maps/place/411+E+67th+St,+New+York,+NY+10065,+USA/@40.7645597,-73.9601172,17z/data=!3m1!4b1!4m5!3m4!1s0x89c258c242c0b3f1:0x2fbd8e1add386215!8m2!3d40.7645597!4d-73.9579285">
+                    2/114 Sunny Enclave, Kharar 131004 2/114 Sunny Enclave, Kharar 131004 more    
+                  </a>   
+                  <br>
+                  <a target="_blank" href="https://www.google.com/maps/place/411+E+67th+St,+New+York,+NY+10065,+USA/@40.7645597,-73.9601172,17z/data=!3m1!4b1!4m5!3m4!1s0x89c258c242c0b3f1:0x2fbd8e1add386215!8m2!3d40.7645597!4d-73.9579285">
+                    Click to see on map <!-- Add this in all slides to ensure two lines being occupied-->     
+                  </a> 
+                </address>
+                <div class="features d-flex justify-space-between">
+                  <div class="beds d-flex flex-column">
+                    <span class="material-icons-outlined ">
+                      bed
+                    </span>
+                    <span class="amount">4</span>
+                  </div>
+                  <div class="baths d-flex flex-column">
+                    <span class="material-icons-outlined">
+                      shower
+                    </span>
+                    <span class="amount">2</span>
+                  </div>
+                  <div class="cars d-flex flex-column">
+                    <span class="material-icons-outlined">
+                      car_repair
+                    </span>
+                    <span class="amount">2</span>
+                  </div>
+                  <div class="area d-flex flex-column">
+                    <span class="material-icons-outlined">
+                      square_foot
+                    </span>
+                    <span class="amount truncated center">150<small>ft<sup>2</sup></small> </span>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="card-action valign-wrapper justify-space-between">
-              <strong class="price truncated">₹45,70,500</strong>
-              <a class="details orange-text no-wrap" href="#">See details</a>
+              <div class="card-action valign-wrapper justify-space-between">
+                <strong class="price truncated">₹45,70,500</strong>
+                <a class="details orange-text no-wrap" href="#">See details</a>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="card hoverable">
-            <div class="card-image">
-              <div class="swiper nested-swiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <img class="card-pic swiper-lazy" data-src="img/interior3.jpg">
+          <div class="swiper-slide">
+            <div class="card hoverable">
+              <div class="card-image">
+                <div class="swiper nested-swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img class="card-pic swiper-lazy" data-src="img/interior3.jpg">
+                    </div>
+                    <div class="swiper-slide">
+                      <img class="card-pic nested-lazy" data-src="img/interior1.jpg">
+                    </div>
+                    <div class="swiper-slide">
+                      <img class="card-pic nested-lazy" data-src="img/interior2.jpg">
+                    </div>
+                    <div class="swiper-slide">
+                      <img class="card-pic nested-lazy" data-src="img/interior1.jpg">
+                    </div>
+                    <div class="swiper-slide">
+                      <img class="card-pic nested-lazy" data-src="img/interior2.jpg">
+                    </div>                  
                   </div>
-                  <div class="swiper-slide">
-                    <img class="card-pic nested-lazy" data-src="img/interior1.jpg">
-                  </div>
-                  <div class="swiper-slide">
-                    <img class="card-pic nested-lazy" data-src="img/interior2.jpg">
-                  </div>
-                  <div class="swiper-slide">
-                    <img class="card-pic nested-lazy" data-src="img/interior1.jpg">
-                  </div>
-                  <div class="swiper-slide">
-                    <img class="card-pic nested-lazy" data-src="img/interior2.jpg">
-                  </div>                  
+                  <div class="swiper-button-next orange-text"></div>
+                  <div class="swiper-button-prev orange-text"></div>
                 </div>
-                <div class="swiper-button-next orange-text"></div>
-                <div class="swiper-button-prev orange-text"></div>
-              </div>
 
-              <span class="orange badge new">For Rent</span>
-              <svg class="bookmark" xmlns="http://www.w3.org/2000/svg"  height="24" viewBox="0 0 24 24" width="24">
-                <g>
-                  <path d="M0,0h24v24H0V0z" fill="none"/>
-                  <path d="M0,0h24v24H0V0z" fill="none"/>
-                </g>
-                <g>
-                  <path class="star" fill="transparent" d="M12,17.27L18.18,21l-1.64-7.03L22,9.24l-7.19-0.61L12,2L9.19,8.63L2,9.24l5.46,4.73L5.82,21L12,17.27z"/>
-                </g>
-              </svg>
-              <a class="btn-floating halfway-fab waves-effect waves-light white" href="#!">
-                <img class="circle responsive-img" src="img/profile2.jpg" alt="Seller pic">
-              </a>
-            </div>
-            <div class="card-content">
-              <h6 class="title">
-                <a class="orange-text truncated" href="#!">Vintage villa on bye pass near jalandhar</a>
-              </h6>
-              <address class="">
-                <a class="" target="_blank" href="https://www.google.com/maps/place/411+E+67th+St,+New+York,+NY+10065,+USA/@40.7645597,-73.9601172,17z/data=!3m1!4b1!4m5!3m4!1s0x89c258c242c0b3f1:0x2fbd8e1add386215!8m2!3d40.7645597!4d-73.9579285">
-                  2/114 Sunny Enclave, Kharar 131004   
-                </a>   
-                <br>
-                <a target="_blank" href="https://www.google.com/maps/place/411+E+67th+St,+New+York,+NY+10065,+USA/@40.7645597,-73.9601172,17z/data=!3m1!4b1!4m5!3m4!1s0x89c258c242c0b3f1:0x2fbd8e1add386215!8m2!3d40.7645597!4d-73.9579285">
-                  Click to see on map <!-- Add this in all slides to ensure two lines being occupied-->     
-                </a> 
-              </address>
-              <div class="features d-flex justify-space-between">
-                <div class="beds d-flex flex-column">
-                  <span class="material-icons-outlined ">
-                    bed
-                  </span>
-                  <span class="amount">4</span>
-                </div>
-                <div class="baths d-flex flex-column">
-                  <span class="material-icons-outlined">
-                    shower
-                  </span>
-                  <span class="amount">2</span>
-                </div>
-                <div class="cars d-flex flex-column">
-                  <span class="material-icons-outlined">
-                    car_repair
-                  </span>
-                  <span class="amount">2</span>
-                </div>
-                <div class="area d-flex flex-column">
-                  <span class="material-icons-outlined">
-                    square_foot
-                  </span>
-                  <span class="amount truncated center">80<small>ft<sup>2</sup></small> </span>
+                <span class="orange badge new">For Rent</span>
+                <svg class="bookmark" xmlns="http://www.w3.org/2000/svg"  height="24" viewBox="0 0 24 24" width="24">
+                  <g>
+                    <path d="M0,0h24v24H0V0z" fill="none"/>
+                    <path d="M0,0h24v24H0V0z" fill="none"/>
+                  </g>
+                  <g>
+                    <path class="star" fill="transparent" d="M12,17.27L18.18,21l-1.64-7.03L22,9.24l-7.19-0.61L12,2L9.19,8.63L2,9.24l5.46,4.73L5.82,21L12,17.27z"/>
+                  </g>
+                </svg>
+                <a class="btn-floating halfway-fab waves-effect waves-light white" href="#!">
+                  <img class="circle responsive-img" src="img/profile2.jpg" alt="Seller pic">
+                </a>
+              </div>
+              <div class="card-content">
+                <h6 class="title">
+                  <a class="orange-text truncated" href="#!">Vintage villa on bye pass near jalandhar</a>
+                </h6>
+                <address class="">
+                  <a class="" target="_blank" href="https://www.google.com/maps/place/411+E+67th+St,+New+York,+NY+10065,+USA/@40.7645597,-73.9601172,17z/data=!3m1!4b1!4m5!3m4!1s0x89c258c242c0b3f1:0x2fbd8e1add386215!8m2!3d40.7645597!4d-73.9579285">
+                    2/114 Sunny Enclave, Kharar 131004   
+                  </a>   
+                  <br>
+                  <a target="_blank" href="https://www.google.com/maps/place/411+E+67th+St,+New+York,+NY+10065,+USA/@40.7645597,-73.9601172,17z/data=!3m1!4b1!4m5!3m4!1s0x89c258c242c0b3f1:0x2fbd8e1add386215!8m2!3d40.7645597!4d-73.9579285">
+                    Click to see on map <!-- Add this in all slides to ensure two lines being occupied-->     
+                  </a> 
+                </address>
+                <div class="features d-flex justify-space-between">
+                  <div class="beds d-flex flex-column">
+                    <span class="material-icons-outlined ">
+                      bed
+                    </span>
+                    <span class="amount">4</span>
+                  </div>
+                  <div class="baths d-flex flex-column">
+                    <span class="material-icons-outlined">
+                      shower
+                    </span>
+                    <span class="amount">2</span>
+                  </div>
+                  <div class="cars d-flex flex-column">
+                    <span class="material-icons-outlined">
+                      car_repair
+                    </span>
+                    <span class="amount">2</span>
+                  </div>
+                  <div class="area d-flex flex-column">
+                    <span class="material-icons-outlined">
+                      square_foot
+                    </span>
+                    <span class="amount truncated center">80<small>ft<sup>2</sup></small> </span>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="card-action valign-wrapper justify-space-between">
-              <strong class="price truncated">₹9000/month</strong>
-              <a class="details orange-text no-wrap" href="#">See details</a>
+              <div class="card-action valign-wrapper justify-space-between">
+                <strong class="price truncated">₹9000/month</strong>
+                <a class="details orange-text no-wrap" href="#">See details</a>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="card hoverable">
-            <div class="card-image">
-              <div class="swiper nested-swiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <img class="card-pic swiper-lazy" data-src="img/interior1.jpg">
+          <div class="swiper-slide">
+            <div class="card hoverable">
+              <div class="card-image">
+                <div class="swiper nested-swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img class="card-pic swiper-lazy" data-src="img/interior1.jpg">
+                    </div>
+                    <div class="swiper-slide">
+                      <img class="card-pic nested-lazy" data-src="img/interior2.jpg">
+                    </div>
+                    <div class="swiper-slide">
+                      <img class="card-pic nested-lazy" data-src="img/interior3.jpg">
+                    </div>
+                    <div class="swiper-slide">
+                      <img class="card-pic nested-lazy" data-src="img/interior1.jpg">
+                    </div>
+                    <div class="swiper-slide">
+                      <img class="card-pic nested-lazy" data-src="img/interior2.jpg">
+                    </div>                  
                   </div>
-                  <div class="swiper-slide">
-                    <img class="card-pic nested-lazy" data-src="img/interior2.jpg">
-                  </div>
-                  <div class="swiper-slide">
-                    <img class="card-pic nested-lazy" data-src="img/interior3.jpg">
-                  </div>
-                  <div class="swiper-slide">
-                    <img class="card-pic nested-lazy" data-src="img/interior1.jpg">
-                  </div>
-                  <div class="swiper-slide">
-                    <img class="card-pic nested-lazy" data-src="img/interior2.jpg">
-                  </div>                  
+                  <div class="swiper-button-next orange-text"></div>
+                  <div class="swiper-button-prev orange-text"></div>
                 </div>
-                <div class="swiper-button-next orange-text"></div>
-                <div class="swiper-button-prev orange-text"></div>
-              </div>
 
-              <span class="orange badge new">For Sale</span>
-              <svg class="bookmark" xmlns="http://www.w3.org/2000/svg"  height="24" viewBox="0 0 24 24" width="24">
-                <g>
-                  <path d="M0,0h24v24H0V0z" fill="none"/>
-                  <path d="M0,0h24v24H0V0z" fill="none"/>
-                </g>
-                <g>
-                  <path class="star" fill="transparent" d="M12,17.27L18.18,21l-1.64-7.03L22,9.24l-7.19-0.61L12,2L9.19,8.63L2,9.24l5.46,4.73L5.82,21L12,17.27z"/>
-                </g>
-              </svg>
-              <a class="btn-floating halfway-fab waves-effect waves-light white" href="#!">
-                <img class="circle responsive-img" src="img/profile.jpg" alt="Seller pic">
-              </a>
-            </div>
-            <div class="card-content">
-              <h6 class="title">
-                <a class="orange-text truncated" href="#!">Road side house</a>
-              </h6>
-              <address class="">
-                <a class="" target="_blank" href="https://www.google.com/maps/place/411+E+67th+St,+New+York,+NY+10065,+USA/@40.7645597,-73.9601172,17z/data=!3m1!4b1!4m5!3m4!1s0x89c258c242c0b3f1:0x2fbd8e1add386215!8m2!3d40.7645597!4d-73.9579285">
-                  180 Ratchel st, Thornbury, Vic, 3078   
-                </a>   
-                <br>
-                <a target="_blank" href="https://www.google.com/maps/place/411+E+67th+St,+New+York,+NY+10065,+USA/@40.7645597,-73.9601172,17z/data=!3m1!4b1!4m5!3m4!1s0x89c258c242c0b3f1:0x2fbd8e1add386215!8m2!3d40.7645597!4d-73.9579285">
-                  Click to see on map <!-- Add this in all slides to ensure two lines being occupied-->     
-                </a> 
-              </address>
-              <div class="features d-flex justify-space-between">
-                <div class="beds d-flex flex-column">
-                  <span class="material-icons-outlined ">
-                    bed
-                  </span>
-                  <span class="amount">4</span>
-                </div>
-                <div class="baths d-flex flex-column">
-                  <span class="material-icons-outlined">
-                    shower
-                  </span>
-                  <span class="amount">2</span>
-                </div>
-                <div class="cars d-flex flex-column">
-                  <span class="material-icons-outlined">
-                    car_repair
-                  </span>
-                  <span class="amount">2</span>
-                </div>
-                <div class="area d-flex flex-column">
-                  <span class="material-icons-outlined">
-                    square_foot
-                  </span>
-                  <span class="amount truncated center">220<small>ft<sup>2</sup></small> </span>
+                <span class="orange badge new">For Sale</span>
+                <svg class="bookmark" xmlns="http://www.w3.org/2000/svg"  height="24" viewBox="0 0 24 24" width="24">
+                  <g>
+                    <path d="M0,0h24v24H0V0z" fill="none"/>
+                    <path d="M0,0h24v24H0V0z" fill="none"/>
+                  </g>
+                  <g>
+                    <path class="star" fill="transparent" d="M12,17.27L18.18,21l-1.64-7.03L22,9.24l-7.19-0.61L12,2L9.19,8.63L2,9.24l5.46,4.73L5.82,21L12,17.27z"/>
+                  </g>
+                </svg>
+                <a class="btn-floating halfway-fab waves-effect waves-light white" href="#!">
+                  <img class="circle responsive-img" src="img/profile.jpg" alt="Seller pic">
+                </a>
+              </div>
+              <div class="card-content">
+                <h6 class="title">
+                  <a class="orange-text truncated" href="#!">Road side house</a>
+                </h6>
+                <address class="">
+                  <a class="" target="_blank" href="https://www.google.com/maps/place/411+E+67th+St,+New+York,+NY+10065,+USA/@40.7645597,-73.9601172,17z/data=!3m1!4b1!4m5!3m4!1s0x89c258c242c0b3f1:0x2fbd8e1add386215!8m2!3d40.7645597!4d-73.9579285">
+                    180 Ratchel st, Thornbury, Vic, 3078   
+                  </a>   
+                  <br>
+                  <a target="_blank" href="https://www.google.com/maps/place/411+E+67th+St,+New+York,+NY+10065,+USA/@40.7645597,-73.9601172,17z/data=!3m1!4b1!4m5!3m4!1s0x89c258c242c0b3f1:0x2fbd8e1add386215!8m2!3d40.7645597!4d-73.9579285">
+                    Click to see on map <!-- Add this in all slides to ensure two lines being occupied-->     
+                  </a> 
+                </address>
+                <div class="features d-flex justify-space-between">
+                  <div class="beds d-flex flex-column">
+                    <span class="material-icons-outlined ">
+                      bed
+                    </span>
+                    <span class="amount">4</span>
+                  </div>
+                  <div class="baths d-flex flex-column">
+                    <span class="material-icons-outlined">
+                      shower
+                    </span>
+                    <span class="amount">2</span>
+                  </div>
+                  <div class="cars d-flex flex-column">
+                    <span class="material-icons-outlined">
+                      car_repair
+                    </span>
+                    <span class="amount">2</span>
+                  </div>
+                  <div class="area d-flex flex-column">
+                    <span class="material-icons-outlined">
+                      square_foot
+                    </span>
+                    <span class="amount truncated center">220<small>ft<sup>2</sup></small> </span>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="card-action valign-wrapper justify-space-between">
-              <strong class="price truncated">₹83,89,500</strong>
-              <a class="details orange-text no-wrap" href="#">See details</a>
+              <div class="card-action valign-wrapper justify-space-between">
+                <strong class="price truncated">₹83,89,500</strong>
+                <a class="details orange-text no-wrap" href="#">See details</a>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="card hoverable">
-            <div class="card-image">
-              <div class="swiper nested-swiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <img class="card-pic swiper-lazy" data-src="img/interior3.jpg">
+          <div class="swiper-slide">
+            <div class="card hoverable">
+              <div class="card-image">
+                <div class="swiper nested-swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img class="card-pic swiper-lazy" data-src="img/interior3.jpg">
+                    </div>
+                    <div class="swiper-slide">
+                      <img class="card-pic nested-lazy" data-src="img/interior1.jpg">
+                    </div>
+                    <div class="swiper-slide">
+                      <img class="card-pic nested-lazy" data-src="img/interior2.jpg">
+                    </div>
+                    <div class="swiper-slide">
+                      <img class="card-pic nested-lazy" data-src="img/interior1.jpg">
+                    </div>
+                    <div class="swiper-slide">
+                      <img class="card-pic nested-lazy" data-src="img/interior2.jpg">
+                    </div>                  
                   </div>
-                  <div class="swiper-slide">
-                    <img class="card-pic nested-lazy" data-src="img/interior1.jpg">
-                  </div>
-                  <div class="swiper-slide">
-                    <img class="card-pic nested-lazy" data-src="img/interior2.jpg">
-                  </div>
-                  <div class="swiper-slide">
-                    <img class="card-pic nested-lazy" data-src="img/interior1.jpg">
-                  </div>
-                  <div class="swiper-slide">
-                    <img class="card-pic nested-lazy" data-src="img/interior2.jpg">
-                  </div>                  
+                  <div class="swiper-button-next orange-text"></div>
+                  <div class="swiper-button-prev orange-text"></div>
                 </div>
-                <div class="swiper-button-next orange-text"></div>
-                <div class="swiper-button-prev orange-text"></div>
-              </div>
 
-              <span class="orange badge new">For Rent</span>
-              <svg class="bookmark" xmlns="http://www.w3.org/2000/svg"  height="24" viewBox="0 0 24 24" width="24">
-                <g>
-                  <path d="M0,0h24v24H0V0z" fill="none"/>
-                  <path d="M0,0h24v24H0V0z" fill="none"/>
-                </g>
-                <g>
-                  <path class="star" fill="transparent" d="M12,17.27L18.18,21l-1.64-7.03L22,9.24l-7.19-0.61L12,2L9.19,8.63L2,9.24l5.46,4.73L5.82,21L12,17.27z"/>
-                </g>
-              </svg>
-              <a class="btn-floating halfway-fab waves-effect waves-light white" href="#!">
-                <img class="circle responsive-img" src="img/profile2.jpg" alt="Seller pic">
-              </a>
-            </div>
-            <div class="card-content">
-              <h6 class="title">
-                <a class="orange-text truncated" href="#!">2BHK House near bus stand</a>
-              </h6>
-              <address class="">
-                <a class="" target="_blank" href="https://www.google.com/maps/place/411+E+67th+St,+New+York,+NY+10065,+USA/@40.7645597,-73.9601172,17z/data=!3m1!4b1!4m5!3m4!1s0x89c258c242c0b3f1:0x2fbd8e1add386215!8m2!3d40.7645597!4d-73.9579285">
-                  2/114 Sunny Enclave, Kharar 131004 2/114 Sunny Enclave, Kharar 131004 more    
-                </a>   
-                <br>
-                <a target="_blank" href="https://www.google.com/maps/place/411+E+67th+St,+New+York,+NY+10065,+USA/@40.7645597,-73.9601172,17z/data=!3m1!4b1!4m5!3m4!1s0x89c258c242c0b3f1:0x2fbd8e1add386215!8m2!3d40.7645597!4d-73.9579285">
-                  Click to see on map <!-- Add this in all slides to ensure two lines being occupied-->     
-                </a> 
-              </address>
-              <div class="features d-flex justify-space-between">
-                <div class="beds d-flex flex-column">
-                  <span class="material-icons-outlined ">
-                    bed
-                  </span>
-                  <span class="amount">4</span>
-                </div>
-                <div class="baths d-flex flex-column">
-                  <span class="material-icons-outlined">
-                    shower
-                  </span>
-                  <span class="amount">2</span>
-                </div>
-                <div class="cars d-flex flex-column">
-                  <span class="material-icons-outlined">
-                    car_repair
-                  </span>
-                  <span class="amount">2</span>
-                </div>
-                <div class="area d-flex flex-column">
-                  <span class="material-icons-outlined">
-                    square_foot
-                  </span>
-                  <span class="amount truncated center">3000<small>ft<sup>2</sup></small> </span>
+                <span class="orange badge new">For Rent</span>
+                <svg class="bookmark" xmlns="http://www.w3.org/2000/svg"  height="24" viewBox="0 0 24 24" width="24">
+                  <g>
+                    <path d="M0,0h24v24H0V0z" fill="none"/>
+                    <path d="M0,0h24v24H0V0z" fill="none"/>
+                  </g>
+                  <g>
+                    <path class="star" fill="transparent" d="M12,17.27L18.18,21l-1.64-7.03L22,9.24l-7.19-0.61L12,2L9.19,8.63L2,9.24l5.46,4.73L5.82,21L12,17.27z"/>
+                  </g>
+                </svg>
+                <a class="btn-floating halfway-fab waves-effect waves-light white" href="#!">
+                  <img class="circle responsive-img" src="img/profile2.jpg" alt="Seller pic">
+                </a>
+              </div>
+              <div class="card-content">
+                <h6 class="title">
+                  <a class="orange-text truncated" href="#!">2BHK House near bus stand</a>
+                </h6>
+                <address class="">
+                  <a class="" target="_blank" href="https://www.google.com/maps/place/411+E+67th+St,+New+York,+NY+10065,+USA/@40.7645597,-73.9601172,17z/data=!3m1!4b1!4m5!3m4!1s0x89c258c242c0b3f1:0x2fbd8e1add386215!8m2!3d40.7645597!4d-73.9579285">
+                    2/114 Sunny Enclave, Kharar 131004 2/114 Sunny Enclave, Kharar 131004 more    
+                  </a>   
+                  <br>
+                  <a target="_blank" href="https://www.google.com/maps/place/411+E+67th+St,+New+York,+NY+10065,+USA/@40.7645597,-73.9601172,17z/data=!3m1!4b1!4m5!3m4!1s0x89c258c242c0b3f1:0x2fbd8e1add386215!8m2!3d40.7645597!4d-73.9579285">
+                    Click to see on map <!-- Add this in all slides to ensure two lines being occupied-->     
+                  </a> 
+                </address>
+                <div class="features d-flex justify-space-between">
+                  <div class="beds d-flex flex-column">
+                    <span class="material-icons-outlined ">
+                      bed
+                    </span>
+                    <span class="amount">4</span>
+                  </div>
+                  <div class="baths d-flex flex-column">
+                    <span class="material-icons-outlined">
+                      shower
+                    </span>
+                    <span class="amount">2</span>
+                  </div>
+                  <div class="cars d-flex flex-column">
+                    <span class="material-icons-outlined">
+                      car_repair
+                    </span>
+                    <span class="amount">2</span>
+                  </div>
+                  <div class="area d-flex flex-column">
+                    <span class="material-icons-outlined">
+                      square_foot
+                    </span>
+                    <span class="amount truncated center">3000<small>ft<sup>2</sup></small> </span>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="card-action valign-wrapper justify-space-between">
-              <strong class="price truncated">₹11,000/month</strong>
-              <a class="details orange-text no-wrap" href="#">See details</a>
+              <div class="card-action valign-wrapper justify-space-between">
+                <strong class="price truncated">₹11,000/month</strong>
+                <a class="details orange-text no-wrap" href="#">See details</a>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="swiper-slide">
-          <div class="card hoverable">
-            <div class="card-image">
-              <div class="swiper nested-swiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <img class="card-pic swiper-lazy" data-src="img/interior1.jpg">
+          <div class="swiper-slide">
+            <div class="card hoverable">
+              <div class="card-image">
+                <div class="swiper nested-swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img class="card-pic swiper-lazy" data-src="img/interior1.jpg">
+                    </div>
+                    <div class="swiper-slide">
+                      <img class="card-pic nested-lazy" data-src="img/interior2.jpg">
+                    </div>
+                    <div class="swiper-slide">
+                      <img class="card-pic nested-lazy" data-src="img/interior3.jpg">
+                    </div>
+                    <div class="swiper-slide">
+                      <img class="card-pic nested-lazy" data-src="img/interior1.jpg">
+                    </div>
+                    <div class="swiper-slide">
+                      <img class="card-pic nested-lazy" data-src="img/interior2.jpg">
+                    </div>                  
                   </div>
-                  <div class="swiper-slide">
-                    <img class="card-pic nested-lazy" data-src="img/interior2.jpg">
-                  </div>
-                  <div class="swiper-slide">
-                    <img class="card-pic nested-lazy" data-src="img/interior3.jpg">
-                  </div>
-                  <div class="swiper-slide">
-                    <img class="card-pic nested-lazy" data-src="img/interior1.jpg">
-                  </div>
-                  <div class="swiper-slide">
-                    <img class="card-pic nested-lazy" data-src="img/interior2.jpg">
-                  </div>                  
+                  <div class="swiper-button-next orange-text"></div>
+                  <div class="swiper-button-prev orange-text"></div>
                 </div>
-                <div class="swiper-button-next orange-text"></div>
-                <div class="swiper-button-prev orange-text"></div>
-              </div>
 
-              <span class="orange badge new">For Sale</span>
-              <svg class="bookmark" xmlns="http://www.w3.org/2000/svg"  height="24" viewBox="0 0 24 24" width="24">
-                <g>
-                  <path d="M0,0h24v24H0V0z" fill="none"/>
-                  <path d="M0,0h24v24H0V0z" fill="none"/>
-                </g>
-                <g>
-                  <path class="star" fill="transparent" d="M12,17.27L18.18,21l-1.64-7.03L22,9.24l-7.19-0.61L12,2L9.19,8.63L2,9.24l5.46,4.73L5.82,21L12,17.27z"/>
-                </g>
-              </svg>
-              <a class="btn-floating halfway-fab waves-effect waves-light white" href="#!">
-                <img class="circle responsive-img" src="img/profile.jpg" alt="Seller pic">
-              </a>
-            </div>
-            <div class="card-content">
-              <h6 class="title">
-                <a class="orange-text truncated" href="#!">Spacious old house</a>
-              </h6>
-              <address class="">
-                <a class="" target="_blank" href="https://www.google.com/maps/place/411+E+67th+St,+New+York,+NY+10065,+USA/@40.7645597,-73.9601172,17z/data=!3m1!4b1!4m5!3m4!1s0x89c258c242c0b3f1:0x2fbd8e1add386215!8m2!3d40.7645597!4d-73.9579285">
-                  2/114 Sunny Enclave, Kharar 131004 2/114 Sunny Enclave, Kharar 131004 more    
-                </a>   
-                <br>
-                <a target="_blank" href="https://www.google.com/maps/place/411+E+67th+St,+New+York,+NY+10065,+USA/@40.7645597,-73.9601172,17z/data=!3m1!4b1!4m5!3m4!1s0x89c258c242c0b3f1:0x2fbd8e1add386215!8m2!3d40.7645597!4d-73.9579285">
-                  Click to see on map <!-- Add this in all slides to ensure two lines being occupied-->     
-                </a> 
-              </address>
-              <div class="features d-flex justify-space-between">
-                <div class="beds d-flex flex-column">
-                  <span class="material-icons-outlined ">
-                    bed
-                  </span>
-                  <span class="amount">4</span>
-                </div>
-                <div class="baths d-flex flex-column">
-                  <span class="material-icons-outlined">
-                    shower
-                  </span>
-                  <span class="amount">2</span>
-                </div>
-                <div class="cars d-flex flex-column">
-                  <span class="material-icons-outlined">
-                    car_repair
-                  </span>
-                  <span class="amount">2</span>
-                </div>
-                <div class="area d-flex flex-column">
-                  <span class="material-icons-outlined">
-                    square_foot
-                  </span>
-                  <span class="amount truncated center">150<small>ft<sup>2</sup></small> </span>
+                <span class="orange badge new">For Sale</span>
+                <svg class="bookmark" xmlns="http://www.w3.org/2000/svg"  height="24" viewBox="0 0 24 24" width="24">
+                  <g>
+                    <path d="M0,0h24v24H0V0z" fill="none"/>
+                    <path d="M0,0h24v24H0V0z" fill="none"/>
+                  </g>
+                  <g>
+                    <path class="star" fill="transparent" d="M12,17.27L18.18,21l-1.64-7.03L22,9.24l-7.19-0.61L12,2L9.19,8.63L2,9.24l5.46,4.73L5.82,21L12,17.27z"/>
+                  </g>
+                </svg>
+                <a class="btn-floating halfway-fab waves-effect waves-light white" href="#!">
+                  <img class="circle responsive-img" src="img/profile.jpg" alt="Seller pic">
+                </a>
+              </div>
+              <div class="card-content">
+                <h6 class="title">
+                  <a class="orange-text truncated" href="#!">Spacious old house</a>
+                </h6>
+                <address class="">
+                  <a class="" target="_blank" href="https://www.google.com/maps/place/411+E+67th+St,+New+York,+NY+10065,+USA/@40.7645597,-73.9601172,17z/data=!3m1!4b1!4m5!3m4!1s0x89c258c242c0b3f1:0x2fbd8e1add386215!8m2!3d40.7645597!4d-73.9579285">
+                    2/114 Sunny Enclave, Kharar 131004 2/114 Sunny Enclave, Kharar 131004 more    
+                  </a>   
+                  <br>
+                  <a target="_blank" href="https://www.google.com/maps/place/411+E+67th+St,+New+York,+NY+10065,+USA/@40.7645597,-73.9601172,17z/data=!3m1!4b1!4m5!3m4!1s0x89c258c242c0b3f1:0x2fbd8e1add386215!8m2!3d40.7645597!4d-73.9579285">
+                    Click to see on map <!-- Add this in all slides to ensure two lines being occupied-->     
+                  </a> 
+                </address>
+                <div class="features d-flex justify-space-between">
+                  <div class="beds d-flex flex-column">
+                    <span class="material-icons-outlined ">
+                      bed
+                    </span>
+                    <span class="amount">4</span>
+                  </div>
+                  <div class="baths d-flex flex-column">
+                    <span class="material-icons-outlined">
+                      shower
+                    </span>
+                    <span class="amount">2</span>
+                  </div>
+                  <div class="cars d-flex flex-column">
+                    <span class="material-icons-outlined">
+                      car_repair
+                    </span>
+                    <span class="amount">2</span>
+                  </div>
+                  <div class="area d-flex flex-column">
+                    <span class="material-icons-outlined">
+                      square_foot
+                    </span>
+                    <span class="amount truncated center">150<small>ft<sup>2</sup></small> </span>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="card-action valign-wrapper justify-space-between">
-              <strong class="price truncated">₹45,70,500</strong>
-              <a class="details orange-text no-wrap" href="#">See details</a>
+              <div class="card-action valign-wrapper justify-space-between">
+                <strong class="price truncated">₹45,70,500</strong>
+                <a class="details orange-text no-wrap" href="#">See details</a>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="card hoverable">
-            <div class="card-image">
-              <div class="swiper nested-swiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <img class="card-pic swiper-lazy" data-src="img/interior3.jpg">
+          <div class="swiper-slide">
+            <div class="card hoverable">
+              <div class="card-image">
+                <div class="swiper nested-swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img class="card-pic swiper-lazy" data-src="img/interior3.jpg">
+                    </div>
+                    <div class="swiper-slide">
+                      <img class="card-pic nested-lazy" data-src="img/interior1.jpg">
+                    </div>
+                    <div class="swiper-slide">
+                      <img class="card-pic nested-lazy" data-src="img/interior2.jpg">
+                    </div>
+                    <div class="swiper-slide">
+                      <img class="card-pic nested-lazy" data-src="img/interior1.jpg">
+                    </div>
+                    <div class="swiper-slide">
+                      <img class="card-pic nested-lazy" data-src="img/interior2.jpg">
+                    </div>                  
                   </div>
-                  <div class="swiper-slide">
-                    <img class="card-pic nested-lazy" data-src="img/interior1.jpg">
-                  </div>
-                  <div class="swiper-slide">
-                    <img class="card-pic nested-lazy" data-src="img/interior2.jpg">
-                  </div>
-                  <div class="swiper-slide">
-                    <img class="card-pic nested-lazy" data-src="img/interior1.jpg">
-                  </div>
-                  <div class="swiper-slide">
-                    <img class="card-pic nested-lazy" data-src="img/interior2.jpg">
-                  </div>                  
+                  <div class="swiper-button-next orange-text"></div>
+                  <div class="swiper-button-prev orange-text"></div>
                 </div>
-                <div class="swiper-button-next orange-text"></div>
-                <div class="swiper-button-prev orange-text"></div>
-              </div>
 
-              <span class="orange badge new">For Rent</span>
-              <svg class="bookmark" xmlns="http://www.w3.org/2000/svg"  height="24" viewBox="0 0 24 24" width="24">
-                <g>
-                  <path d="M0,0h24v24H0V0z" fill="none"/>
-                  <path d="M0,0h24v24H0V0z" fill="none"/>
-                </g>
-                <g>
-                  <path class="star" fill="transparent" d="M12,17.27L18.18,21l-1.64-7.03L22,9.24l-7.19-0.61L12,2L9.19,8.63L2,9.24l5.46,4.73L5.82,21L12,17.27z"/>
-                </g>
-              </svg>
-              <a class="btn-floating halfway-fab waves-effect waves-light white" href="#!">
-                <img class="circle responsive-img" src="img/profile2.jpg" alt="Seller pic">
-              </a>
-            </div>
-            <div class="card-content">
-              <h6 class="title">
-                <a class="orange-text truncated" href="#!">Vintage villa on bye pass near jalandhar</a>
-              </h6>
-              <address class="">
-                <a class="" target="_blank" href="https://www.google.com/maps/place/411+E+67th+St,+New+York,+NY+10065,+USA/@40.7645597,-73.9601172,17z/data=!3m1!4b1!4m5!3m4!1s0x89c258c242c0b3f1:0x2fbd8e1add386215!8m2!3d40.7645597!4d-73.9579285">
-                  2/114 Sunny Enclave, Kharar 131004   
-                </a>   
-                <br>
-                <a target="_blank" href="https://www.google.com/maps/place/411+E+67th+St,+New+York,+NY+10065,+USA/@40.7645597,-73.9601172,17z/data=!3m1!4b1!4m5!3m4!1s0x89c258c242c0b3f1:0x2fbd8e1add386215!8m2!3d40.7645597!4d-73.9579285">
-                  Click to see on map <!-- Add this in all slides to ensure two lines being occupied-->     
-                </a> 
-              </address>
-              <div class="features d-flex justify-space-between">
-                <div class="beds d-flex flex-column">
-                  <span class="material-icons-outlined ">
-                    bed
-                  </span>
-                  <span class="amount">4</span>
-                </div>
-                <div class="baths d-flex flex-column">
-                  <span class="material-icons-outlined">
-                    shower
-                  </span>
-                  <span class="amount">2</span>
-                </div>
-                <div class="cars d-flex flex-column">
-                  <span class="material-icons-outlined">
-                    car_repair
-                  </span>
-                  <span class="amount">2</span>
-                </div>
-                <div class="area d-flex flex-column">
-                  <span class="material-icons-outlined">
-                    square_foot
-                  </span>
-                  <span class="amount truncated center">80<small>ft<sup>2</sup></small> </span>
+                <span class="orange badge new">For Rent</span>
+                <svg class="bookmark" xmlns="http://www.w3.org/2000/svg"  height="24" viewBox="0 0 24 24" width="24">
+                  <g>
+                    <path d="M0,0h24v24H0V0z" fill="none"/>
+                    <path d="M0,0h24v24H0V0z" fill="none"/>
+                  </g>
+                  <g>
+                    <path class="star" fill="transparent" d="M12,17.27L18.18,21l-1.64-7.03L22,9.24l-7.19-0.61L12,2L9.19,8.63L2,9.24l5.46,4.73L5.82,21L12,17.27z"/>
+                  </g>
+                </svg>
+                <a class="btn-floating halfway-fab waves-effect waves-light white" href="#!">
+                  <img class="circle responsive-img" src="img/profile2.jpg" alt="Seller pic">
+                </a>
+              </div>
+              <div class="card-content">
+                <h6 class="title">
+                  <a class="orange-text truncated" href="#!">Vintage villa on bye pass near jalandhar</a>
+                </h6>
+                <address class="">
+                  <a class="" target="_blank" href="https://www.google.com/maps/place/411+E+67th+St,+New+York,+NY+10065,+USA/@40.7645597,-73.9601172,17z/data=!3m1!4b1!4m5!3m4!1s0x89c258c242c0b3f1:0x2fbd8e1add386215!8m2!3d40.7645597!4d-73.9579285">
+                    2/114 Sunny Enclave, Kharar 131004   
+                  </a>   
+                  <br>
+                  <a target="_blank" href="https://www.google.com/maps/place/411+E+67th+St,+New+York,+NY+10065,+USA/@40.7645597,-73.9601172,17z/data=!3m1!4b1!4m5!3m4!1s0x89c258c242c0b3f1:0x2fbd8e1add386215!8m2!3d40.7645597!4d-73.9579285">
+                    Click to see on map <!-- Add this in all slides to ensure two lines being occupied-->     
+                  </a> 
+                </address>
+                <div class="features d-flex justify-space-between">
+                  <div class="beds d-flex flex-column">
+                    <span class="material-icons-outlined ">
+                      bed
+                    </span>
+                    <span class="amount">4</span>
+                  </div>
+                  <div class="baths d-flex flex-column">
+                    <span class="material-icons-outlined">
+                      shower
+                    </span>
+                    <span class="amount">2</span>
+                  </div>
+                  <div class="cars d-flex flex-column">
+                    <span class="material-icons-outlined">
+                      car_repair
+                    </span>
+                    <span class="amount">2</span>
+                  </div>
+                  <div class="area d-flex flex-column">
+                    <span class="material-icons-outlined">
+                      square_foot
+                    </span>
+                    <span class="amount truncated center">80<small>ft<sup>2</sup></small> </span>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="card-action valign-wrapper justify-space-between">
-              <strong class="price truncated">₹9000/month</strong>
-              <a class="details orange-text no-wrap" href="#">See details</a>
+              <div class="card-action valign-wrapper justify-space-between">
+                <strong class="price truncated">₹9000/month</strong>
+                <a class="details orange-text no-wrap" href="#">See details</a>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="card hoverable">
-            <div class="card-image">
-              <div class="swiper nested-swiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <img class="card-pic swiper-lazy" data-src="img/interior1.jpg">
+          <div class="swiper-slide">
+            <div class="card hoverable">
+              <div class="card-image">
+                <div class="swiper nested-swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img class="card-pic swiper-lazy" data-src="img/interior1.jpg">
+                    </div>
+                    <div class="swiper-slide">
+                      <img class="card-pic nested-lazy" data-src="img/interior2.jpg">
+                    </div>
+                    <div class="swiper-slide">
+                      <img class="card-pic nested-lazy" data-src="img/interior3.jpg">
+                    </div>
+                    <div class="swiper-slide">
+                      <img class="card-pic nested-lazy" data-src="img/interior1.jpg">
+                    </div>
+                    <div class="swiper-slide">
+                      <img class="card-pic nested-lazy" data-src="img/interior2.jpg">
+                    </div>                  
                   </div>
-                  <div class="swiper-slide">
-                    <img class="card-pic nested-lazy" data-src="img/interior2.jpg">
-                  </div>
-                  <div class="swiper-slide">
-                    <img class="card-pic nested-lazy" data-src="img/interior3.jpg">
-                  </div>
-                  <div class="swiper-slide">
-                    <img class="card-pic nested-lazy" data-src="img/interior1.jpg">
-                  </div>
-                  <div class="swiper-slide">
-                    <img class="card-pic nested-lazy" data-src="img/interior2.jpg">
-                  </div>                  
+                  <div class="swiper-button-next orange-text"></div>
+                  <div class="swiper-button-prev orange-text"></div>
                 </div>
-                <div class="swiper-button-next orange-text"></div>
-                <div class="swiper-button-prev orange-text"></div>
-              </div>
 
-              <span class="orange badge new">For Sale</span>
-              <svg class="bookmark" xmlns="http://www.w3.org/2000/svg"  height="24" viewBox="0 0 24 24" width="24">
-                <g>
-                  <path d="M0,0h24v24H0V0z" fill="none"/>
-                  <path d="M0,0h24v24H0V0z" fill="none"/>
-                </g>
-                <g>
-                  <path class="star" fill="transparent" d="M12,17.27L18.18,21l-1.64-7.03L22,9.24l-7.19-0.61L12,2L9.19,8.63L2,9.24l5.46,4.73L5.82,21L12,17.27z"/>
-                </g>
-              </svg>
-              <a class="btn-floating halfway-fab waves-effect waves-light white" href="#!">
-                <img class="circle responsive-img" src="img/profile.jpg" alt="Seller pic">
-              </a>
-            </div>
-            <div class="card-content">
-              <h6 class="title">
-                <a class="orange-text truncated" href="#!">Road side house</a>
-              </h6>
-              <address class="">
-                <a class="" target="_blank" href="https://www.google.com/maps/place/411+E+67th+St,+New+York,+NY+10065,+USA/@40.7645597,-73.9601172,17z/data=!3m1!4b1!4m5!3m4!1s0x89c258c242c0b3f1:0x2fbd8e1add386215!8m2!3d40.7645597!4d-73.9579285">
-                  180 Ratchel st, Thornbury, Vic, 3078   
-                </a>   
-                <br>
-                <a target="_blank" href="https://www.google.com/maps/place/411+E+67th+St,+New+York,+NY+10065,+USA/@40.7645597,-73.9601172,17z/data=!3m1!4b1!4m5!3m4!1s0x89c258c242c0b3f1:0x2fbd8e1add386215!8m2!3d40.7645597!4d-73.9579285">
-                  Click to see on map <!-- Add this in all slides to ensure two lines being occupied-->     
-                </a> 
-              </address>
-              <div class="features d-flex justify-space-between">
-                <div class="beds d-flex flex-column">
-                  <span class="material-icons-outlined ">
-                    bed
-                  </span>
-                  <span class="amount">4</span>
-                </div>
-                <div class="baths d-flex flex-column">
-                  <span class="material-icons-outlined">
-                    shower
-                  </span>
-                  <span class="amount">2</span>
-                </div>
-                <div class="cars d-flex flex-column">
-                  <span class="material-icons-outlined">
-                    car_repair
-                  </span>
-                  <span class="amount">2</span>
-                </div>
-                <div class="area d-flex flex-column">
-                  <span class="material-icons-outlined">
-                    square_foot
-                  </span>
-                  <span class="amount truncated center">220<small>ft<sup>2</sup></small> </span>
+                <span class="orange badge new">For Sale</span>
+                <svg class="bookmark" xmlns="http://www.w3.org/2000/svg"  height="24" viewBox="0 0 24 24" width="24">
+                  <g>
+                    <path d="M0,0h24v24H0V0z" fill="none"/>
+                    <path d="M0,0h24v24H0V0z" fill="none"/>
+                  </g>
+                  <g>
+                    <path class="star" fill="transparent" d="M12,17.27L18.18,21l-1.64-7.03L22,9.24l-7.19-0.61L12,2L9.19,8.63L2,9.24l5.46,4.73L5.82,21L12,17.27z"/>
+                  </g>
+                </svg>
+                <a class="btn-floating halfway-fab waves-effect waves-light white" href="#!">
+                  <img class="circle responsive-img" src="img/profile.jpg" alt="Seller pic">
+                </a>
+              </div>
+              <div class="card-content">
+                <h6 class="title">
+                  <a class="orange-text truncated" href="#!">Road side house</a>
+                </h6>
+                <address class="">
+                  <a class="" target="_blank" href="https://www.google.com/maps/place/411+E+67th+St,+New+York,+NY+10065,+USA/@40.7645597,-73.9601172,17z/data=!3m1!4b1!4m5!3m4!1s0x89c258c242c0b3f1:0x2fbd8e1add386215!8m2!3d40.7645597!4d-73.9579285">
+                    180 Ratchel st, Thornbury, Vic, 3078   
+                  </a>   
+                  <br>
+                  <a target="_blank" href="https://www.google.com/maps/place/411+E+67th+St,+New+York,+NY+10065,+USA/@40.7645597,-73.9601172,17z/data=!3m1!4b1!4m5!3m4!1s0x89c258c242c0b3f1:0x2fbd8e1add386215!8m2!3d40.7645597!4d-73.9579285">
+                    Click to see on map <!-- Add this in all slides to ensure two lines being occupied-->     
+                  </a> 
+                </address>
+                <div class="features d-flex justify-space-between">
+                  <div class="beds d-flex flex-column">
+                    <span class="material-icons-outlined ">
+                      bed
+                    </span>
+                    <span class="amount">4</span>
+                  </div>
+                  <div class="baths d-flex flex-column">
+                    <span class="material-icons-outlined">
+                      shower
+                    </span>
+                    <span class="amount">2</span>
+                  </div>
+                  <div class="cars d-flex flex-column">
+                    <span class="material-icons-outlined">
+                      car_repair
+                    </span>
+                    <span class="amount">2</span>
+                  </div>
+                  <div class="area d-flex flex-column">
+                    <span class="material-icons-outlined">
+                      square_foot
+                    </span>
+                    <span class="amount truncated center">220<small>ft<sup>2</sup></small> </span>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="card-action valign-wrapper justify-space-between">
-              <strong class="price truncated">₹83,89,500</strong>
-              <a class="details orange-text no-wrap" href="#">See details</a>
+              <div class="card-action valign-wrapper justify-space-between">
+                <strong class="price truncated">₹83,89,500</strong>
+                <a class="details orange-text no-wrap" href="#">See details</a>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="card hoverable">
-            <div class="card-image">
-              <div class="swiper nested-swiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <img class="card-pic swiper-lazy" data-src="img/interior3.jpg">
+          <div class="swiper-slide">
+            <div class="card hoverable">
+              <div class="card-image">
+                <div class="swiper nested-swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img class="card-pic swiper-lazy" data-src="img/interior3.jpg">
+                    </div>
+                    <div class="swiper-slide">
+                      <img class="card-pic nested-lazy" data-src="img/interior1.jpg">
+                    </div>
+                    <div class="swiper-slide">
+                      <img class="card-pic nested-lazy" data-src="img/interior2.jpg">
+                    </div>
+                    <div class="swiper-slide">
+                      <img class="card-pic nested-lazy" data-src="img/interior1.jpg">
+                    </div>
+                    <div class="swiper-slide">
+                      <img class="card-pic nested-lazy" data-src="img/interior2.jpg">
+                    </div>                  
                   </div>
-                  <div class="swiper-slide">
-                    <img class="card-pic nested-lazy" data-src="img/interior1.jpg">
-                  </div>
-                  <div class="swiper-slide">
-                    <img class="card-pic nested-lazy" data-src="img/interior2.jpg">
-                  </div>
-                  <div class="swiper-slide">
-                    <img class="card-pic nested-lazy" data-src="img/interior1.jpg">
-                  </div>
-                  <div class="swiper-slide">
-                    <img class="card-pic nested-lazy" data-src="img/interior2.jpg">
-                  </div>                  
+                  <div class="swiper-button-next orange-text"></div>
+                  <div class="swiper-button-prev orange-text"></div>
                 </div>
-                <div class="swiper-button-next orange-text"></div>
-                <div class="swiper-button-prev orange-text"></div>
-              </div>
 
-              <span class="orange badge new">For Rent</span>
-              <svg class="bookmark" xmlns="http://www.w3.org/2000/svg"  height="24" viewBox="0 0 24 24" width="24">
-                <g>
-                  <path d="M0,0h24v24H0V0z" fill="none"/>
-                  <path d="M0,0h24v24H0V0z" fill="none"/>
-                </g>
-                <g>
-                  <path class="star" fill="transparent" d="M12,17.27L18.18,21l-1.64-7.03L22,9.24l-7.19-0.61L12,2L9.19,8.63L2,9.24l5.46,4.73L5.82,21L12,17.27z"/>
-                </g>
-              </svg>
-              <a class="btn-floating halfway-fab waves-effect waves-light white" href="#!">
-                <img class="circle responsive-img" src="img/profile2.jpg" alt="Seller pic">
-              </a>
-            </div>
-            <div class="card-content">
-              <h6 class="title">
-                <a class="orange-text truncated" href="#!">2BHK House near bus stand</a>
-              </h6>
-              <address class="">
-                <a class="" target="_blank" href="https://www.google.com/maps/place/411+E+67th+St,+New+York,+NY+10065,+USA/@40.7645597,-73.9601172,17z/data=!3m1!4b1!4m5!3m4!1s0x89c258c242c0b3f1:0x2fbd8e1add386215!8m2!3d40.7645597!4d-73.9579285">
-                  2/114 Sunny Enclave, Kharar 131004 2/114 Sunny Enclave, Kharar 131004 more    
-                </a>   
-                <br>
-                <a target="_blank" href="https://www.google.com/maps/place/411+E+67th+St,+New+York,+NY+10065,+USA/@40.7645597,-73.9601172,17z/data=!3m1!4b1!4m5!3m4!1s0x89c258c242c0b3f1:0x2fbd8e1add386215!8m2!3d40.7645597!4d-73.9579285">
-                  Click to see on map <!-- Add this in all slides to ensure two lines being occupied-->     
-                </a> 
-              </address>
-              <div class="features d-flex justify-space-between">
-                <div class="beds d-flex flex-column">
-                  <span class="material-icons-outlined ">
-                    bed
-                  </span>
-                  <span class="amount">4</span>
-                </div>
-                <div class="baths d-flex flex-column">
-                  <span class="material-icons-outlined">
-                    shower
-                  </span>
-                  <span class="amount">2</span>
-                </div>
-                <div class="cars d-flex flex-column">
-                  <span class="material-icons-outlined">
-                    car_repair
-                  </span>
-                  <span class="amount">2</span>
-                </div>
-                <div class="area d-flex flex-column">
-                  <span class="material-icons-outlined">
-                    square_foot
-                  </span>
-                  <span class="amount truncated center">3000<small>ft<sup>2</sup></small> </span>
+                <span class="orange badge new">For Rent</span>
+                <svg class="bookmark" xmlns="http://www.w3.org/2000/svg"  height="24" viewBox="0 0 24 24" width="24">
+                  <g>
+                    <path d="M0,0h24v24H0V0z" fill="none"/>
+                    <path d="M0,0h24v24H0V0z" fill="none"/>
+                  </g>
+                  <g>
+                    <path class="star" fill="transparent" d="M12,17.27L18.18,21l-1.64-7.03L22,9.24l-7.19-0.61L12,2L9.19,8.63L2,9.24l5.46,4.73L5.82,21L12,17.27z"/>
+                  </g>
+                </svg>
+                <a class="btn-floating halfway-fab waves-effect waves-light white" href="#!">
+                  <img class="circle responsive-img" src="img/profile2.jpg" alt="Seller pic">
+                </a>
+              </div>
+              <div class="card-content">
+                <h6 class="title">
+                  <a class="orange-text truncated" href="#!">2BHK House near bus stand</a>
+                </h6>
+                <address class="">
+                  <a class="" target="_blank" href="https://www.google.com/maps/place/411+E+67th+St,+New+York,+NY+10065,+USA/@40.7645597,-73.9601172,17z/data=!3m1!4b1!4m5!3m4!1s0x89c258c242c0b3f1:0x2fbd8e1add386215!8m2!3d40.7645597!4d-73.9579285">
+                    2/114 Sunny Enclave, Kharar 131004 2/114 Sunny Enclave, Kharar 131004 more    
+                  </a>   
+                  <br>
+                  <a target="_blank" href="https://www.google.com/maps/place/411+E+67th+St,+New+York,+NY+10065,+USA/@40.7645597,-73.9601172,17z/data=!3m1!4b1!4m5!3m4!1s0x89c258c242c0b3f1:0x2fbd8e1add386215!8m2!3d40.7645597!4d-73.9579285">
+                    Click to see on map <!-- Add this in all slides to ensure two lines being occupied-->     
+                  </a> 
+                </address>
+                <div class="features d-flex justify-space-between">
+                  <div class="beds d-flex flex-column">
+                    <span class="material-icons-outlined ">
+                      bed
+                    </span>
+                    <span class="amount">4</span>
+                  </div>
+                  <div class="baths d-flex flex-column">
+                    <span class="material-icons-outlined">
+                      shower
+                    </span>
+                    <span class="amount">2</span>
+                  </div>
+                  <div class="cars d-flex flex-column">
+                    <span class="material-icons-outlined">
+                      car_repair
+                    </span>
+                    <span class="amount">2</span>
+                  </div>
+                  <div class="area d-flex flex-column">
+                    <span class="material-icons-outlined">
+                      square_foot
+                    </span>
+                    <span class="amount truncated center">3000<small>ft<sup>2</sup></small> </span>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="card-action valign-wrapper justify-space-between">
-              <strong class="price truncated">₹11,000/month</strong>
-              <a class="details orange-text no-wrap" href="#">See details</a>
+              <div class="card-action valign-wrapper justify-space-between">
+                <strong class="price truncated">₹11,000/month</strong>
+                <a class="details orange-text no-wrap" href="#">See details</a>
+              </div>
             </div>
           </div>
-        </div>
+        </div>      
+        <div class="swiper-pagination"></div>
       </div>
-
-
-
-
-
-      <!-- If we need pagination -->
-      <div class="swiper-pagination"></div>
-
-
     </div>
   </section>
 
@@ -3266,11 +3260,11 @@
           </div>
         </div>
         <div class="swiper-slide .swiper-slide-thumb-active">
-           <img class="circle responsive-img" src="img/rev3.jpg" />
-           <div class="client">
-             <h6 class="name">Chris Hemsworth</h6>
-             <div class="about"><span class="occupation">Business owner</span> at Rygon Ltd</div>
-           </div>
+          <img class="circle responsive-img" src="img/rev3.jpg" />
+          <div class="client">
+            <h6 class="name">Chris Hemsworth</h6>
+            <div class="about"><span class="occupation">Business owner</span> at Rygon Ltd</div>
+          </div>
         </div>
         <div class="swiper-slide">
           <img class="circle responsive-img" src="img/rev4.jpg" />
@@ -3330,7 +3324,70 @@
     </div>
   </section>
 
-  <footer class="footer-copyright orange">
+
+  <section class="team whiteblue2 ">
+    <h3 class="center px-15">Our Team</h3>
+    <h4 class="center px-15">Get to know who works with us</h4>
+    <div class="container-fixed d-flex justify-content-center">
+      <div class="card z-depth-2 hoverable">
+        <div class="card-image waves-effect waves-block waves-light">
+          <img class="activator" src="img/team1.jpg">
+        </div>
+        <div class="card-content center-align">
+          <h6> 
+            <a href="#!">Christina williams</a>
+          </h6>
+          <p>Lead sales representative</p>
+        </div>      
+      </div>
+      <div class="card z-depth-2 hoverable">
+        <div class="card-image waves-effect waves-block waves-light">
+          <img class="activator" src="img/team4.jpg">
+        </div>
+        <div class="card-content center-align">
+          <h6> 
+            <a href="#!">Robert Murray</a>
+          </h6>
+          <p>Assistant Manager</p>
+        </div>      
+      </div>
+      <div class="card z-depth-2 hoverable">
+        <div class="card-image waves-effect waves-block waves-light">
+          <img class="activator" src="img/team2.jpg">
+        </div>
+        <div class="card-content center-align">
+          <h6> 
+            <a href="#!">Brittany Sharapova</a>
+          </h6>
+          <p>Receptionist</p>
+        </div>      
+      </div>
+      <div class="card z-depth-2 hoverable">
+        <div class="card-image waves-effect waves-block waves-light">
+          <img class="activator" src="img/team3.jpg">
+        </div>
+        <div class="card-content center-align">
+          <h6> 
+            <a href="#!">Anthony Ciaklov</a>
+          </h6>
+          <p>Supervisor</p>
+        </div>      
+      </div>
+      <div class="card z-depth-2 hoverable">
+        <div class="card-image waves-effect waves-block waves-light">
+          <img class="activator" src="img/team5.jpg">
+        </div>
+        <div class="card-content center-align">
+          <h6> 
+            <a href="#!">Robert Sait</a>
+          </h6>
+          <p>CEO cum Director</p>
+        </div>      
+      </div>    
+    </div>
+  </section>
+
+  <footer class="footer-copyright blue">
     <div class="container">
       2.00 Inspired from <a class="brown-text text-lighten-3" href="https://demoapus2.com/houzing/">Wordpress theme</a>
     </div>
@@ -3343,7 +3400,7 @@
   crossorigin="anonymous"></script>
   <script src="js/materialize.js"></script>
   <script src="js/nouislider.js"></script>
-
+  <script src="js/num.js"></script>
   <script type="module" src="js/init.js"></script>
 
 
