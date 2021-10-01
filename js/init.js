@@ -18,7 +18,9 @@ import Swiper from   '../js/swiper-bundle.esm.browser.js'
     //detects mobile/tablet android/safari browsers
 
     $('.sidenav').sidenav();
-    $('.parallax').parallax(); 
+    //$('.parallax').parallax(); 
+    // Need to replace with good parallax plugin
+
 
     $('nav .tabs').tabs({      
       onShow: function(){   

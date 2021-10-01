@@ -1315,8 +1315,14 @@ section.week h4 {
 
 
 
+
+
+
+
+
+
 .team {
-  padding: 20px 15px 40px;
+  padding: 20px 15px 100px;
 }
 
 .team > h4:not(.default) {
@@ -1377,11 +1383,101 @@ section.week h4 {
     content: "";
     width: 100%;
     height: 7px;
-    background: orange;
+    background: #ff9800;
     position: absolute;
     bottom: 0;
     left: 0;
     border-radius: 0 0 10px 10px;
+  }
+  /*team section finishes*/
+
+
+
+
+  footer {
+    position: relative;
+    display: flow-root;
+  }
+
+  footer .newsletter {
+    position: absolute;    
+    transform: translate(-50%, -50px);
+    width: calc(100% - 60px);
+    max-width: 1225px;
+    background-color: white;
+    top: 0;
+    left: 50%;
+    border-radius: 10px;
+    overflow: hidden;    
+  }
+
+  footer .row-mail {
+    height: 100px;
+    margin: 0;
+  }
+
+  footer .mail {
+    font-size: 60px;
+    color: white;
+  }
+
+  footer .join > h5 {
+    margin: 0;
+  }
+
+  footer .input-field {
+    margin: 0;
+    transform: translate3d(0,0,0);
+    /*box-hadow bug fix for chrome by using null-transform hack*/
+  }
+
+  footer #email {
+    
+
+  }
+
+  footer .send {
+    position: absolute;
+    right: 0px;
+    top: 10px;
+    background-color: transparent;
+    border: none;
+    color: #555;
+  }
+
+  footer input[type=email]#email:not(.browser-default):focus:not([readonly]) {
+    border-bottom: 1px solid #ff9800 ;
+    -webkit-box-shadow: 0 1px 0 0 #ff9800 ;
+    box-shadow: 0 1px 0 0 #ff9800 ;
+  }
+
+  footer input[type=email]#email:not(.browser-default):focus:not([readonly]) + label,
+  footer input[type=email]#email:not(.browser-default):focus:not([readonly]) ~ .send {
+    color: #ff9800;
+  }
+
+  footer .row .left2 {    
+    padding: 120px 30px 70px;
+    float: left;
+    align-items: center;
+  }
+
+  footer .brand-logo .material-icons-outlined {
+    font-size: 200px;
+    max-width: 220px;
+    width: auto;
+    margin: 0;
+  }
+
+  footer .logo-text {
+    font-size: 38px;
+    margin-top: -20px;
+    font-weight: 500;
+  }
+
+  footer .row .right2 {    
+    padding: 120px 30px 70px;
+    float: right;
   }
 
   
@@ -1545,7 +1641,7 @@ section.week h4 {
   }
 
   .team {
-    padding: 20px 5px 0px;
+    padding: 20px 5px 50px;
   }
 
   .team .container-fixed {
@@ -1747,13 +1843,51 @@ section.week h4 {
   }
 
   .team {
-    padding: 20px 5px 10px;
+    padding: 20px 5px 50px;
   }
 
   .team .card {
     margin: 0 15px 30px;
     flex: 0 0 calc(33.3333% - 30px);
   }  
+
+
+
+
+  footer .row-mail {
+    height: 120px;
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    grid-template-rows: 50% 50%;
+    grid-template-areas:
+      "icon text"
+      "icon form";
+  }
+
+  footer .icon {
+    grid-area: icon;
+
+  }
+
+  footer .row .join {
+    grid-area: text;
+    padding-top: 15px;
+  }
+
+  footer .row .col.form {
+    grid-area: form;
+    padding: 0 30px 30px;
+  }
+
+  footer .join > h5 {
+    font-size: 1.25rem;
+  }
+
+
+  footer .row-footer {
+    flex-direction: column;    
+  }
+
 
 
 }
@@ -1763,6 +1897,14 @@ section.week h4 {
   .team .card {
     margin: 0 15px 30px;
     flex: 0 0 calc(50% - 30px);
+  }
+
+  footer .row-mail {    
+    grid-template-columns: 100px 1fr;   
+  }
+
+   footer .mail {
+    font-size: 40px;   
   }
   
 }
@@ -1953,7 +2095,7 @@ section.week h4 {
   }
 
   .team {
-    padding: 30px 0px 25px;
+    padding: 30px 0px 80px;
   }
 
   .team .container-fixed {
@@ -1971,6 +2113,62 @@ section.week h4 {
     flex: 0;
     width: 100%;
   }  
+
+  footer .newsletter {
+    width: calc(100% - 30px);
+  }
+
+  footer .row-mail {   
+    height: 160px;
+    grid-template-rows: 40% 60%;
+    grid-template-areas: 
+      "text text"
+      "form form"
+  }
+
+  footer .icon {
+    display: none;
+  }
+
+  footer .row .join {
+    background-color: #ff9800;
+    padding-top: 0;
+  }
+
+  footer .join h5 {
+    color: white;
+    font-size: 1.125rem;
+  }
+
+  footer .row .col.form {
+    padding: 0 15px;
+  }
+
+  footer #email {
+    height: 38px;
+  }
+
+  footer .form label {
+    font-size: 0.825rem;
+  }
+
+  footer .send {
+    top: 7px;
+  }
+
+  footer .mail {
+    width: auto;  
+    max-width: 40px;  
+    margin-right: 10px;
+  }
+
+  footer .row .right2 {
+    padding: 150px 30px 70px;
+  }
+
+  footer .row .left2 {
+    padding: 150px 30px 70px;
+  }
 
 }
 
@@ -2008,6 +2206,10 @@ section.week h4 {
   max-width: 1600px;
   margin-right: auto;
   margin-left: auto;  
+}
+
+.container-fluid {
+  width: 100%;
 }
 
 .d-block {
@@ -2087,6 +2289,36 @@ section.week h4 {
 .px-15 {
   padding-left: 15px;
   padding-right: 15px;
+}
+
+.px-50 {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.row .col.px-50 {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.pl-0 {
+  padding-left: 0;
+}
+
+.row .col.pl-0 {  
+  padding-left: 0px;
+}
+
+.pxr-50 {  
+  padding-right: 50px;
+}
+
+.row .col.pxr-50 {  
+  padding-right: 50px;
+}
+
+.show-on-small {
+  display: none;
 }
 
 .truncated {
