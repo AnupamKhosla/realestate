@@ -44,7 +44,7 @@ a:focus-visible {
 
 .parallax-container .parallax img {
   opacity: 1;
-  filter: brightness(0.65);
+  filter: brightness(0.5);
 }
 
 
@@ -1421,6 +1421,7 @@ section.week h4 {
 footer {
   position: relative;
   display: flow-root;
+  padding:0 15px 10px 15px;
 }
 
 footer .newsletter {
@@ -1485,25 +1486,83 @@ footer input[type=email]#email:not(.browser-default):focus:not([readonly]) ~ .se
 footer .row .left2 {    
   padding: 120px 30px 70px;
   float: left;
-  align-items: center;
+  align-items: flex-start;
 }
 
 footer .brand-logo .material-icons-outlined {
   font-size: 200px;
-  max-width: 220px;
-  width: auto;
+  max-width: none;
+  width: 200px;
+  height: 200px;
   margin: 0;
 }
 
 footer .logo-text {
-  font-size: 38px;
-  margin-top: -20px;
+  font-size: 36px;
+  margin-top: -25px;
+  margin-bottom: 15px;
   font-weight: 500;
 }
 
 footer .row .right2 {    
-  padding: 120px 30px 70px;
+  padding: 120px 30px 70px 0;
   float: right;
+}
+
+footer .social a {
+  display: flex;
+}
+
+footer .social img {
+  filter: invert(1);
+  width: 32px;
+  height: auto;
+}
+
+footer .lists > .col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+footer .lists .title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  margin-top: 5px;
+}
+
+footer .lists li {
+  font-size: 0.875rem;
+  margin-bottom: 15px;
+}
+
+footer .lists a {
+  color: #dff4ff;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+footer .lists a:hover,  
+footer .lists a:focus {
+  color: #fff;
+}
+
+footer .lists .icon {
+  margin-right: 10px;  
+  width: 24px;
+  flex-shrink: 0;
+}
+
+footer address {
+  font-style: normal;
+}
+
+footer .copyright {
+  font-size: 0.875rem;
+  color: #c1e4ff
 }
 
 
@@ -1949,6 +2008,30 @@ I am going with multiple quesries for height */
     flex-direction: column;    
   }
 
+  footer .row .right2 {
+    padding: 90px 30px 0px;    
+  }
+
+  footer .row .left2 {
+    padding: 0px 30px 30px;
+    align-items: center;
+  }
+
+  footer .lists .title {
+    margin-bottom: 20px;
+  }
+
+  footer .lists ul {
+    margin-bottom: 0;
+  }
+
+  footer .lists li {
+    margin-bottom: 10px;
+  }
+
+  footer .lists > .col {
+    align-items: initial;
+  }
 
 
 }
@@ -2224,11 +2307,12 @@ I am going with multiple quesries for height */
   }
 
   footer .row .right2 {
-    padding: 150px 30px 70px;
+    padding: 125px 5px 0px;
   }
 
   footer .row .left2 {
-    padding: 150px 30px 70px;
+    padding: 0px 15px 30px;
+    margin-top: -20px;
   }
 
 }
@@ -2267,6 +2351,11 @@ I am going with multiple quesries for height */
   max-width: 1600px;
   margin-right: auto;
   margin-left: auto;  
+}
+
+.container-fixed-small {
+  max-width: 1230px;
+  margin: auto;
 }
 
 .container-fluid {
@@ -2323,6 +2412,10 @@ I am going with multiple quesries for height */
 
 .align-items-center {
   align-items: center;
+}
+
+.lh-initial {
+  line-height: initial;
 }
 
 .mb-0 {
@@ -2439,6 +2532,10 @@ I am going with multiple quesries for height */
 
 .whiteblue2 {
   background-color: #f6f8f9;
+}
+
+.white-text-light {
+  color: #f1faff
 }
 
 /*Genric utility classe end*/
