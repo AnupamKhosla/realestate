@@ -4,13 +4,15 @@
 
 /*global rules start */
 html, body {
-  height: 100vh;
+  height: 100%;
   font-family: 'Montserrat', sans-serif;
   font-size: 1rem;  
   min-width: 320px;
+  
   /*force scroll on old/ultra-small/anroid-watch/etc devices*/
   /*It might also zoom out on screen < 320px*/
 }
+
 
 html.no-js * {
   transition: none !important;
@@ -42,6 +44,7 @@ a:focus-visible {
 
 .parallax-container .parallax img {
   opacity: 1;
+  filter: brightness(0.65);
 }
 
 
@@ -454,7 +457,7 @@ nav .dropdown-content li > a:focus {
 
 
 .parallax-container {  
-  min-height: 100vh;  
+  min-height: 100%;  
   top: -64px;
   margin-bottom: -64px;
   height: auto;
@@ -463,17 +466,21 @@ nav .dropdown-content li > a:focus {
   width: 100%;
 }
 
+/*
 .parallax-container .parallax img {
  filter: brightness(0.5);
  min-height: 100vh;
  transform: translate3d(-50%, calc(640px - 50vh), 0px);
 }
+*/
 
 #index-banner {
+  /*
   background-image: linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)), url("../img/house_night.jpg");
   background-position: center center;
   background-size: cover;
   background-attachment: fixed;
+  */
 }
 
 #index-banner .card-tabs {
@@ -576,7 +583,7 @@ nav .dropdown-content li > a:focus {
 }
 
 #form1 .search {
-  margin-top: -0px;
+  min-width: 125px;
   width: 100%;
 }
 /* Hero area finishes */
@@ -953,10 +960,12 @@ section h4:not(.default) {
 /*Week's top property area starts*/
 
 .week {
+  /*
   background-image: linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)), url("../img/week.jpg");
   background-position: center center;
   background-size: cover;
   background-attachment: fixed;
+  */
 }
 
 .week .parallax-container {
@@ -1448,7 +1457,7 @@ footer .input-field {
 }
 
 footer #email {
-  
+
 
 }
 
@@ -1500,16 +1509,48 @@ footer .row .right2 {
 
 
 
-
+/*Hover:none  will target only android/sfari phone/ipad browsers*/
+/*Because background size cover doesn't work with 100vh banner height on androind chrome:
+I am going with multiple quesries for height */
 @media (hover:none) {
-  /*This will target only android/sfari phone/ipad browsers*/
-  /*Old code -- removed parallax because buggy*/
-  .parallax-container {
-    min-height: calc(100vh - 50px);
-  }
-  .parallax-container .parallax img {   
-   transform: translate3d(-50%, calc(676px - 50vh), 0px);
- }
+    #index-banner {
+      min-height: 100%;      
+    }    
+    .no-js .html,
+    .no-js .body {
+      overflow-y: scroll;
+    }
+}
+
+/*
+@media (hover:none) and (max-height: 1400px){
+    #index-banner {
+      
+    }
+}
+@media (hover:none) and (max-height: 1000px){
+    #index-banner {
+      
+      background-size: 1500px 1000px;
+    }
+}
+@media (hover:none) and (max-height: 800px){
+    #index-banner {
+     
+      background-size: 1200px 800px;
+    }
+}
+
+
+
+@media (hover:none) and (max-height: 600px){
+    #index-banner {
+      
+      background-size: 900px 600px;
+    }
+    */
+
+    
 }
 
 

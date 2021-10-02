@@ -8,6 +8,11 @@ import Swiper from   '../js/swiper-bundle.esm.browser.js'
     $("html").removeClass("no-js");
     // chrome bug https://stackoverflow.com/a/42969608/3429430
 
+
+    $("html").css("height", $(window).height());
+    //this will avoid flickering in mobile browsers due to url bar
+    
+
     $("a[data-href]").each(function(){
       $(this).attr("href", $(this).attr("data-href"));
     });
@@ -18,7 +23,7 @@ import Swiper from   '../js/swiper-bundle.esm.browser.js'
     //detects mobile/tablet android/safari browsers
 
     $('.sidenav').sidenav();
-    //$('.parallax').parallax(); 
+    $('.parallax').parallax(); 
     // Need to replace with good parallax plugin
 
 
